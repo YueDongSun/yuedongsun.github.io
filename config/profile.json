@@ -1,0 +1,62 @@
+{
+  "display_name": "Fonte",
+  "monogram": "f.",
+  "github_username": "YueDongSun",
+  "role": "Developer & Researcher",
+  "summary": "An independent developer working across software, infrastructure, and research. Curious by nature. Thoughtful about what comes next.",
+  "site_url": "https://yuedongsun.github.io",
+  "email": null,
+  "is_complete": false,
+  "focus_areas": ["Software engineering", "Agent collaboration", "Research workflows", "Quantum software"],
+  "experience": [
+    {
+      "title": "Independent developer",
+      "organization": "Software, infrastructure & research",
+      "period": "Current focus",
+      "description": "Maintaining cooperating projects with an emphasis on reuse, maintainability, and keeping each project independently runnable and testable."
+    }
+  ],
+  "education": [],
+  "projects": [
+    {
+      "id": "vibemux",
+      "title": "VibeMux",
+      "repository_name": "vibemux",
+      "description": "A local collaboration environment for multiple coding agents, designed with Windows in mind.",
+      "category": "Agent tooling",
+      "url": "https://github.com/YueDongSun/vibemux",
+      "tags": ["Windows", "Coding agents", "Local first"],
+      "motif": "terminal"
+    },
+    {
+      "id": "brisk",
+      "title": "Brisk",
+      "repository_name": "Brisk",
+      "description": "A quantum framework for exploring photonic circuits and simulating quantum networks.",
+      "category": "Quantum software",
+      "url": "https://github.com/YueDongSun/Brisk",
+      "tags": ["Photonics", "Simulation", "Quantum networks"],
+      "motif": "orbit"
+    },
+    {
+      "id": "eigent",
+      "title": "Eigent",
+      "repository_name": "eigent",
+      "description": "Exploring collaboration between multiple agents powered by large language models.",
+      "category": "Agent tooling",
+      "url": "https://github.com/YueDongSun/eigent",
+      "tags": ["Agent collaboration", "Language models"],
+      "motif": "network"
+    },
+    {
+      "id": "quantum_calibration",
+      "title": "Quantum Calibration",
+      "repository_name": "Quantum-Calibration-Agent-Blueprint",
+      "description": "A blueprint for applying AI agents to quantum device calibration.",
+      "category": "Quantum software",
+      "url": "https://github.com/YueDongSun/Quantum-Calibration-Agent-Blueprint",
+      "tags": ["Calibration", "AI workflows"],
+      "motif": "calibration"
+    }
+  ]
+}
