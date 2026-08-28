@@ -2026,3 +2026,212 @@ body {
 }
 
 }
+@media screen {
+  body {
+    font-size: 16px;
+  }
+  .site_header nav {
+    font-size: 14px;
+  }
+  .header_note {
+    font-size: 11px;
+  }
+  .eyebrow {
+    font-size: 11px;
+  }
+  .brand_mark {
+    font-size: 30px;
+    line-height: 33px;
+  }
+  .hero h1 {
+    font-size: 78px;
+    letter-spacing: -4px;
+  }
+  .hero_description {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+  .hero_footnote {
+    font-size: 10px;
+  }
+  .button,
+  .text_link {
+    font-size: 13px;
+  }
+  .button {
+    min-height: 50px;
+  }
+  .card_topline {
+    font-size: 10px;
+  }
+  .profile_letter {
+    font-size: 170px;
+    letter-spacing: -8px;
+  }
+  .profile_caption h2 {
+    font-size: 28px;
+  }
+  .profile_caption p,
+  .profile_details {
+    font-size: 13px;
+  }
+  .focus_strip {
+    font-size: 13px;
+  }
+  .focus_strip .eyebrow {
+    font-size: 9px;
+  }
+  .section_heading .eyebrow {
+    font-size: 10px;
+  }
+  .section_heading h2 {
+    font-size: 50px;
+  }
+  .section_aside {
+    font-size: 14px;
+  }
+  .experience_lead {
+    font-size: 24px;
+  }
+  .timeline_period {
+    font-size: 10px;
+  }
+  .timeline_entry h3,
+  .education_entry h3 {
+    font-size: 19px;
+  }
+  .timeline_organization {
+    font-size: 13px;
+  }
+  .timeline_description,
+  .muted_text {
+    font-size: 15px;
+  }
+  .focus_areas li {
+    font-size: 12px;
+  }
+  .draft_note {
+    font-size: 10px;
+  }
+  .projects_intro {
+    font-size: 14px;
+  }
+  .project_filters button {
+    font-size: 12px;
+  }
+  .project_count {
+    font-size: 10px;
+  }
+  .art_index {
+    font-size: 9px;
+  }
+  .project_title_row h3 {
+    font-size: 26px;
+  }
+  .project_body > p {
+    font-size: 14px;
+  }
+  .project_body > p.project_detail {
+    font-size: 12px !important;
+  }
+  .project_tags li {
+    font-size: 10px;
+  }
+  .research_title {
+    font-size: 16px;
+  }
+  .research_item time {
+    font-size: 11px;
+  }
+  .research_summary {
+    font-size: 15px;
+  }
+  .research_details {
+    font-size: 14px;
+  }
+  .research_keywords li {
+    font-size: 10px;
+  }
+  .research_figure figcaption {
+    font-size: 11px;
+  }
+  .publication_copy h3 {
+    font-size: 15px;
+  }
+  .publication_copy > p {
+    font-size: 11px;
+  }
+  .publication_meta {
+    font-size: 12px;
+  }
+  .publication_status {
+    font-size: 10px;
+  }
+  .skill_group_header > span {
+    font-size: 11px;
+  }
+  .skill_group li {
+    font-size: 12px;
+  }
+  .contact_description {
+    font-size: 15px;
+  }
+  .contact_links a {
+    font-size: 13px;
+  }
+  .contact_availability {
+    font-size: 10px;
+  }
+  .footer_caption {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hero h1 {
+    font-size: 64px;
+  }
+  .hero_description {
+    font-size: 15px;
+  }
+  .section_heading h2 {
+    font-size: 45px;
+  }
+  .experience_lead {
+    font-size: 22px;
+  }
+  .project_title_row h3 {
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .site_header nav {
+    font-size: 12px;
+  }
+  .hero h1 {
+    font-size: clamp(50px, 13vw, 64px);
+    letter-spacing: -3px;
+  }
+  .hero_description {
+    font-size: 15px;
+  }
+  .section_heading h2 {
+    font-size: 41px;
+  }
+  .experience_lead {
+    font-size: 22px;
+  }
+  .timeline_description,
+  .muted_text {
+    font-size: 14px;
+  }
+  .research_summary,
+  .research_details {
+    font-size: 13px;
+  }
+  .publication_copy h3 {
+    font-size: 14px;
+  }
+  .contact_description {
+    font-size: 14px;
+  }
+}

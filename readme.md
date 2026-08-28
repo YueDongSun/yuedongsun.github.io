@@ -6,7 +6,7 @@ A personal CV and repository portfolio with a warm ivory and olive palette. Buil
 
 Update `config/profile.json`. Profile content is validated before rendering or building; malformed records and unsafe links fail with a field-specific error.
 
-- `display_name`, `monogram`, `role`, `summary`, and `availability` control the introduction.
+- `display_name`, `nickname`, `monogram`, `role`, `summary`, and `availability` control the introduction. The current display name is `YuedongSun`, with `Fonte` as the nickname and `F` as the monogram.
 - `github_username` and `site_url` control the profile link and canonical/social URLs.
 - `contact_details` contains the two addresses and the Google Scholar link supplied in the CV.
 - `experience` and `education` contain entries with `title`, `organization`, `period`, and `description`.

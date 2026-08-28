@@ -34,7 +34,7 @@ export default function Cv_page() {
               <span className="profile_letter">{profile.monogram}</span>
               <span className="art_caption">NO PHOTO,<br />JUST IDEAS.</span>
             </div>
-            <div className="profile_caption"><div><h2>{profile.display_name}</h2><p>{profile.role}</p></div><span className="profile_badge" aria-hidden="true">↗</span></div>
+            <div className="profile_caption"><div><h2>{profile.display_name}</h2><p>{profile.nickname} · {profile.role}</p></div><span className="profile_badge" aria-hidden="true">↗</span></div>
             <dl className="profile_details">
               <div><dt>Research</dt><dd>{profile.focus_areas.slice(0, 2).join(' · ')}</dd></div>
               <div><dt>Training</dt><dd>{primary_education?.title.replace(' in Quantum Optics and Quantum Information', '') ?? 'Research & software'}</dd></div>

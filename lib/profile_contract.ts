@@ -62,6 +62,7 @@ export interface Project_entry {
 
 export interface Profile_data {
   display_name: string;
+  nickname: string;
   monogram: string;
   github_username: string;
   role: string;
@@ -262,6 +263,7 @@ export function parse_profile(value: unknown): Profile_data {
   });
   return {
     display_name: require_text(record.display_name, 'display_name'),
+    nickname: require_text(record.nickname, 'nickname'),
     monogram: require_text(record.monogram, 'monogram'),
     github_username,
     role: require_text(record.role, 'role'),
