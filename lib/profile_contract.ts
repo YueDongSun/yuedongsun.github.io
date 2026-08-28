@@ -60,6 +60,17 @@ export interface Project_entry {
   motif: Project_motif;
 }
 
+export interface Private_project {
+  id: string;
+  title: string;
+  repository_name: string;
+  description: string;
+  details: string;
+  category: string;
+  tags: string[];
+  motif: Project_motif;
+}
+
 export interface Profile_data {
   display_name: string;
   nickname: string;
@@ -79,6 +90,7 @@ export interface Profile_data {
   research_projects: Research_project[];
   publications: Publication_entry[];
   projects: Project_entry[];
+  private_projects: Private_project[];
 }
 
 const allowed_motifs: Project_motif[] = ['terminal', 'orbit', 'network', 'calibration'];
@@ -200,6 +212,32 @@ function parse_publications(value: unknown): Publication_entry[] {
   });
 }
 
+function parse_private_projects(value: unknown): Private_project[] {
+  const project_ids = new Set<string>();
+  return require_array(value, 'private_projects').map((entry, entry_index) => {
+    const entry_name = `private_projects[${entry_index}]`;
+    const project = require_record(entry, entry_name);
+    const project_id = require_text(project.id, `${entry_name}.id`);
+    if (!identifier_pattern.test(project_id) || project_ids.has(project_id)) {
+      throw new TypeError(`${entry_name}.id must be unique and use snake_case.`);
+    }
+    project_ids.add(project_id);
+    const motif = require_text(project.motif, `${entry_name}.motif`) as Project_motif;
+    if (!allowed_motifs.includes(motif)) throw new TypeError(`${entry_name}.motif is unsupported.`);
+    return {
+      id: project_id,
+      title: require_text(project.title, `${entry_name}.title`),
+      repository_name: require_text(project.repository_name, `${entry_name}.repository_name`),
+      description: require_text(project.description, `${entry_name}.description`),
+      details: require_text(project.details, `${entry_name}.details`),
+      category: require_text(project.category, `${entry_name}.category`),
+      tags: require_array(project.tags, `${entry_name}.tags`).map((tag, tag_index) =>
+        require_text(tag, `${entry_name}.tags[${tag_index}]`)),
+      motif,
+    };
+  });
+}
+
 function parse_contact_details(value: unknown): Contact_details {
   const record = require_record(value, 'contact_details');
   const primary_email = require_text(record.primary_email, 'contact_details.primary_email');
@@ -282,5 +320,6 @@ export function parse_profile(value: unknown): Profile_data {
     research_projects: parse_research_projects(record.research_projects),
     publications: parse_publications(record.publications),
     projects,
+    private_projects: parse_private_projects(record.private_projects),
   };
 }

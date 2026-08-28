@@ -14,9 +14,10 @@ Update `config/profile.json`. Profile content is validated before rendering or b
 - `publications` preserves author contribution, paper title, venue, status, and author reference exactly enough to distinguish published, under-review, preprint, and in-preparation work.
 - `technical_skills` and `languages` describe tools and communication languages without implying a proficiency score.
 - `projects` contains public repository links and descriptions. Preserve attribution and do not imply authorship of upstream work.
+- `private_projects` contains concise, public-facing summaries of selected private repositories. They intentionally have no outbound links until the repositories are made public.
 - `is_complete` controls the draft note; it is `true` for the reviewed CV content and should be revisited after future edits.
 
-The expanded profile is based on the supplied CV and current public GitHub repository READMEs. Seven research figures were extracted from the CV and placed under `public/research`; the portrait and empty mask layers were intentionally excluded, so the website keeps its abstract monogram artwork. Date of birth and citizenship are intentionally omitted from the public page; private machine paths, topology, credentials, and private repository details are not included.
+The expanded profile is based on the supplied CV and current GitHub repository READMEs. Seven research figures were extracted from the CV and placed under `public/research`; the portrait and empty mask layers were intentionally excluded, so the website keeps its abstract monogram artwork. Date of birth and citizenship are intentionally omitted from the public page. Private source code, operational paths, topology, credentials, and private repository internals are not included; only the concise summaries in `private_projects` are public by design.
 
 ## Discoverability and performance
 
@@ -67,7 +68,7 @@ Choose **Print CV**, then select a printer or **Save as PDF** in the browser. Th
 ## Structure
 
 - `app`: page composition, global styles, and metadata.
-- `components`: navigation, project-filter, education, research, publication, skills, and contact interfaces.
+- `components`: navigation, project-filter, education, research, publication, skills, public-project, private-project, and contact interfaces.
 - `config`: editable public profile content and its validated adapter.
 - `lib`: UI-independent profile contract and validation.
 - `scripts`: bounded static-build orchestration.

@@ -18,6 +18,8 @@ test('the reviewed CV profile preserves education, research, publications, and c
   assert.equal(parsed_profile.research_projects[0].figures.length, 2);
   assert.equal(parsed_profile.publications.length, 9);
   assert.equal(parsed_profile.projects.length, 4);
+  assert.equal(parsed_profile.private_projects.length, 5);
+  assert.equal(parsed_profile.private_projects[0].repository_name, 'N_qubit');
   assert.equal(parsed_profile.is_complete, true);
 });
 
@@ -54,6 +56,9 @@ test('duplicate identifiers and unsupported project or publication values fail v
   const invalid_publication = structuredClone(profile_source);
   invalid_publication.publications[0].contribution = 'Editor';
   assert.throws(() => parse_profile(invalid_publication), /contribution is unsupported/);
+  const invalid_private_project = structuredClone(profile_source);
+  invalid_private_project.private_projects[0].id = 'N-qubit';
+  assert.throws(() => parse_profile(invalid_private_project), /unique and use snake_case/);
 });
 
 test('contact validation blocks multiline email input and malformed GitHub handles', () => {

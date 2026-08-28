@@ -245,5 +245,57 @@
       "tags": ["Calibration", "AI workflows", "Vision analysis", "HDF5"],
       "motif": "calibration"
     }
+  ],
+  "private_projects": [
+    {
+      "id": "n_qubit",
+      "title": "N-Qubit W-State Control",
+      "repository_name": "N_qubit",
+      "description": "Control, sequence generation, acquisition, and feedback analysis for 3- and 4-qubit W-state experiments.",
+      "details": "A unified experimental loop connects W/R sequence generation, Fourier validation, AWG waveform upload, serial acquisition, snapshot export, and optional feedback-model inference.",
+      "category": "Quantum systems",
+      "tags": ["W-state experiments", "PyQt", "AWG control", "Feedback analysis"],
+      "motif": "calibration"
+    },
+    {
+      "id": "pdf_ocr_tex",
+      "title": "PDF OCR TEX",
+      "repository_name": "pdf_ocr_tex",
+      "description": "A local Windows desktop tool for turning academic PDFs into complete LaTeX submission projects.",
+      "details": "The tool combines a PyQt5 interface, session persistence, BibTeX management, journal template switching, optional model assistance, and PyInstaller packaging.",
+      "category": "Developer tooling",
+      "tags": ["Python", "LaTeX", "PyQt5", "BibTeX"],
+      "motif": "terminal"
+    },
+    {
+      "id": "tailnet_mesh",
+      "title": "Tailnet Mesh",
+      "repository_name": "tailnet_mesh",
+      "description": "A self-hosted mesh networking toolkit for coordinating Tailscale-connected machines.",
+      "details": "The private project brings together fleet health, distributed compute, file sharing, Git hosting, VPN automation, and AI collaboration in one operations control plane.",
+      "category": "Infrastructure",
+      "tags": ["Python", "Tailscale", "Distributed systems", "WebUI"],
+      "motif": "network"
+    },
+    {
+      "id": "cc_copilot_kilo",
+      "title": "AI Agent Gateway",
+      "repository_name": "cc_copilot_kilo",
+      "description": "A unified gateway and configuration switcher for AI coding agents.",
+      "details": "The desktop and local proxy stack covers multi-protocol routing, provider switching, circuit-breaker failover, backups, MCP, skills, and session tooling.",
+      "category": "Agent tooling",
+      "tags": ["Tauri", "Rust", "AI agents", "Proxy"],
+      "motif": "network"
+    },
+    {
+      "id": "ai_agent_learning",
+      "title": "AI Agent Learning Directory",
+      "repository_name": "ai-agent-learning",
+      "description": "A structured study directory for key papers and runnable examples in AI agent systems.",
+      "details": "The learning path connects reasoning and acting, memory, retrieval, workflow search, and skill evolution to self-contained Python implementations.",
+      "category": "Research notes",
+      "tags": ["Agents", "RAG", "Memory", "Python"],
+      "motif": "orbit"
+    }
   ]
 }

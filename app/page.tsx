@@ -2,6 +2,7 @@ import { Contact_details } from '../components/contact_details';
 import { Education_section } from '../components/education_section';
 import { Publication_list } from '../components/publication_list';
 import { Project_gallery } from '../components/project_gallery';
+import { Private_project_list } from '../components/private_project_list';
 import { Research_project_list } from '../components/research_project_list';
 import { Skills_matrix } from '../components/skills_matrix';
 import { Site_header } from '../components/site_header';
@@ -87,11 +88,19 @@ export default function Cv_page() {
             <p className="projects_intro">A few public repositories across agent tooling and quantum software. Explore the code, context, and experiments.</p>
           </div>
           <Project_gallery projects={profile.projects} />
+          <div className="private_projects_block" aria-labelledby="private_projects_heading">
+            <div className="private_projects_heading">
+              <p className="eyebrow">04 / OPENING SOON</p>
+              <h3 id="private_projects_heading">The next things<br /><em>in the open.</em></h3>
+              <p>Private repositories with a short public-facing introduction. The source stays private until it is ready to open.</p>
+            </div>
+            <Private_project_list projects={profile.private_projects} />
+          </div>
           <a className="all_projects_link text_link" href={github_url + '?tab=repositories'} target="_blank" rel="noopener noreferrer">More on GitHub <span aria-hidden="true">↗</span></a>
         </section>
         <section className="content_section publications_section" id="publications" aria-labelledby="publications_heading">
           <div className="section_heading">
-            <p className="eyebrow">04 / PUBLICATIONS</p>
+            <p className="eyebrow">05 / PUBLICATIONS</p>
             <h2 id="publications_heading">Work that<br /><em>travels.</em></h2>
             <p className="section_aside">From work in preparation<br />to published results.</p>
           </div>
@@ -99,7 +108,7 @@ export default function Cv_page() {
         </section>
         <section className="content_section skills_section" id="skills" aria-labelledby="skills_heading">
           <div className="section_heading">
-            <p className="eyebrow">05 / TOOLKIT</p>
+            <p className="eyebrow">06 / TOOLKIT</p>
             <h2 id="skills_heading">A practical<br /><em>toolkit.</em></h2>
             <p className="section_aside">Tools are a means to<br />make better questions answerable.</p>
           </div>
