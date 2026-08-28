@@ -63,6 +63,10 @@
       "period": "2024–2026",
       "summary": "A high-rate matter–matter entanglement system built around multiplexed quantum memories.",
       "details": "Using two 15×15 quantum memory arrays and a 2π-pulse protocol, the work achieved 546 Hz matter–matter entanglement over 20 km of fibre without active phase stabilisation. The result surpassed TPI and SPI by 75,932× and 23×, respectively. A Python/C++ simulation pipeline supported protocol optimisation and loss modelling.",
+      "figures": [
+        {"src": "/research/aod_optical_relay.png", "alt": "AOD-addressed optical relay with write, read, and signal paths.", "caption": "AOD-addressed optical relay and beam paths.", "width": 1672, "height": 941},
+        {"src": "/research/quantum_relay_network.png", "alt": "Two-node quantum memory relay with FPGA feedforward and count traces.", "caption": "Two-node relay architecture with FPGA feedforward.", "width": 968, "height": 557}
+      ],
       "keywords": ["Quantum repeater", "Quantum memory", "Entanglement distribution", "Multiplexing"]
     },
     {
@@ -71,6 +75,9 @@
       "period": "2024–2025",
       "summary": "A hybrid deep-learning architecture for sample-efficient multipartite entanglement classification.",
       "details": "Quantum density matrices are converted into multi-channel image representations and classified with a CNN–BiLSTM network for 3–4 qubit systems. The work covered architecture co-design, the data pipeline, and benchmarking against MLP and CNN baselines.",
+      "figures": [
+        {"src": "/research/cnn_bilstm_pipeline.png", "alt": "CNN and BiLSTM pipeline from measurement results to entanglement classification.", "caption": "Multi-channel representation and hybrid CNN–BiLSTM pipeline.", "width": 865, "height": 555}
+      ],
       "keywords": ["Machine learning", "Entanglement classification", "CNN", "BiLSTM"]
     },
     {
@@ -79,6 +86,9 @@
       "period": "2022–2023",
       "summary": "A combined AOD and orbital-angular-momentum approach to increase quantum memory capacity.",
       "details": "Combined AOD-based optical-path multiplexing with OAM modes to boost quantum memory capacity by more than 10× beyond the 225-mode state of the art. Verified high efficiency and 0.5 dB bandwidth after AOD modulation, and developed Python tools for mode characterisation and crosstalk modelling.",
+      "figures": [
+        {"src": "/research/oam_multiplexing.png", "alt": "AOD and OAM optical multiplexing paths producing multiple spatial modes.", "caption": "AOD and OAM paths for multimode multiplexing.", "width": 744, "height": 517}
+      ],
       "keywords": ["OAM", "SLM", "AOD", "Optical multiplexing", "Laguerre–Gaussian modes"]
     },
     {
@@ -87,6 +97,9 @@
       "period": "2026–present",
       "summary": "A learning-based framework for feedback control and noise decomposition in high-dimensional AOD systems.",
       "details": "The framework separates correctable and irrecoverable noise, studies five-arm feedback control with Hellinger-distance gain, and analyses ESM/CSM scaling with critical thresholds N₍c₎.",
+      "figures": [
+        {"src": "/research/aod_memory_array.png", "alt": "Signal and idler AODs addressing a selected region in a quantum memory array.", "caption": "Signal/idler AOD control over a selected memory-array region.", "width": 2171, "height": 724}
+      ],
       "keywords": ["Quantum control", "Noise analysis", "Feedback", "ESM/CSM", "Physics-informed ML"]
     },
     {
@@ -95,6 +108,9 @@
       "period": "2020–2022",
       "summary": "A modelling and parameterisation framework for rare-earth-doped Y₂SiO₅ quantum memories.",
       "details": "Built full Hamiltonian models spanning free-ion, crystal-field, Zeeman, and hyperfine terms down to low-energy spin Hamiltonians. The work included ZEFOZ analysis and comparison of AFC, spin-wave storage, NLPE-DLCZ, and single-ion repeater schemes.",
+      "figures": [
+        {"src": "/research/rare_earth_hamiltonian.png", "alt": "Rare-earth crystal structure, Hamiltonian terms, and energy-level diagram.", "caption": "Crystal-field and spin-Hamiltonian modelling view.", "width": 1192, "height": 544}
+      ],
       "keywords": ["Rare-earth ions", "YSO", "Crystal field", "ZEFOZ", "AFC", "Quantum repeater"]
     },
     {
@@ -103,6 +119,9 @@
       "period": "2020–2022",
       "summary": "An optical–microwave interface for communication-band Er³⁺:YSO single-ion repeater nodes.",
       "details": "Designed grating couplers with Lumerical FDTD/MEEP (67.1% and 57.67% simulated peak efficiency, over 60 nm bandwidth), 50 Ω CPW layouts with COMSOL RF optimisation (about 3.99 G drive field at 1 W), and GDS/EBL/SEM fabrication workflows. Measured coupling efficiency was 10.36%.",
+      "figures": [
+        {"src": "/research/er3_yso_nanofabrication.png", "alt": "SEM images of fabricated photonic structures for an Er3+:YSO interface.", "caption": "SEM views from the nanofabrication workflow.", "width": 896, "height": 345}
+      ],
       "keywords": ["Nanophotonics", "Grating coupler", "FDTD", "COMSOL", "CPW", "EBL", "Er³⁺:YSO"]
     }
   ],

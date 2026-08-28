@@ -12,6 +12,8 @@ test('the reviewed CV profile preserves education, research, publications, and c
   assert.equal(parsed_profile.contact_details.scholar_url, 'https://scholar.google.com/citations?user=0Sn386wAAAAJ&hl=en');
   assert.equal(parsed_profile.education.length, 2);
   assert.equal(parsed_profile.research_projects.length, 6);
+  assert.equal(parsed_profile.research_projects.every((project) => project.figures.length > 0), true);
+  assert.equal(parsed_profile.research_projects[0].figures.length, 2);
   assert.equal(parsed_profile.publications.length, 9);
   assert.equal(parsed_profile.projects.length, 4);
   assert.equal(parsed_profile.is_complete, true);
@@ -32,6 +34,12 @@ test('invalid records are reported rather than silently dropped', () => {
   const invalid_research = structuredClone(profile_source);
   invalid_research.research_projects[0].details = '';
   assert.throws(() => parse_profile(invalid_research), /research_projects\[0\]\.details/);
+  const invalid_figure = structuredClone(profile_source);
+  invalid_figure.research_projects[0].figures[0].src = 'https://example.com/image.png';
+  assert.throws(() => parse_profile(invalid_figure), /must be a local research PNG/);
+  invalid_figure.research_projects[0].figures[0].src = profile_source.research_projects[0].figures[0].src;
+  invalid_figure.research_projects[0].figures[0].width = 0;
+  assert.throws(() => parse_profile(invalid_figure), /positive integers/);
 });
 
 test('duplicate identifiers and unsupported project or publication values fail validation', () => {

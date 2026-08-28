@@ -14,7 +14,16 @@ export interface Research_project {
   period: string;
   summary: string;
   details: string;
+  figures: Research_figure[];
   keywords: string[];
+}
+
+export interface Research_figure {
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
 }
 
 export interface Publication_entry {
@@ -76,6 +85,7 @@ const allowed_contributions: Publication_contribution[] = ['Co-first author', 'C
 const github_username_pattern = /^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,37}[a-zA-Z0-9])?$/;
 const email_pattern = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/;
 const identifier_pattern = /^[a-z][a-z0-9_]*$/;
+const research_asset_pattern = /^\/research\/[a-z][a-z0-9_]*\.png$/;
 
 function require_record(value: unknown, field_name: string): Record<string, unknown> {
   if (!value || typeof value !== 'object' || Array.isArray(value)) {
@@ -133,12 +143,31 @@ function parse_research_projects(value: unknown): Research_project[] {
       throw new TypeError(`${entry_name}.id must be unique and use snake_case.`);
     }
     project_ids.add(project_id);
+    const figures = require_array(project.figures, `${entry_name}.figures`).map((figure, figure_index) => {
+      const figure_name = `${entry_name}.figures[${figure_index}]`;
+      const figure_record = require_record(figure, figure_name);
+      const src = require_text(figure_record.src, `${figure_name}.src`);
+      if (!research_asset_pattern.test(src)) throw new TypeError(`${figure_name}.src must be a local research PNG.`);
+      const width = figure_record.width;
+      const height = figure_record.height;
+      if (typeof width !== 'number' || typeof height !== 'number' || !Number.isInteger(width) || !Number.isInteger(height) || width <= 0 || height <= 0) {
+        throw new TypeError(`${figure_name}.width and height must be positive integers.`);
+      }
+      return {
+        src,
+        alt: require_text(figure_record.alt, `${figure_name}.alt`),
+        caption: require_text(figure_record.caption, `${figure_name}.caption`),
+        width,
+        height,
+      };
+    });
     return {
       id: project_id,
       title: require_text(project.title, `${entry_name}.title`),
       period: require_text(project.period, `${entry_name}.period`),
       summary: require_text(project.summary, `${entry_name}.summary`),
       details: require_text(project.details, `${entry_name}.details`),
+      figures,
       keywords: require_array(project.keywords, `${entry_name}.keywords`).map((keyword, keyword_index) =>
         require_text(keyword, `${entry_name}.keywords[${keyword_index}]`)),
     };

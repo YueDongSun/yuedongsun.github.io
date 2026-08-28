@@ -16,7 +16,7 @@ Update `config/profile.json`. Profile content is validated before rendering or b
 - `projects` contains public repository links and descriptions. Preserve attribution and do not imply authorship of upstream work.
 - `is_complete` controls the draft note; it is `true` for the reviewed CV content and should be revisited after future edits.
 
-The expanded profile is based on the supplied CV and current public GitHub repository READMEs. No information was taken from the CV's portrait: the website intentionally uses its abstract monogram artwork instead. Date of birth and citizenship are intentionally omitted from the public page; private machine paths, topology, credentials, and private repository details are not included.
+The expanded profile is based on the supplied CV and current public GitHub repository READMEs. Seven research figures were extracted from the CV and placed under `public/research`; the portrait and empty mask layers were intentionally excluded, so the website keeps its abstract monogram artwork. Date of birth and citizenship are intentionally omitted from the public page; private machine paths, topology, credentials, and private repository details are not included.
 
 ## Local development
 
@@ -68,6 +68,7 @@ Choose **Print CV**, then select a printer or **Save as PDF** in the browser. Th
 - `tests`: profile boundary and safety tests.
 - `.github/workflows`: GitHub Pages publication.
 - `public/og.png`: branded social preview image.
+- `public/research`: extracted non-portrait research figures, referenced by validated profile records.
 
 ## Updating and rollback
 

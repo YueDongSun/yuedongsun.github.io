@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Research_project } from '../lib/profile_contract';
 
 export function Research_project_list({ projects }: { projects: Research_project[] }) {
@@ -14,6 +15,14 @@ export function Research_project_list({ projects }: { projects: Research_project
           <div className="research_item_content">
             <p className="research_summary">{project.summary}</p>
             <p className="research_details">{project.details}</p>
+            <div className="research_figures">
+              {project.figures.map((figure) => (
+                <figure className="research_figure" key={figure.src}>
+                  <Image className="research_figure_image" src={figure.src} alt={figure.alt} width={figure.width} height={figure.height} sizes="(max-width: 700px) 100vw, 560px" />
+                  <figcaption>{figure.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
             <ul className="research_keywords" aria-label="Research keywords">
               {project.keywords.map((keyword) => <li key={keyword}>{keyword}</li>)}
             </ul>
