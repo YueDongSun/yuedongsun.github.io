@@ -2235,3 +2235,11 @@ body {
     font-size: 14px;
   }
 }
+@media screen {
+  .research_item,
+  .publication_group,
+  .skills_matrix {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 420px;
+  }
+}

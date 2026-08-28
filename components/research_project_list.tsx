@@ -18,7 +18,7 @@ export function Research_project_list({ projects }: { projects: Research_project
             <div className="research_figures">
               {project.figures.map((figure) => (
                 <figure className="research_figure" key={figure.src}>
-                  <Image className="research_figure_image" src={figure.src} alt={figure.alt} width={figure.width} height={figure.height} sizes="(max-width: 700px) 100vw, 560px" />
+                  <Image className="research_figure_image" src={figure.src} alt={figure.alt} width={figure.width} height={figure.height} sizes="(max-width: 700px) 100vw, 560px" loading="lazy" />
                   <figcaption>{figure.caption}</figcaption>
                 </figure>
               ))}

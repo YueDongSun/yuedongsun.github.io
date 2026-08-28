@@ -18,6 +18,12 @@ Update `config/profile.json`. Profile content is validated before rendering or b
 
 The expanded profile is based on the supplied CV and current public GitHub repository READMEs. Seven research figures were extracted from the CV and placed under `public/research`; the portrait and empty mask layers were intentionally excluded, so the website keeps its abstract monogram artwork. Date of birth and citizenship are intentionally omitted from the public page; private machine paths, topology, credentials, and private repository details are not included.
 
+## Discoverability and performance
+
+The site now includes root-level `robots.txt` and `sitemap.xml` with the canonical public URL, plus a `ProfilePage`/`Person` JSON-LD block with the public name, nickname, role, focus areas, GitHub, and Scholar links. The research figures use explicit dimensions, responsive `sizes`, and lazy loading so the browser can reserve layout space and defer below-the-fold image work. There are no remote font or analytics requests.
+
+The sitemap helps crawlers discover the canonical page; it does not guarantee indexing. After a major profile update, use Google Search Console's URL Inspection and sitemap tools, then check PageSpeed Insights for current field data. References: [ProfilePage structured data](https://developers.google.com/search/docs/appearance/structured-data/profile-page), [Build and submit a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), and [robots.txt specification](https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec).
+
 ## Local development
 
 Use Node.js 24 and npm. Dependencies are pinned by `package-lock.json`.

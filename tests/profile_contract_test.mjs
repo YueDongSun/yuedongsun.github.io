@@ -10,6 +10,7 @@ test('the reviewed CV profile preserves education, research, publications, and c
   assert.equal(parsed_profile.display_name, 'YuedongSun');
   assert.equal(parsed_profile.nickname, 'Fonte');
   assert.equal(parsed_profile.contact_details.primary_email, 'syd23@mails.tsinghua.edu.cn');
+  assert.equal(parsed_profile.contact_details.secondary_email, 'yuedongsun02@gmail.com');
   assert.equal(parsed_profile.contact_details.scholar_url, 'https://scholar.google.com/citations?user=0Sn386wAAAAJ&hl=en');
   assert.equal(parsed_profile.education.length, 2);
   assert.equal(parsed_profile.research_projects.length, 6);
