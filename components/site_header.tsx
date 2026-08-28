@@ -4,8 +4,9 @@ import { useEffect as use_effect, useState as use_state } from 'react';
 
 const navigation_items = [
   { section_id: 'about', label: 'About' },
-  { section_id: 'experience', label: 'Experience' },
-  { section_id: 'projects', label: 'Projects' },
+  { section_id: 'research', label: 'Research' },
+  { section_id: 'projects', label: 'Code' },
+  { section_id: 'publications', label: 'Papers' },
   { section_id: 'contact', label: 'Contact' },
 ];
 

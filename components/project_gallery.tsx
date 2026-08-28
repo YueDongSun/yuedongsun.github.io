@@ -37,6 +37,7 @@ export function Project_gallery({ projects }: { projects: Project_entry[] }) {
             <div className="project_body">
               <div className="project_title_row"><h3>{project.title}</h3><span aria-hidden="true">↗</span></div>
               <p>{project.description}</p>
+              <p className="project_detail">{project.details}</p>
               <ul className="project_tags" aria-label="Topics">{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
             </div>
           </a>

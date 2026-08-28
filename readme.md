@@ -6,15 +6,17 @@ A personal CV and repository portfolio with a warm ivory and olive palette. Buil
 
 Update `config/profile.json`. Profile content is validated before rendering or building; malformed records and unsafe links fail with a field-specific error.
 
-- `display_name`, `monogram`, `role`, and `summary` control the introduction.
+- `display_name`, `monogram`, `role`, `summary`, and `availability` control the introduction.
 - `github_username` and `site_url` control the profile link and canonical/social URLs.
-- `email` is `null` by default. Set an address only if you want it published.
-- `experience` and `education` contain entries with `title`, `organization`, `period`, and `description`. Empty education entries are omitted from the page.
+- `contact_details` contains the two addresses and the Google Scholar link supplied in the CV.
+- `experience` and `education` contain entries with `title`, `organization`, `period`, and `description`.
+- `research_projects` contains six expandable project summaries with dates, details, and keywords.
+- `publications` preserves author contribution, paper title, venue, status, and author reference exactly enough to distinguish published, under-review, preprint, and in-preparation work.
+- `technical_skills` and `languages` describe tools and communication languages without implying a proficiency score.
 - `projects` contains public repository links and descriptions. Preserve attribution and do not imply authorship of upstream work.
-- `focus_areas` lists topics without implying a proficiency score.
-- `is_complete` controls the small draft note. Leave it `false` until the biographical details have been reviewed.
+- `is_complete` controls the draft note; it is `true` for the reviewed CV content and should be revisited after future edits.
 
-The initial name and repository links were checked against public GitHub metadata. Employment history, dates, degrees, achievements, and contact details have not been invented. The independent developer description reflects the supplied task context. The public site contains no private machine paths, topology, credentials, or private repository details.
+The expanded profile is based on the supplied CV and current public GitHub repository READMEs. No information was taken from the CV's portrait: the website intentionally uses its abstract monogram artwork instead. Date of birth and citizenship are intentionally omitted from the public page; private machine paths, topology, credentials, and private repository details are not included.
 
 ## Local development
 
@@ -59,7 +61,7 @@ Choose **Print CV**, then select a printer or **Save as PDF** in the browser. Th
 ## Structure
 
 - `app`: page composition, global styles, and metadata.
-- `components`: navigation and project-filter interactions.
+- `components`: navigation, project-filter, education, research, publication, skills, and contact interfaces.
 - `config`: editable public profile content and its validated adapter.
 - `lib`: UI-independent profile contract and validation.
 - `scripts`: bounded static-build orchestration.
