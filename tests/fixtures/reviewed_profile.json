@@ -1,0 +1,300 @@
+{
+  "display_name": "YuedongSun",
+  "nickname": "Fonte",
+  "github_username": "YueDongSun",
+  "role": "Physics PhD · Developer & Researcher",
+  "summary": "Physics PhD candidate at Tsinghua University building cold-atom quantum platforms and AI-for-Science systems. I bridge experimental physics with software engineering through FPGA control, ML pipelines, and simulation tools in Python, Rust, C++, and C.",
+  "site_url": "https://yuedongsun.github.io",
+  "is_complete": true,
+  "availability": "Open to software development internships",
+  "focus_areas": [
+    "Quantum optics",
+    "AI for Science",
+    "Experimental systems",
+    "Scientific software"
+  ],
+  "languages": [
+    "Chinese · native",
+    "English · CET-4/6"
+  ],
+  "technical_skills": {
+    "software": ["Python", "Rust", "C++", "C", "Verilog HDL", "LabVIEW", "LaTeX"],
+    "systems": ["Mesh networking", "Server administration", "Git", "Linux"],
+    "research": ["Data analysis", "Scientific computing", "FPGA control", "ML pipelines", "Simulation"],
+    "optical": ["AOD multimode addressing", "SLM and OAM", "Beam shaping", "Crosstalk calibration"]
+  },
+  "contact_details": {
+    "primary_email": "syd23@mails.tsinghua.edu.cn",
+    "secondary_email": "yuedongsun02@gmail.com",
+    "scholar_url": "https://scholar.google.com/citations?user=0Sn386wAAAAJ&hl=en"
+  },
+  "experience": [
+    {
+      "title": "Ph.D. researcher",
+      "organization": "Center for Quantum Information, IIIS · Tsinghua University",
+      "period": "2023–present",
+      "description": "Multimode quantum relay networks with AOD-addressed cold-atom ensembles, combining experimental physics, software systems, and learning-based analysis."
+    },
+    {
+      "title": "Undergraduate researcher",
+      "organization": "School of the Gifted Young · USTC",
+      "period": "2020–2023",
+      "description": "Rare-earth quantum memory and repeater modelling, optical and microwave interface design, and nanofabrication-oriented photonic systems."
+    }
+  ],
+  "education": [
+    {
+      "title": "Ph.D. in Quantum Optics and Quantum Information",
+      "organization": "Tsinghua University, Beijing · Center for Quantum Information, IIIS",
+      "period": "2023–present",
+      "description": "Researching multimode quantum relay networks with AOD-addressed cold-atom ensembles."
+    },
+    {
+      "title": "B.Sc. in Optics and Optical Engineering",
+      "organization": "University of Science and Technology of China (USTC) · School of the Gifted Young",
+      "period": "2019–2023",
+      "description": "Training in mathematics, quantum mechanics, and computational physics."
+    }
+  ],
+  "research_projects": [
+    {
+      "id": "multiplexed_four_photon_entanglement",
+      "title": "High-rate multiplexed four-photon entanglement",
+      "period": "2024–2026",
+      "summary": "A high-rate matter–matter entanglement system built around multiplexed quantum memories.",
+      "details": "Using two 15×15 quantum memory arrays and a 2π-pulse protocol, the work achieved 546 Hz matter–matter entanglement over 20 km of fibre without active phase stabilisation. The result surpassed TPI and SPI by 75,932× and 23×, respectively. A Python/C++ simulation pipeline supported protocol optimisation and loss modelling.",
+      "figures": [
+        {"src": "/research/aod_optical_relay.png", "alt": "AOD-addressed optical relay with write, read, and signal paths.", "caption": "AOD-addressed optical relay and beam paths.", "width": 1672, "height": 941},
+        {"src": "/research/quantum_relay_network.png", "alt": "Two-node quantum memory relay with FPGA feedforward and count traces.", "caption": "Two-node relay architecture with FPGA feedforward.", "width": 968, "height": 557}
+      ],
+      "keywords": ["Quantum repeater", "Quantum memory", "Entanglement distribution", "Multiplexing"]
+    },
+    {
+      "id": "ai_entanglement_classification",
+      "title": "AI for Science · CNN–BiLSTM entanglement classification",
+      "period": "2024–2025",
+      "summary": "A hybrid deep-learning architecture for sample-efficient multipartite entanglement classification.",
+      "details": "Quantum density matrices are converted into multi-channel image representations and classified with a CNN–BiLSTM network for 3–4 qubit systems. The work covered architecture co-design, the data pipeline, and benchmarking against MLP and CNN baselines.",
+      "figures": [
+        {"src": "/research/cnn_bilstm_pipeline.png", "alt": "CNN and BiLSTM pipeline from measurement results to entanglement classification.", "caption": "Multi-channel representation and hybrid CNN–BiLSTM pipeline.", "width": 865, "height": 555}
+      ],
+      "keywords": ["Machine learning", "Entanglement classification", "CNN", "BiLSTM"]
+    },
+    {
+      "id": "slm_oam_multiplexing",
+      "title": "SLM-based OAM multimode multiplexing",
+      "period": "2022–2023",
+      "summary": "A combined AOD and orbital-angular-momentum approach to increase quantum memory capacity.",
+      "details": "Combined AOD-based optical-path multiplexing with OAM modes to boost quantum memory capacity by more than 10× beyond the 225-mode state of the art. Verified high efficiency and 0.5 dB bandwidth after AOD modulation, and developed Python tools for mode characterisation and crosstalk modelling.",
+      "figures": [
+        {"src": "/research/oam_multiplexing.png", "alt": "AOD and OAM optical multiplexing paths producing multiple spatial modes.", "caption": "AOD and OAM paths for multimode multiplexing.", "width": 744, "height": 517}
+      ],
+      "keywords": ["OAM", "SLM", "AOD", "Optical multiplexing", "Laguerre–Gaussian modes"]
+    },
+    {
+      "id": "aod_learning_noise_analysis",
+      "title": "High-dimensional AOD learning enhancement and noise analysis",
+      "period": "2026–present",
+      "summary": "A learning-based framework for feedback control and noise decomposition in high-dimensional AOD systems.",
+      "details": "The framework separates correctable and irrecoverable noise, studies five-arm feedback control with Hellinger-distance gain, and analyses ESM/CSM scaling with critical thresholds N₍c₎.",
+      "figures": [
+        {"src": "/research/aod_memory_array.png", "alt": "Signal and idler AODs addressing a selected region in a quantum memory array.", "caption": "Signal/idler AOD control over a selected memory-array region.", "width": 2171, "height": 724}
+      ],
+      "keywords": ["Quantum control", "Noise analysis", "Feedback", "ESM/CSM", "Physics-informed ML"]
+    },
+    {
+      "id": "rare_earth_memory_modeling",
+      "title": "Rare-earth solid-state quantum memory and repeater modelling",
+      "period": "2020–2022",
+      "summary": "A modelling and parameterisation framework for rare-earth-doped Y₂SiO₅ quantum memories.",
+      "details": "Built full Hamiltonian models spanning free-ion, crystal-field, Zeeman, and hyperfine terms down to low-energy spin Hamiltonians. The work included ZEFOZ analysis and comparison of AFC, spin-wave storage, NLPE-DLCZ, and single-ion repeater schemes.",
+      "figures": [
+        {"src": "/research/rare_earth_hamiltonian.png", "alt": "Rare-earth crystal structure, Hamiltonian terms, and energy-level diagram.", "caption": "Crystal-field and spin-Hamiltonian modelling view.", "width": 1192, "height": 544}
+      ],
+      "keywords": ["Rare-earth ions", "YSO", "Crystal field", "ZEFOZ", "AFC", "Quantum repeater"]
+    },
+    {
+      "id": "er3_yso_single_ion_node",
+      "title": "Er³⁺:YSO single-ion node · interface and nanofabrication",
+      "period": "2020–2022",
+      "summary": "An optical–microwave interface for communication-band Er³⁺:YSO single-ion repeater nodes.",
+      "details": "Designed grating couplers with Lumerical FDTD/MEEP (67.1% and 57.67% simulated peak efficiency, over 60 nm bandwidth), 50 Ω CPW layouts with COMSOL RF optimisation (about 3.99 G drive field at 1 W), and GDS/EBL/SEM fabrication workflows. Measured coupling efficiency was 10.36%.",
+      "figures": [
+        {"src": "/research/er3_yso_nanofabrication.png", "alt": "SEM images of fabricated photonic structures for an Er3+:YSO interface.", "caption": "SEM views from the nanofabrication workflow.", "width": 896, "height": 345}
+      ],
+      "keywords": ["Nanophotonics", "Grating coupler", "FDTD", "COMSOL", "CPW", "EBL", "Er³⁺:YSO"]
+    }
+  ],
+  "publications": [
+    {
+      "id": "shi_500hz_atom_entanglement",
+      "contribution": "Co-first author",
+      "title": "500 Hz atom–atom entanglement distribution over metropolitan-scale fibres",
+      "venue": "Nature Photonics",
+      "status": "Under review",
+      "reference": "J.-X. Shi*, Y.-D. Sun*, et al."
+    },
+    {
+      "id": "sun_sample_efficient_entanglement",
+      "contribution": "Co-first author",
+      "title": "Towards Sample-Efficient Entanglement Classification for 3–4 Qubit Systems",
+      "venue": "npj Quantum Information",
+      "status": "Under review",
+      "reference": "Q. Sun*, Y. Sun*, et al."
+    },
+    {
+      "id": "sun_physics_informed_learning",
+      "contribution": "Co-first author",
+      "title": "Measurement-Efficient Characterization and Control of Multipartite Quantum States via Physics-Informed Learning",
+      "venue": "Manuscript in preparation",
+      "status": "In preparation",
+      "reference": "Y.-D. Sun*, Y. Hu*, et al."
+    },
+    {
+      "id": "zhang_12km_atom_photon",
+      "contribution": "Co-author",
+      "title": "Fast delivery of heralded atom–photon quantum correlation over 12 km fiber",
+      "venue": "Nature Communications 15, 10306",
+      "status": "Published · 2024",
+      "reference": "S. Zhang, J. Shi, Y. Liang, Y. Sun, et al."
+    },
+    {
+      "id": "shi_w_state_fusion",
+      "contribution": "Co-author",
+      "title": "Scalable and modular generation of W-state entanglements via memory-enhanced fusion",
+      "venue": "Physical Review Letters 135(15), 150802",
+      "status": "Published · 2025",
+      "reference": "J. Shi, S. Zhang, Y. Wu, Y. Sun, et al."
+    },
+    {
+      "id": "lai_crosstalk_free_node",
+      "contribution": "Co-author",
+      "title": "Realization of a crosstalk-free two-ion node for long-distance quantum networking",
+      "venue": "Physical Review Letters 134(7), 070801",
+      "status": "Published · 2025",
+      "reference": "P.-C. Lai, Y. Wang, J.-X. Shi, …, Y.-D. Sun, et al."
+    },
+    {
+      "id": "cui_metropolitan_network_node",
+      "contribution": "Co-author",
+      "title": "A metropolitan-scale trapped-ion quantum network node",
+      "venue": "arXiv:2503.13898",
+      "status": "Preprint · 2025",
+      "reference": "Z.-B. Cui, Z.-Q. Wang, …, Y.-D. Sun, et al."
+    },
+    {
+      "id": "cui_12km_ion_entanglement",
+      "contribution": "Co-author",
+      "title": "Multiplexed ion–ion entanglement over 1.2 km fibers",
+      "venue": "arXiv:2510.20392",
+      "status": "Preprint · 2025",
+      "reference": "Z.-B. Cui, Z.-Q. Wang, …, Y.-D. Sun, et al."
+    },
+    {
+      "id": "liao_aod_oam_multiplexing",
+      "contribution": "Co-author",
+      "title": "Free-space optical multiplexing scheme based on AOD with OAM",
+      "venue": "Optics Express 33(11), 23605",
+      "status": "Published · 2025",
+      "reference": "Z. Liao, Q. Sun, Y. Hu, N. Jiang"
+    }
+  ],
+  "projects": [
+    {
+      "id": "vibemux",
+      "title": "VibeMux",
+      "repository_name": "vibemux",
+      "description": "A Windows-first, local-first, terminal-native collaboration environment for multiple coding harnesses.",
+      "details": "Task, Run, and Event domain models stay independent from terminal backends. The repository combines controlled harness adapters, Git worktrees, an append-only SQLite event log, mock workflows, and an in-progress Rust daemon migration.",
+      "category": "Agent tooling",
+      "url": "https://github.com/YueDongSun/vibemux",
+      "tags": ["Windows", "Coding agents", "Git worktrees", "SQLite"],
+      "motif": "terminal"
+    },
+    {
+      "id": "brisk",
+      "title": "Brisk",
+      "repository_name": "Brisk",
+      "description": "A modern quantum framework for photonic circuit design and quantum network simulation.",
+      "details": "The public project describes an interactive circuit designer, network simulation, QKD analysis, Perceval integration, photonic chip design with GDS Factory, and tomography and error-analysis tools.",
+      "category": "Quantum software",
+      "url": "https://github.com/YueDongSun/Brisk",
+      "tags": ["Photonics", "Simulation", "QKD", "GDS Factory"],
+      "motif": "orbit"
+    },
+    {
+      "id": "eigent",
+      "title": "Eigent",
+      "repository_name": "eigent",
+      "description": "An open-source Cowork desktop application for coordinating AI workforces and complex workflows.",
+      "details": "The repository focuses on local deployment, multi-agent coordination, custom model support, MCP integration, and human-in-the-loop workflow automation.",
+      "category": "Agent tooling",
+      "url": "https://github.com/YueDongSun/eigent",
+      "tags": ["Multi-agent", "Local deployment", "MCP", "Automation"],
+      "motif": "network"
+    },
+    {
+      "id": "quantum_calibration",
+      "title": "Quantum Calibration",
+      "repository_name": "Quantum-Calibration-Agent-Blueprint",
+      "description": "A reference blueprint for AI-powered quantum device calibration workflows.",
+      "details": "The public README covers experiment discovery, structured execution, vision-based analysis, multi-step validation, HDF5 and SQLite result management, and support for multiple model providers.",
+      "category": "Quantum software",
+      "url": "https://github.com/YueDongSun/Quantum-Calibration-Agent-Blueprint",
+      "tags": ["Calibration", "AI workflows", "Vision analysis", "HDF5"],
+      "motif": "calibration"
+    }
+  ],
+  "private_projects": [
+    {
+      "id": "n_qubit",
+      "title": "N-Qubit W-State Control",
+      "repository_name": "N_qubit",
+      "description": "Control, sequence generation, acquisition, and feedback analysis for 3- and 4-qubit W-state experiments.",
+      "details": "A unified experimental loop connects W/R sequence generation, Fourier validation, AWG waveform upload, serial acquisition, snapshot export, and optional feedback-model inference.",
+      "category": "Quantum systems",
+      "tags": ["W-state experiments", "PyQt", "AWG control", "Feedback analysis"],
+      "motif": "calibration"
+    },
+    {
+      "id": "pdf_ocr_tex",
+      "title": "PDF OCR TEX",
+      "repository_name": "pdf_ocr_tex",
+      "description": "A local Windows desktop tool for turning academic PDFs into complete LaTeX submission projects.",
+      "details": "The tool combines a PyQt5 interface, session persistence, BibTeX management, journal template switching, optional model assistance, and PyInstaller packaging.",
+      "category": "Developer tooling",
+      "tags": ["Python", "LaTeX", "PyQt5", "BibTeX"],
+      "motif": "terminal"
+    },
+    {
+      "id": "tailnet_mesh",
+      "title": "Tailnet Mesh",
+      "repository_name": "tailnet_mesh",
+      "description": "A self-hosted mesh networking toolkit for coordinating Tailscale-connected machines.",
+      "details": "The private project brings together fleet health, distributed compute, file sharing, Git hosting, VPN automation, and AI collaboration in one operations control plane.",
+      "category": "Infrastructure",
+      "tags": ["Python", "Tailscale", "Distributed systems", "WebUI"],
+      "motif": "network"
+    },
+    {
+      "id": "cc_copilot_kilo",
+      "title": "AI Agent Gateway",
+      "repository_name": "cc_copilot_kilo",
+      "description": "A unified gateway and configuration switcher for AI coding agents.",
+      "details": "The desktop and local proxy stack covers multi-protocol routing, provider switching, circuit-breaker failover, backups, MCP, skills, and session tooling.",
+      "category": "Agent tooling",
+      "tags": ["Tauri", "Rust", "AI agents", "Proxy"],
+      "motif": "network"
+    },
+    {
+      "id": "ai_agent_learning",
+      "title": "AI Agent Learning Directory",
+      "repository_name": "ai-agent-learning",
+      "description": "A structured study directory for key papers and runnable examples in AI agent systems.",
+      "details": "The learning path connects reasoning and acting, memory, retrieval, workflow search, and skill evolution to self-contained Python implementations.",
+      "category": "Research notes",
+      "tags": ["Agents", "RAG", "Memory", "Python"],
+      "motif": "orbit"
+    }
+  ]
+}

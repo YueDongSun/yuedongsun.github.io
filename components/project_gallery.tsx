@@ -27,8 +27,8 @@ export function Project_gallery({ projects }: { projects: Project_entry[] }) {
             hidden={selected_category !== all_projects_label && project.category !== selected_category}
             aria-label={`View ${project.title} on GitHub (opens in a new tab)`}>
             <div className={`project_art art_${project.motif}`} aria-hidden="true">
-              <span className="art_index">0{project_index + 1} / {project.category.toUpperCase()}</span>
-              {project.motif === 'terminal' && <div className="terminal_window"><div className="terminal_dots"><i /><i /><i /></div><p><span>~/</span> vibemux</p><p className="terminal_command">plan <span>→</span> build <span>→</span> verify<span className="terminal_cursor">_</span></p></div>}
+              <span className="art_index">{String(project_index + 1).padStart(2, '0')} / {project.category.toUpperCase()}</span>
+              {project.motif === 'terminal' && <div className="terminal_window"><div className="terminal_dots"><i /><i /><i /></div><p><span>~/</span> {project.repository_name}</p><p className="terminal_command">plan <span>→</span> build <span>→</span> verify<span className="terminal_cursor">_</span></p></div>}
               {project.motif === 'orbit' && <div className="quantum_orbits"><i /><i /><i /><b>ψ</b><span className="quantum_point" /></div>}
               {project.motif === 'network' && <div className="agent_network"><span className="agent_node">Think</span><i /><span className="agent_node central_node">Create</span><i /><span className="agent_node">Refine</span></div>}
               {project.motif === 'calibration' && <div className="calibration_graph"><i /><i /><i /><i /><i /><i /><i /><span>tune · measure · learn</span></div>}

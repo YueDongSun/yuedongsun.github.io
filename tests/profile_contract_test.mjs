@@ -3,8 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync as read_file_sync } from 'node:fs';
 import { parse_profile } from '../lib/profile_contract.ts';
 
-const profile_source = JSON.parse(read_file_sync(new URL('../config/profile.json', import.meta.url), 'utf8').replace(/^\uFEFF/, ''));
+const profile_source = JSON.parse(read_file_sync(new URL('./fixtures/reviewed_profile.json', import.meta.url), 'utf8').replace(/^\uFEFF/, ''));
 
+// The historical content snapshot is a fixture, not a restriction on future profile edits.
 test('the reviewed CV profile preserves education, research, publications, and contact links', () => {
   const parsed_profile = parse_profile(profile_source);
   assert.equal(parsed_profile.display_name, 'YuedongSun');
@@ -76,4 +77,25 @@ test('canonical URLs reject fragments and preserve a valid project subpath', () 
   assert.throws(() => parse_profile(invalid_profile), /query or fragment/);
   invalid_profile.site_url = 'https://example.github.io/cv/';
   assert.equal(parse_profile(invalid_profile).site_url, 'https://example.github.io/cv');
+});
+
+
+test('the editable public profile satisfies the same safety contract', () => {
+  const current_profile = JSON.parse(read_file_sync(new URL('../config/profile.json', import.meta.url), 'utf8').replace(/^\uFEFF/, ''));
+  assert.doesNotThrow(() => parse_profile(current_profile));
+});
+
+test('ordinary content updates may change contact details and collection sizes', () => {
+  const updated_profile = structuredClone(profile_source);
+  updated_profile.display_name = 'Example Researcher';
+  updated_profile.contact_details.primary_email = 'researcher@example.org';
+  updated_profile.research_projects.push({ ...updated_profile.research_projects[0], id: 'new_research_project' });
+  updated_profile.publications.push({ ...updated_profile.publications[0], id: 'new_publication' });
+  updated_profile.projects.push({ ...updated_profile.projects[0], id: 'new_repository' });
+  const parsed_profile = parse_profile(updated_profile);
+  assert.equal(parsed_profile.display_name, 'Example Researcher');
+  assert.equal(parsed_profile.contact_details.primary_email, 'researcher@example.org');
+  assert.equal(parsed_profile.research_projects.length, updated_profile.research_projects.length);
+  assert.equal(parsed_profile.publications.length, updated_profile.publications.length);
+  assert.equal(parsed_profile.projects.length, updated_profile.projects.length);
 });

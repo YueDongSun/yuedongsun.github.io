@@ -1,13 +1,28 @@
+'use client';
+
+import { useRef as use_ref } from 'react';
 import Image from 'next/image';
 import type { Research_project } from '../lib/profile_contract';
 
 export function Research_project_list({ projects }: { projects: Research_project[] }) {
+  const list_ref = use_ref<HTMLDivElement>(null);
+
+  function set_all_open(open: boolean) {
+    list_ref.current?.querySelectorAll('details').forEach((project) => { project.open = open; });
+  }
+
   return (
-    <div className="research_list">
+    <div className="research_portfolio">
+      <div className="research_toolbar" role="group" aria-label="Research project display">
+        <span>{projects.length} {projects.length === 1 ? 'project' : 'projects'}</span>
+        <button type="button" onClick={() => set_all_open(true)}>Expand all <span aria-hidden="true">＋</span></button>
+        <button type="button" onClick={() => set_all_open(false)}>Collapse all <span aria-hidden="true">−</span></button>
+      </div>
+      <div className="research_list" ref={list_ref}>
       {projects.map((project, project_index) => (
         <details className="research_item" key={project.id} open={project_index === 0}>
           <summary>
-            <span className="research_index">0{project_index + 1}</span>
+            <span className="research_index">{String(project_index + 1).padStart(2, '0')}</span>
             <span className="research_title">{project.title}</span>
             <time>{project.period}</time>
             <span className="research_toggle" aria-hidden="true">＋</span>
@@ -29,6 +44,7 @@ export function Research_project_list({ projects }: { projects: Research_project
           </div>
         </details>
       ))}
+      </div>
     </div>
   );
 }
