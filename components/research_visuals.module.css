@@ -63,7 +63,7 @@
 .lightboxHeader button:hover { background:var(--surface); }
 .lightboxHeader button span { color:var(--accent); font-size:22px; line-height:1; }
 .fullImageFrame { display:flex; align-items:center; justify-content:center; padding:22px; background:#fff; }
-.fullImage { display:block; width:auto; max-width:100%; height:auto; max-height:74vh; object-fit:contain; }
+.fullImage { display:block; width:100%; max-width:100%; height:auto; max-height:74vh; object-fit:contain; }
 .lightboxFooter { padding:15px 22px; border-top:1px solid var(--line); }
 .lightboxFooter > p { margin:0; color:var(--muted); font-size:12px; line-height:1.8; }
 .lightboxFooter > div { display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px 20px; margin-top:10px; font-size:11px; }
