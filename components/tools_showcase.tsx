@@ -1,5 +1,6 @@
 import type { Tool_accent } from '../config/tools';
 import { tool_principles, tool_questions, tools_catalog } from '../config/tools';
+import { Project_visual } from './project_visual';
 import styles from './tools_showcase.module.css';
 
 const accent_class_names: Record<Tool_accent, string> = {
@@ -96,6 +97,10 @@ export function Tools_showcase({ github_url }: { github_url: string }) {
                 <ul aria-label={`${product.name} topics`}>
                   {product.tags.map((tag) => <li key={tag}>{tag}</li>)}
                 </ul>
+              </div>
+
+              <div className={styles.product_visual}>
+                <Project_visual project_id={product.id} featured />
               </div>
 
               <div className={styles.product_details}>

@@ -6,13 +6,15 @@ A compact personal homepage for **Yuedong Sun / 孙跃东**, connecting quantum 
 - **Software introductions:** https://yuedongsun.github.io/tools/
 - **Source:** https://github.com/YueDongSun/yuedongsun.github.io
 
-The design uses warm paper colours, dark text, serif headings, fine rules, and a dense responsive layout. A personal sidebar accompanies education and experience, research, publications, an interactive project directory, and contact details.
+The design uses warm paper colours, dark text, serif headings, fine rules, and a dense responsive layout. A personal sidebar accompanies education and experience, an illustrated research gallery, publications with paper figures, an interactive project directory, and contact details.
 
 ## Content
 
 `config/profile.json` holds the biography, education, experience, research figures, publications, and project descriptions. `config/tools.ts` holds the expanded software introductions. Institution marks are local assets from the official websites; their origins are documented in `public/institutions/SOURCES.md`.
 
 The publication list distinguishes journal articles, preprints, and manuscripts. Published records link directly to their DOI, and the preprint links to arXiv. The existing Google Scholar profile is linked without embedding changing citation metrics. Project entries show development status, and derived projects retain upstream attribution.
+
+Research images are visible in the overview and can be enlarged. Lightweight previews keep the original figures available for close reading. `config/publication_visuals.ts` associates paper images with publication IDs; figure sources and credits live in `public/papers/SOURCES.md`. The project directory and Tools page use compact SVG workflow illustrations to explain each tool's purpose.
 
 See [content sources](docs/content_sources_20261112.md) for the November 2026 bibliography and profile update, and [editing guide](docs/editing_guide.md) for routine maintenance.
 
@@ -45,6 +47,7 @@ The two former Sites introductions have separate source checkouts and fixed HTTP
 
 - Search public projects by name, subject, or technology; combine with a category filter.
 - Expand individual research entries or use the expand/collapse controls.
+- Enlarge research and publication figures; close the viewer with its close control or Escape.
 - Use the mobile navigation menu, section links, and skip link.
 - Choose **Print CV** to print or save a PDF; research disclosures expand for printing and then restore their state.
 - Layouts adapt from a desktop sidebar to a single-column mobile view; motion respects reduced-motion settings.
@@ -61,6 +64,9 @@ The two former Sites introductions have separate source checkouts and fixed HTTP
 | `lib/profile_contract.ts` | Typed content validation, URL and contact checks |
 | `public/institutions/` | Official institution marks and source credits |
 | `public/research/` | Research figures from the supplied CV |
+| `public/research/previews/` | Compressed web previews of selected research figures |
+| `public/papers/` | Publication figures and source credits |
+| `config/publication_visuals.ts` | Publication IDs mapped to figures, captions, and source links |
 | `scripts/build_github_pages.mjs` | Next.js static-export orchestration |
 | `.github/workflows/deploy_pages.yml` | GitHub Pages publication |
 

@@ -2,6 +2,7 @@
 
 import { useState as use_state } from 'react';
 import type { Project_entry } from '../lib/profile_contract';
+import { Project_visual } from './project_visual';
 
 const all_projects_label = 'All projects';
 
@@ -28,6 +29,7 @@ export function Project_gallery({ projects }: { projects: Project_entry[] }) {
             {(project as Project_entry & {status?: string}).status && <span className="project_status">{(project as Project_entry & {status?: string}).status}</span>}
             <h3>{project.title}</h3>
             <p className="project_description">{project.description}</p>
+            <Project_visual project_id={project.id} />
             <p className="project_detail">{project.details}</p>
             {(project as Project_entry & {attribution?: string}).attribution && <p className="project_attribution">{(project as Project_entry & {attribution?: string}).attribution}</p>}
             <ul className="project_tags" aria-label="Topics">{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
