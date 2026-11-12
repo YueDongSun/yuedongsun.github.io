@@ -3,13 +3,14 @@
   "nickname": "Fonte",
   "github_username": "YueDongSun",
   "role": "Physics Ph.D. student · Researcher & developer",
-  "summary": "I work at the intersection of quantum physics, machine learning, and software systems. At Tsinghua IIIS, I study multiplexed quantum memories and quantum networks. At ByteDance Seed, I work on STEM data and evaluation. I build tools that turn research questions into experiments, code, and measurable results.",
+  "summary": "I work at the intersection of quantum physics, machine learning, and software systems. At Tsinghua IIIS, I study multiplexed quantum memories and quantum networks. At ByteDance Seed, I work on reinforcement learning for STEM, spanning data, algorithms, and benchmarks. I build tools that turn research questions into experiments, code, and measurable results.",
   "site_url": "https://yuedongsun.github.io",
   "is_complete": true,
   "availability": "Physics Ph.D. student · Seed intern",
   "focus_areas": [
     "Quantum networks",
     "Quantum memories",
+    "STEM reinforcement learning",
     "AI for Science",
     "Agent infrastructure"
   ],
@@ -52,10 +53,10 @@
   },
   "experience": [
     {
-      "title": "STEM data & evaluation · Intern",
+      "title": "STEM reinforcement learning · Intern",
       "organization": "ByteDance Seed · 字节跳动",
       "period": "2026.11–present",
-      "description": "Connecting scientific domain expertise with post-training workflows through STEM datasets, evaluation rubrics, and benchmarks."
+      "description": "Reinforcement learning for STEM reasoning, spanning data development, algorithm research, and benchmark design."
     },
     {
       "title": "Ph.D. · Quantum Optics & Information",

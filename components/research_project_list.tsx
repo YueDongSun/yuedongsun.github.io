@@ -6,9 +6,7 @@ import { Figure_viewer } from './figure_viewer';
 import styles from './research_visuals.module.css';
 
 const visual_selections = [
-  { id: 'multiplexed_four_photon_entanglement', title: 'Quantum memories', preview: '/research/previews/aod_optical_relay.webp' },
-  { id: 'ai_entanglement_classification', title: 'Learning from measurements', preview: '/research/previews/cnn_bilstm_pipeline.webp' },
-  { id: 'slm_oam_multiplexing', title: 'Optical mode multiplexing', preview: '/research/previews/oam_multiplexing.webp' },
+  { id: 'multiplexed_four_photon_entanglement', title: 'Cold atoms & optical control', preview: '/research/previews/aod_optical_relay.webp' },
   { id: 'rare_earth_memory_modeling', title: 'Rare-earth quantum systems', preview: '/research/previews/rare_earth_hamiltonian.webp' },
 ];
 
@@ -33,10 +31,10 @@ export function Research_project_list({ projects }: { projects: Research_project
           if (!project || !figure) return null;
           return (
             <article className={styles.galleryCard} key={project.id}>
-              <Figure_viewer {...figure} preview_src={selection.preview} title={selection.title} source_label="Research portfolio / CV" compact sizes="(max-width: 700px) 46vw, (max-width: 1200px) 30vw, 230px" />
+              <Figure_viewer {...figure} preview_src={selection.preview} title={selection.title} source_label="Research portfolio / CV" compact sizes="(max-width: 700px) 100vw, 560px" />
               <div className={styles.galleryCopy}>
                 <a href={`#research-${project.id}`} onClick={() => open_project(project.id)}>{selection.title}<span aria-hidden="true"> ↘</span></a>
-                <p>{figure.caption}</p>
+                <p>{project.summary}</p>
               </div>
             </article>
           );

@@ -6,6 +6,7 @@ import { Project_gallery } from '../components/project_gallery';
 import { Research_project_list } from '../components/research_project_list';
 import { Skills_matrix } from '../components/skills_matrix';
 import { Site_header } from '../components/site_header';
+import { Seed_research } from '../components/seed_research';
 import { github_url, profile } from '../config/profile';
 
 function institution(organization: string) {
@@ -61,9 +62,9 @@ export default function Cv_page() {
         </aside>
         <div className="portfolio_content">
           <section className="introduction" id="about" aria-labelledby="intro_heading">
-            <div className="intro_topline"><p className="eyebrow">A PERSONAL NOTEBOOK</p><span>Research & engineering</span></div>
+            <div className="intro_topline"><p className="eyebrow">PHYSICS, LEARNING & ENGINEERING</p><span>Research & engineering</span></div>
             <h2 id="intro_heading">Quantum systems.<br /><em>Useful software.</em></h2>
-            <p>I work across quantum memories, physical inference, and the tools that make research easier to do. This is a collection of my experiments, papers, and software.</p>
+            <p>I work across quantum memories, STEM reinforcement learning, and the tools that make research easier to do. Explore my experiments, published work, and software.</p>
           </section>
           <section className="experience_section" id="experience" aria-labelledby="experience_heading">
             <div className="section_heading compact_heading">
@@ -85,6 +86,7 @@ export default function Cv_page() {
               })}
             </div>
           </section>
+          <Seed_research />
           <section className="content_section research_section" id="research" aria-labelledby="research_heading">
             <div className="section_heading">
               <div><p className="eyebrow">EXPERIMENTS & QUESTIONS</p><h2 id="research_heading">Research <span lang="zh-CN">研究</span></h2></div>

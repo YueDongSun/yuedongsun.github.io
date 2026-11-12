@@ -1,12 +1,12 @@
 # Yuedong Sun · Personal website
 
-A compact personal homepage for **Yuedong Sun / 孙跃东**, connecting quantum physics, scientific machine learning, and software engineering.
+A personal research portfolio for **Yuedong Sun / 孙跃东**, connecting quantum physics, STEM reinforcement learning, and software engineering.
 
 - **Homepage:** https://yuedongsun.github.io/
 - **Software introductions:** https://yuedongsun.github.io/tools/
 - **Source:** https://github.com/YueDongSun/yuedongsun.github.io
 
-The design uses warm paper colours, dark text, serif headings, fine rules, and a dense responsive layout. A personal sidebar accompanies education and experience, an illustrated research gallery, publications with paper figures, an interactive project directory, and contact details.
+The design uses warm paper colours, dark text, serif headings, fine rules, and large editorial images with compact supporting information. A personal sidebar accompanies education and experience, a panoramic Seed research illustration, an illustrated research gallery, publications with full-width paper figures, an interactive project directory, and contact details.
 
 ## Content
 
@@ -14,7 +14,7 @@ The design uses warm paper colours, dark text, serif headings, fine rules, and a
 
 The publication list distinguishes journal articles, preprints, and manuscripts. Published records link directly to their DOI, and the preprint links to arXiv. The existing Google Scholar profile is linked without embedding changing citation metrics. Project entries show development status, and derived projects retain upstream attribution.
 
-Research images are visible in the overview and can be enlarged. Lightweight previews keep the original figures available for close reading. `config/publication_visuals.ts` associates paper images with publication IDs; figure sources and credits live in `public/papers/SOURCES.md`. The project directory and Tools page use compact SVG workflow illustrations to explain each tool's purpose.
+Research images are visible in the overview and can be enlarged. Lightweight previews keep the original figures available for close reading. `config/publication_visuals.ts` associates paper images with publication IDs and labels their published or preprint source; figure sources and credits live in `public/papers/SOURCES.md`. The project directory and Tools page use large SVG workflow illustrations to explain each tool's purpose. The generated concept illustration in `public/seed/` connects STEM data, reinforcement-learning algorithms, and benchmarks.
 
 See [content sources](docs/content_sources_20261112.md) for the November 2026 bibliography and profile update, and [editing guide](docs/editing_guide.md) for routine maintenance.
 
@@ -66,6 +66,7 @@ The two former Sites introductions have separate source checkouts and fixed HTTP
 | `public/research/` | Research figures from the supplied CV |
 | `public/research/previews/` | Compressed web previews of selected research figures |
 | `public/papers/` | Publication figures and source credits |
+| `public/seed/` | Generated STEM reinforcement-learning illustration and provenance |
 | `config/publication_visuals.ts` | Publication IDs mapped to figures, captions, and source links |
 | `scripts/build_github_pages.mjs` | Next.js static-export orchestration |
 | `.github/workflows/deploy_pages.yml` | GitHub Pages publication |

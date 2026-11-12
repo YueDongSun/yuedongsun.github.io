@@ -82,3 +82,39 @@
   .featured .caption strong { font-size:14pt; }
   .featured .caption span { font-size:8pt; }
 }
+/* Large editorial project illustrations. */
+@media screen {
+  .visual { margin:17px 0 20px; padding:17px 18px; border-radius:6px; }
+  .sketch_label { font-size:10px; letter-spacing:.09em; }
+  .canvas { height:250px; }
+  .small_label { font-size:9.5px; }
+  .caption { margin-top:9px; font-size:12px; line-height:1.65; }
+  .featured { display:block; padding:23px 26px 25px; margin:18px 0 22px; }
+  .featured .sketch_label { font-size:10px; }
+  .featured .canvas { height:340px; }
+  .featured .caption { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; gap:35px; margin-top:14px; padding:0; text-align:left; }
+  .featured .caption strong { margin:0; font-size:28px; line-height:1.15; }
+  .featured .caption span { max-width:none; font-size:13px; line-height:1.8; }
+}
+@media screen and (max-width:1150px) {
+  .canvas { height:235px; }
+  .featured .canvas { height:320px; }
+  .featured .caption strong { font-size:25px; }
+}
+@media screen and (max-width:700px) {
+  .visual { padding:14px; }
+  .canvas,.visual:not(.featured) .canvas { height:240px; }
+  .visual:not(.featured) .small_label { font-size:9.5px; }
+  .featured { padding:17px 14px; }
+  .featured .canvas { height:265px; }
+  .featured .caption { display:block; padding:0 5px; text-align:left; }
+  .featured .caption strong { margin-bottom:10px; font-size:27px; }
+  .featured .caption span { font-size:12px; }
+  .caption { font-size:12px; }
+}
+@media screen and (max-width:440px) {
+  .canvas,.visual:not(.featured) .canvas { height:215px; }
+  .featured .canvas { height:235px; }
+  .featured .caption strong { font-size:25px; }
+  .sketch_label,.featured .sketch_label { font-size:9px; }
+}

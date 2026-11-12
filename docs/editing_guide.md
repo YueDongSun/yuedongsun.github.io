@@ -16,13 +16,15 @@ Project search matches names, summaries, detailed text, categories, tags, and re
 
 The research overview displays selected figures from `research_projects`. Original files stay in `public/research/`; the selected gallery images have compressed WebP previews in `public/research/previews/`. Preserve the original image proportions and use the full image in the enlarged view.
 
-`config/publication_visuals.ts` maps an existing publication ID to its image, caption, source URL, and dimensions. Add the corresponding original source and credit to `public/papers/SOURCES.md`. Use a figure belonging to that exact paper; entries without a figure keep their compact text layout.
+`config/publication_visuals.ts` maps an existing publication ID to its image, caption, source URL, version label, and dimensions. Add the corresponding original source and credit to `public/papers/SOURCES.md`. Use a complete figure belonging to that exact paper and distinguish the journal version from a preprint. Entries without a figure keep their compact text layout.
+
+The Seed section uses the panoramic illustration in `public/seed/`, with its provenance in `SOURCES.md`. Keep the stated work scope aligned with the profile: reinforcement learning for STEM, spanning data, algorithms, and benchmarks. The artwork is a concept illustration; technical claims or quantitative results should come from their actual sources.
 
 `components/project_visual.tsx` holds the reusable SVG workflow illustrations for the public projects and software introductions. Keep their labels aligned with the project descriptions and development stages. The diagrams explain roles and information flow; measurements belong in figures with their actual sources.
 
 ## Layout and appearance
 
-`app/globals.css` defines the warm paper palette, serif headings, compact rows, responsive sidebar, navigation, disclosure panels, project directory, and print styles. `components/tools_showcase.module.css` applies the same language to the software route. Keep institution image aspect ratios and readable type sizes when adjusting density.
+`app/globals.css` defines the warm paper palette, serif headings, spacious image-led sections, compact metadata, responsive sidebar, navigation, disclosure panels, project directory, and print styles. `components/tools_showcase.module.css` applies the same language to the software route. Preserve complete scientific panels and institution image aspect ratios. Let the selected images occupy substantial space on desktop, while keeping text and controls readable on narrow screens.
 
 The legacy anchors `#about`, `#experience`, `#research`, `#projects`, `#publications`, `#skills`, and `#contact` are retained. Tools anchors include `#products`, `#tailnet_mesh`, `#cc`, `#vibemux`, `#principles`, and `#questions`.
 

@@ -4,6 +4,8 @@ These figures come from the cited publications. They retain every panel and the 
 
 Sources and article-specific licences were checked on 12 November 2026.
 
+The two Nature Communications figures are taken directly from their published article versions. The CNN–BiLSTM figure comes from arXiv v1 and is explicitly identified as a preprint figure, rather than a journal-published figure.
+
 ## Fast delivery of heralded atom–photon quantum correlation
 
 - **File:** `fast-delivery-2024-fig1.webp` — 999 × 755 pixels, 104,210 bytes.

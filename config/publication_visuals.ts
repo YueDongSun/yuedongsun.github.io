@@ -5,6 +5,7 @@ export const publication_visuals: Record<
     alt: string;
     caption: string;
     source_url: string;
+    source_label?: string;
     width: number;
     height: number;
   }
@@ -15,6 +16,7 @@ export const publication_visuals: Record<
     caption:
       "Fig. 1 · Implemented ion–photon node within a network concept; timing and scaling. Cui et al. (2026), CC BY-NC-ND 4.0.",
     source_url: "https://www.nature.com/articles/s41467-025-67311-5/figures/1",
+    source_label: "Published figure · Nature Communications (2026)",
     width: 1991,
     height: 791,
   },
@@ -24,6 +26,7 @@ export const publication_visuals: Record<
     caption:
       "Fig. 1 · Repeater concept and the implemented atom–photon protocol. Zhang et al. (2024), CC BY 4.0.",
     source_url: "https://www.nature.com/articles/s41467-024-54691-3/figures/1",
+    source_label: "Published figure · Nature Communications (2024)",
     width: 999,
     height: 755,
   },
@@ -31,8 +34,9 @@ export const publication_visuals: Record<
     src: "/papers/cnn-bilstm-2026-fig1.webp",
     alt: "Complete Figure 1 comparing two CNN–BiLSTM architectures: convolutional features are either flattened or reshaped into a sequence before entanglement classification.",
     caption:
-      "Fig. 1 · Two ways to connect convolutional features with BiLSTM classification. Q. Sun, Y. Sun et al. (2026), CC BY 4.0.",
+      "Preprint Fig. 1 · Two ways to connect convolutional features with BiLSTM classification. Q. Sun, Y. Sun et al. (2026), CC BY 4.0.",
     source_url: "https://arxiv.org/html/2601.22562v1#S3.F1",
+    source_label: "Preprint figure · arXiv (2026)",
     width: 747,
     height: 446,
   },
