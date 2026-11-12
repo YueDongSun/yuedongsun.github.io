@@ -6,7 +6,7 @@ import { github_url, profile } from '../../config/profile';
 
 const tools_title = `Tools — ${profile.display_name}`;
 const tools_description =
-  'Independent software for connected infrastructure, AI provider routing, and local-first coding workflows. Explore tailnet-mesh, cc, and vibemux.';
+  'Independent software for connected infrastructure, AI provider routing, and local-first coding workflows. Explore Tailnet Mesh, AI Agent Gateway, and VibeMux.';
 const tools_url = `${profile.site_url}/tools/`;
 const tools_image_url = `${profile.site_url}/tools/og.png`;
 
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: tools_description,
     images: [{
       url: tools_image_url,
-      alt: 'Your tools. Your machines. Your workflow. — tailnet-mesh, cc, and vibemux',
+      alt: 'Independent software by Yuedong Sun — Tailnet Mesh, AI Agent Gateway, and VibeMux',
     }],
   },
   twitter: {
@@ -42,7 +42,7 @@ export default function Tools_page() {
       <Tools_showcase github_url={github_url} />
       <footer className="site_footer">
         <span>{profile.display_name}<span className="wordmark_dot">.</span><span className="footer_caption">Independent tools, shared direction.</span></span>
-        <span className="footer_platform">Product overviews. No live connections.</span>
+        <span className="footer_platform">Agent systems · Infrastructure · Developer tools.</span>
         <Link href="/">Back to portfolio ↑</Link>
       </footer>
     </div>

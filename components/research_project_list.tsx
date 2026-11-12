@@ -14,16 +14,16 @@ export function Research_project_list({ projects }: { projects: Research_project
   return (
     <div className="research_portfolio">
       <div className="research_toolbar" role="group" aria-label="Research project display">
-        <span>{projects.length} {projects.length === 1 ? 'project' : 'projects'}</span>
+        <span>Open a topic for methods, figures & context.</span>
         <button type="button" onClick={() => set_all_open(true)}>Expand all <span aria-hidden="true">＋</span></button>
         <button type="button" onClick={() => set_all_open(false)}>Collapse all <span aria-hidden="true">−</span></button>
       </div>
       <div className="research_list" ref={list_ref}>
       {projects.map((project, project_index) => (
-        <details className="research_item" key={project.id} open={project_index === 0}>
+        <details className="research_item" key={project.id} >
           <summary>
             <span className="research_index">{String(project_index + 1).padStart(2, '0')}</span>
-            <span className="research_title">{project.title}</span>
+            <span className="research_title">{project.title}<span className="research_preview">{project.summary}</span></span>
             <time>{project.period}</time>
             <span className="research_toggle" aria-hidden="true">＋</span>
           </summary>

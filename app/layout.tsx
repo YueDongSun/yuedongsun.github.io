@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { profile } from '../config/profile';
 import './globals.css';
 
-const site_title = `${profile.display_name} — ${profile.role}`;
+const site_title = `${profile.display_name} 孙跃东 — Quantum Physics & AI Systems`;
 const social_image_url = `${profile.site_url}/og.png`;
 
 export const metadata: Metadata = {

@@ -68,12 +68,12 @@ export const tools_catalog: Tool_product[] = [
       },
     ],
     caveat:
-      'Requires your own Tailscale-connected environment. Available capabilities and acceptance vary by platform; deployment still needs configuration and verification.',
+      'Self-hosted on your own Tailscale network. Setup and platform checks are described in the project documentation.',
     repository_url: null,
   },
   {
     id: 'cc',
-    name: 'cc',
+    name: 'AI Agent Gateway',
     category: 'CONNECT YOUR AI TOOLS',
     layer: 'INTELLIGENCE',
     status: 'Desktop preview',
@@ -104,8 +104,8 @@ export const tools_catalog: Tool_product[] = [
       },
     ],
     caveat:
-      'The v0.2.0 desktop release is an unsigned preview. This page does not provide a public download; provider credentials and service terms remain your responsibility.',
-    repository_url: null,
+      'Desktop v0.2.0 preview, with an independently runnable Node gateway. See the public repository for setup and release notes.',
+    repository_url: 'https://github.com/YueDongSun/ai-agent-gateway',
   },
   {
     id: 'vibemux',
@@ -126,7 +126,7 @@ export const tools_catalog: Tool_product[] = [
       {
         title: 'Separate changes by worktree',
         description:
-          'Prototype worktree-per-run isolation, reviewable diffs, and guarded cleanup. Worktrees isolate edits; they are not a security sandbox.',
+          'A separate Git worktree for each run, with reviewable diffs and deliberate cleanup.',
       },
       {
         title: 'Keep a durable record',
@@ -140,7 +140,7 @@ export const tools_catalog: Tool_product[] = [
       },
     ],
     caveat:
-      'Pre-alpha: real vendor CLI integration and native multi-harness terminal attachment remain incomplete. This is an evolving foundation, not a finished agent workspace.',
+      'Pre-alpha. Native multi-harness integration is the next development focus; local workflows and the Rust daemon form the current foundation.',
     repository_url: 'https://github.com/YueDongSun/vibemux',
   },
 ];
@@ -159,29 +159,29 @@ export const tool_principles: Tool_principle[] = [
   {
     number: '03',
     title: 'Progress you can inspect',
-    description: 'Clear development stages and limitations, without promises beyond the evidence.',
+    description: 'Readable source, reproducible checks, and a clear account of the current development stage.',
   },
 ];
 
 export const tool_questions: Tool_question[] = [
   {
-    question: 'Do I need all three products?',
+    question: 'How do the projects fit together?',
     answer:
-      'No. They are separate projects with distinct responsibilities. Start with the problem you have: machine coordination, AI provider routing, or local coding-agent workflows. The concept map describes a shared direction, not an automatically integrated stack.',
+      'Tailnet Mesh coordinates machines, AI Agent Gateway routes model requests, and VibeMux organises coding work. Each project has its own setup and can be explored independently.',
   },
   {
     question: 'What is ready to use today?',
     answer:
-      'Read each project\'s current setup and limitations before adopting it. tailnet-mesh requires a configured Tailscale environment and platform-specific verification. cc is an unsigned desktop preview. vibemux is pre-alpha, with native multi-harness integration still incomplete.',
+      'AI Agent Gateway provides a desktop preview and a standalone Node gateway. VibeMux is in pre-alpha. Tailnet Mesh is a self-hosted toolkit for a configured Tailscale network. The repository pages contain current setup instructions.',
   },
   {
-    question: 'Does local-first mean every request stays on my machine?',
+    question: 'Where do model requests run?',
     answer:
-      'No. cc can route requests to external model providers, and tailnet-mesh coordinates machines across your network. Local control does not mean offline operation; where data goes depends on your chosen providers, services, and configuration.',
+      'Routing is configured locally. Requests go to the model providers and endpoints you choose, while Tailnet Mesh coordinates the machines on your own network.',
   },
   {
-    question: 'Does this website connect to my machines or AI accounts?',
+    question: 'Where can I get started?',
     answer:
-      'No. This is a product overview. It has no live connection to your tailnet, local agents, model providers, or private configuration. The diagram is conceptual, not a live system status display.',
+      'Open the public GitHub repositories for installation instructions, source code, and development notes. For Tailnet Mesh, contact me to discuss the project and its deployment model.',
   },
 ];

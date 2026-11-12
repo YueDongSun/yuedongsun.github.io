@@ -13,11 +13,10 @@ export function Tools_showcase({ github_url }: { github_url: string }) {
     <main id="main_content" className={styles.tools_main}>
       <section id="tools_overview" className={styles.hero} aria-labelledby="tools_heading">
         <div className={styles.hero_copy}>
-          <p className={styles.eyebrow}><span className={styles.status_dot} /> INDEPENDENT TOOLS. SHARED DIRECTION.</p>
-          <h1 id="tools_heading">Your tools.<br />Your machines.<br /><em>Your workflow.</em></h1>
+          <p className={styles.eyebrow}><span className={styles.status_dot} /> SOFTWARE / TOOLS / EXPERIMENTS</p>
+          <h1 id="tools_heading">A small toolkit.<br /><em>Connected work.</em></h1>
           <p className={styles.hero_description}>
-            A small collection of software for connecting infrastructure, routing AI, and making room for focused work.
-            Built to keep you in control.
+            Projects for machine coordination, model routing, and coding-agent workflows. Explore what each tool does, how it fits, and its current development stage.
           </p>
           <div className={styles.hero_actions}>
             <a className={styles.primary_link} href="#products">Explore the products <span aria-hidden="true">↓</span></a>
@@ -25,20 +24,20 @@ export function Tools_showcase({ github_url }: { github_url: string }) {
               Follow the development <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <p className={styles.hero_note}>LOCAL-FIRST THINKING <span aria-hidden="true">·</span> INDEPENDENTLY BUILT</p>
+          <p className={styles.hero_note}>BY YUEDONG SUN <span aria-hidden="true">·</span> BEIJING</p>
         </div>
 
         <aside className={styles.concept_window}
-          aria-label="Conceptual overview of three independent products, not a live integration">
+          aria-label="Explore the three software projects">
           <div className={styles.window_bar}>
             <span className={styles.window_dots} aria-hidden="true"><i /><i /><i /></span>
-            <span>the connected toolkit</span>
+            <span>project index</span>
             <span aria-hidden="true">□</span>
           </div>
           <div className={styles.window_content}>
             <div className={styles.window_heading}>
-              <span>THREE TOOLS. THREE LAYERS.</span>
-              <span className={styles.concept_badge}>CONCEPT MAP</span>
+              <span>IN THIS TOOLKIT</span>
+              <span className={styles.concept_badge}>DIRECTORY</span>
             </div>
             <div className={styles.layer_stack}>
               {tools_catalog.map((product, product_index) => (
@@ -61,18 +60,20 @@ export function Tools_showcase({ github_url }: { github_url: string }) {
                 </div>
               ))}
             </div>
-            <p className={styles.window_footer}><span aria-hidden="true">&gt;_</span> Separate projects. A common philosophy.</p>
+            <p className={styles.window_footer}><span aria-hidden="true">&gt;_</span> Infrastructure / routing / workspace</p>
           </div>
         </aside>
       </section>
 
       <section id="products" className={styles.products_section} aria-labelledby="products_heading">
+        <span id="product_details" aria-hidden="true" />
+        <span id="engineering" aria-hidden="true" />
         <div className={styles.section_heading}>
           <div>
             <p className={styles.eyebrow}>THE TOOLKIT / 001</p>
-            <h2 id="products_heading">Small tools.<br /><em>More possibilities.</em></h2>
+            <h2 id="products_heading">The projects.</h2>
           </div>
-          <p>Different problems.<br />The same respect for your workflow.</p>
+          <p>A closer look at the tools and their development.</p>
         </div>
 
         <div className={styles.product_list}>
@@ -107,7 +108,7 @@ export function Tools_showcase({ github_url }: { github_url: string }) {
                     <a className={styles.text_link} href={product.repository_url} target="_blank"
                       rel="noopener noreferrer">Explore the repository <span aria-hidden="true">↗</span></a>
                   ) : (
-                    <span className={styles.availability_note}>Public repository not linked here.</span>
+                    <span className={styles.availability_note}>Research & development project</span>
                   )}
                 </div>
                 <ol className={styles.capability_list}>
@@ -120,20 +121,21 @@ export function Tools_showcase({ github_url }: { github_url: string }) {
                 </ol>
               </div>
 
-              <p className={styles.product_caveat}><strong>Current boundary</strong><span>{product.caveat}</span></p>
+              <p className={styles.product_caveat}><strong>Development stage</strong><span>{product.caveat}</span></p>
             </article>
           ))}
         </div>
       </section>
 
+      <span id="philosophy" aria-hidden="true" />
       <section id="principles" className={styles.principles_section} aria-labelledby="principles_heading">
         <div className={styles.section_heading}>
           <div>
             <p className={styles.eyebrow}>THE COMMON THREAD / 002</p>
-            <h2 id="principles_heading">Software that fits<br /><em>the way you build.</em></h2>
+            <h2 id="principles_heading">Working principles.</h2>
           </div>
           <div className={styles.section_aside_copy}>
-            <p>Keep tools understandable. Make boundaries explicit. Let each project do its own job well.</p>
+            <p>Understandable tools, clear ownership, and work you can inspect.</p>
             <p>
               Infrastructure, intelligence, and workspace are different layers. These projects explore each one with a
               shared preference for local control, clear ownership, and reviewable work.
@@ -154,8 +156,8 @@ export function Tools_showcase({ github_url }: { github_url: string }) {
       <section id="questions" className={styles.questions_section} aria-labelledby="questions_heading">
         <div className={styles.question_intro}>
           <p className={styles.eyebrow}>GOOD TO KNOW / 003</p>
-          <h2 id="questions_heading">A few useful<br /><em>details.</em></h2>
-          <p>Clear expectations before you dive in.</p>
+          <h2 id="questions_heading">Practical details.</h2>
+          <p>Setup, scope, and getting started.</p>
         </div>
         <div className={styles.question_list}>
           {tool_questions.map((item, question_index) => (
@@ -169,11 +171,11 @@ export function Tools_showcase({ github_url }: { github_url: string }) {
 
       <section className={styles.closing_section}>
         <div>
-          <p className={styles.eyebrow}>ALWAYS A WORK IN PROGRESS</p>
-          <h2>Built with curiosity.<br /><em>Made to be useful.</em></h2>
+          <p className={styles.eyebrow}>SOURCE & DEVELOPMENT</p>
+          <h2>Follow the work.</h2>
         </div>
         <a className={styles.primary_link} href={github_url} target="_blank" rel="noopener noreferrer">
-          See what comes next <span aria-hidden="true">↗</span>
+          Explore GitHub <span aria-hidden="true">↗</span>
         </a>
       </section>
     </main>

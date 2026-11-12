@@ -15,11 +15,12 @@ interface Navigation_item {
 
 const home_navigation_items: Navigation_item[] = [
   { href: '#about', section_id: 'about', label: 'About' },
+  { href: '#experience', section_id: 'experience', label: 'Experience' },
   { href: '#research', section_id: 'research', label: 'Research' },
-  { href: '#projects', section_id: 'projects', label: 'Code' },
   { href: '#publications', section_id: 'publications', label: 'Papers' },
+  { href: '#projects', section_id: 'projects', label: 'Projects' },
   { href: '/tools/', label: 'Tools' },
-  { href: '#contact', section_id: 'contact', label: 'Contact', compact_hidden: true },
+
 ];
 
 const tools_navigation_items: Navigation_item[] = [

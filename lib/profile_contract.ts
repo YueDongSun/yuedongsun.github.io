@@ -33,6 +33,8 @@ export interface Publication_entry {
   venue: string;
   status: string;
   reference: string;
+  url?: string;
+  link_label?: string;
 }
 
 export interface Technical_skills {
@@ -43,8 +45,8 @@ export interface Technical_skills {
 }
 
 export interface Contact_details {
-  primary_email: string;
-  secondary_email: string;
+  primary_email?: string;
+  secondary_email?: string;
   scholar_url: string;
 }
 
@@ -58,6 +60,9 @@ export interface Project_entry {
   url: string;
   tags: string[];
   motif: Project_motif;
+  status?: string;
+  attribution?: string;
+  upstream_url?: string;
 }
 
 export interface Private_project {
@@ -207,6 +212,8 @@ function parse_publications(value: unknown): Publication_entry[] {
       venue: require_text(publication.venue, `${entry_name}.venue`),
       status: require_text(publication.status, `${entry_name}.status`),
       reference: require_text(publication.reference, `${entry_name}.reference`),
+      ...(publication.url !== undefined ? { url: require_https_url(publication.url, `${entry_name}.url`) } : {}),
+      ...(publication.link_label !== undefined ? { link_label: require_text(publication.link_label, `${entry_name}.link_label`) } : {}),
     };
   });
 }
@@ -239,10 +246,10 @@ function parse_private_projects(value: unknown): Private_project[] {
 
 function parse_contact_details(value: unknown): Contact_details {
   const record = require_record(value, 'contact_details');
-  const primary_email = require_text(record.primary_email, 'contact_details.primary_email');
-  const secondary_email = require_text(record.secondary_email, 'contact_details.secondary_email');
+  const primary_email = record.primary_email === undefined ? undefined : require_text(record.primary_email, 'contact_details.primary_email');
+  const secondary_email = record.secondary_email === undefined ? undefined : require_text(record.secondary_email, 'contact_details.secondary_email');
   for (const [field_name, email] of [['primary_email', primary_email], ['secondary_email', secondary_email]] as const) {
-    if (!email_pattern.test(email)) throw new TypeError(`contact_details.${field_name} must be a valid address.`);
+    if (email !== undefined && !email_pattern.test(email)) throw new TypeError(`contact_details.${field_name} must be a valid address.`);
   }
   return {
     primary_email,
@@ -293,6 +300,9 @@ export function parse_profile(value: unknown): Profile_data {
       details: require_text(project.details, `${entry_name}.details`),
       category: require_text(project.category, `${entry_name}.category`),
       url: require_https_url(project.url, `${entry_name}.url`),
+      ...(project.status !== undefined ? { status: require_text(project.status, `${entry_name}.status`) } : {}),
+      ...(project.attribution !== undefined ? { attribution: require_text(project.attribution, `${entry_name}.attribution`) } : {}),
+      ...(project.upstream_url !== undefined ? { upstream_url: require_https_url(project.upstream_url, `${entry_name}.upstream_url`) } : {}),
       tags: require_array(project.tags, `${entry_name}.tags`).map((tag, tag_index) =>
         require_text(tag, `${entry_name}.tags[${tag_index}]`)),
       motif,

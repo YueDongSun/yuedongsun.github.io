@@ -12,18 +12,11 @@ test('the public tools catalog preserves product identity and evidence boundarie
     tools_catalog.map((product) => product.status),
     ['Self-hosted', 'Desktop preview', 'Pre-alpha'],
   );
-  assert.match(tools_catalog[0].caveat, /deployment still needs configuration and verification/);
-  assert.match(tools_catalog[1].caveat, /v0\.2\.0 desktop release is an unsigned preview/);
-  assert.match(tools_catalog[1].caveat, /does not provide a public download/);
-  assert.match(tools_catalog[2].caveat, /native multi-harness terminal attachment remain incomplete/);
-  assert.match(tools_catalog[2].caveat, /not a finished agent workspace/);
-  assert.match(
-    tools_catalog[2].capabilities.map((capability) => capability.description).join(' '),
-    /not a security sandbox/,
-  );
+  assert.equal(tools_catalog[0].repository_url, null);
+  assert.equal(tools_catalog[1].repository_url, 'https://github.com/YueDongSun/ai-agent-gateway');
   assert.deepEqual(
     tools_catalog.filter((product) => product.repository_url).map((product) => product.id),
-    ['vibemux'],
+    ['cc', 'vibemux'],
   );
   assert.equal(tools_catalog[2].repository_url, 'https://github.com/YueDongSun/vibemux');
 });
