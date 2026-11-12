@@ -1,6 +1,6 @@
 # Publication figure credits
 
-These figures come from the cited publications. They retain every panel and the original pixel dimensions. The only file change is PNG-to-WebP lossless encoding; decoded pixels were checked to be identical to the downloaded originals. No cropping, recoloring, annotations, labels, or scientific content were changed. Captions on this website are brief original summaries; the source pages contain the full original captions.
+The journal and preprint figures below come from their cited sources. Their three original WebP assets retain every panel and the original pixel dimensions, with lossless PNG-to-WebP encoding. The author-provided manuscript figure is documented separately below. Website captions are brief original summaries; source pages contain the full publication captions.
 
 Sources and article-specific licences were checked on 12 November 2026.
 
@@ -36,6 +36,15 @@ The two Nature Communications figures are taken directly from their published ar
 - **Source:** [Paper and full caption](https://arxiv.org/html/2601.22562v1#S3.F1) · [Abstract and version information](https://arxiv.org/abs/2601.22562v1) · [Original PNG](https://arxiv.org/html/2601.22562v1/fig1.png).
 - **Licence:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), identified in the arXiv HTML header.
 
-## Asset size
+## Manuscript with Yu Hu: quantum-state characterization and control
+
+- **Publication key:** `sun_physics_informed_learning`.
+- **Original:** `/research/yu_hu_multimode_control.jpg` — 1976 × 1147 pixels; the supplied JPEG is retained byte-for-byte.
+- **Web preview:** `/research/yu_hu_multimode_control.webp` — same dimensions and complete panels a–c; quality-94 WebP delivery copy.
+- **Source:** Image supplied directly by Yuedong Sun on 12 November 2026 for use on this website and identified as a figure for the work with Yu Hu.
+- **Content:** A spin-wave memory array, AOD-addressed write and read optical paths, photon detection, electronic timing, and the write/read measurement configurations.
+- **Display status:** Author-provided manuscript figure. The paper retains its existing `In preparation` bibliography status.
+
+## Original publication asset size
 
 The three WebP files total **350,544 bytes** (about 342 KiB). No figure is substituted for a different paper, and these publication assets are separate from the site's existing project illustrations.

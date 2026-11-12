@@ -43,7 +43,7 @@ export function Figure_viewer({ src, preview_src, alt, caption, width, height, t
       </a>
       <figcaption className={compact ? styles.visuallyHidden : styles.caption}>
         {caption}
-        {source_url && <a className={styles.sourceLink} href={source_url} target="_blank" rel="noopener noreferrer">{source_label || 'Figure source'} ↗</a>}
+        {source_url ? <a className={styles.sourceLink} href={source_url} target="_blank" rel="noopener noreferrer">{source_label || 'Figure source'} ↗</a> : source_label ? <span className={styles.sourceLabel}>{source_label}</span> : null}
       </figcaption>
       <dialog ref={dialog_ref} id={figure_id} className={styles.lightbox} aria-labelledby={heading_id} aria-describedby={caption_id} onClose={() => trigger_ref.current?.focus()}>
         <div className={styles.lightboxHeader}>

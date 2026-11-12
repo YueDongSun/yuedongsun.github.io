@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">OAM mode workflow</title>
+<desc id="desc">Qualitative research-method schematic: SLM phase preparation, optical mode analysis with AOD routing and alignment, then coupling and crosstalk characterization with Python analysis. No measurement data or numerical performance values are shown.</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#AB704F"/></marker>
+  <marker id="blue-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#8198A4"/></marker>
+  <radialGradient id="mode"><stop offset="0" stop-color="#FFFDFA"/><stop offset=".37" stop-color="#FFFDFA"/><stop offset=".57" stop-color="#8DA497"/><stop offset=".74" stop-color="#DFE8DF"/><stop offset="1" stop-color="#FFFDFA"/></radialGradient>
+  <linearGradient id="host" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ECF0EC"/><stop offset="1" stop-color="#D6E0E2"/></linearGradient>
+</defs>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect width="1200" height="760" fill="#F7F4EC"/>
+
+<text x="40" y="65" fill="#303A39" font-size="34" font-weight="600" text-anchor="start" >From phase to optical channels</text>
+<text x="40" y="105" fill="#6D7975" font-size="20" font-weight="400" text-anchor="start" >SLM-generated OAM modes · AOD routing · optical characterisation</text>
+<rect x="943" y="32" width="217" height="38" rx="19" fill="#DFE8DF" stroke="#DFE8DF" stroke-width="1.5" />
+<text x="1051.5" y="57" fill="#303A39" font-size="15" font-weight="600" text-anchor="middle" >METHOD SCHEMATIC</text>
+<line x1="40" y1="128" x2="1160" y2="128" stroke="#DADDD4" stroke-width="1.5" />
+<rect x="40" y="158" width="348" height="466" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
+<rect x="426" y="158" width="348" height="466" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
+<rect x="812" y="158" width="348" height="466" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
+<text x="64" y="195" fill="#AB704F" font-size="15" font-weight="600" text-anchor="start" >PREPARE</text>
+<text x="64" y="231" fill="#303A39" font-size="28" font-weight="600" text-anchor="start" >SLM phase</text>
+<text x="64" y="265" fill="#303A39" font-size="28" font-weight="600" text-anchor="start" >preparation</text>
+<rect x="93" y="314" width="241" height="194" rx="12" fill="#8198A4" stroke="#8198A4" stroke-width="1.5" />
+<rect x="107" y="328" width="213" height="165" rx="5" fill="#FFFDFA" stroke="#FFFDFA" stroke-width="1.5" />
+<rect x="115.0" y="336.0" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="131.4" y="336.0" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="147.8" y="336.0" width="15.5" height="15.5" rx="1" fill="#C9D5CB" stroke="#C9D5CB" stroke-width="0" />
+<rect x="164.2" y="336.0" width="15.5" height="15.5" rx="1" fill="#C9D5CB" stroke="#C9D5CB" stroke-width="0" />
+<rect x="180.6" y="336.0" width="15.5" height="15.5" rx="1" fill="#C9D5CB" stroke="#C9D5CB" stroke-width="0" />
+<rect x="197.0" y="336.0" width="15.5" height="15.5" rx="1" fill="#C9D5CB" stroke="#C9D5CB" stroke-width="0" />
+<rect x="213.39999999999998" y="336.0" width="15.5" height="15.5" rx="1" fill="#AFC1B8" stroke="#AFC1B8" stroke-width="0" />
+<rect x="229.79999999999998" y="336.0" width="15.5" height="15.5" rx="1" fill="#AFC1B8" stroke="#AFC1B8" stroke-width="0" />
+<rect x="246.2" y="336.0" width="15.5" height="15.5" rx="1" fill="#AFC1B8" stroke="#AFC1B8" stroke-width="0" />
+<rect x="262.6" y="336.0" width="15.5" height="15.5" rx="1" fill="#AFC1B8" stroke="#AFC1B8" stroke-width="0" />
+<rect x="279.0" y="336.0" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="295.4" y="336.0" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="115.0" y="352.4" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="131.4" y="352.4" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="147.8" y="352.4" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="164.2" y="352.4" width="15.5" height="15.5" rx="1" fill="#C9D5CB" stroke="#C9D5CB" stroke-width="0" />
+<rect x="180.6" y="352.4" width="15.5" height="15.5" rx="1" fill="#C9D5CB" stroke="#C9D5CB" stroke-width="0" />
+<rect x="197.0" y="352.4" width="15.5" height="15.5" rx="1" fill="#C9D5CB" stroke="#C9D5CB" stroke-width="0" />
+<rect x="213.39999999999998" y="352.4" width="15.5" height="15.5" rx="1" fill="#AFC1B8" stroke="#AFC1B8" stroke-width="0" />
+<rect x="229.79999999999998" y="352.4" width="15.5" height="15.5" rx="1" fill="#AFC1B8" stroke="#AFC1B8" stroke-width="0" />
+<rect x="246.2" y="352.4" width="15.5" height="15.5" rx="1" fill="#AFC1B8" stroke="#AFC1B8" stroke-width="0" />
+<rect x="262.6" y="352.4" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="279.0" y="352.4" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="295.4" y="352.4" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="115.0" y="368.8" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="131.4" y="368.8" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="147.8" y="368.8" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="164.2" y="368.8" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="180.6" y="368.8" width="15.5" height="15.5" rx="1" fill="#C9D5CB" stroke="#C9D5CB" stroke-width="0" />
+<rect x="197.0" y="368.8" width="15.5" height="15.5" rx="1" fill="#C9D5CB" stroke="#C9D5CB" stroke-width="0" />
+<rect x="213.39999999999998" y="368.8" width="15.5" height="15.5" rx="1" fill="#AFC1B8" stroke="#AFC1B8" stroke-width="0" />
+<rect x="229.79999999999998" y="368.8" width="15.5" height="15.5" rx="1" fill="#AFC1B8" stroke="#AFC1B8" stroke-width="0" />
+<rect x="246.2" y="368.8" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="262.6" y="368.8" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="279.0" y="368.8" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="295.4" y="368.8" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="115.0" y="385.2" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="131.4" y="385.2" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="147.8" y="385.2" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="164.2" y="385.2" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="180.6" y="385.2" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="197.0" y="385.2" width="15.5" height="15.5" rx="1" fill="#C9D5CB" stroke="#C9D5CB" stroke-width="0" />
+<rect x="213.39999999999998" y="385.2" width="15.5" height="15.5" rx="1" fill="#AFC1B8" stroke="#AFC1B8" stroke-width="0" />
+<rect x="229.79999999999998" y="385.2" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="246.2" y="385.2" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="262.6" y="385.2" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="279.0" y="385.2" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="295.4" y="385.2" width="15.5" height="15.5" rx="1" fill="#95ABA1" stroke="#95ABA1" stroke-width="0" />
+<rect x="115.0" y="401.6" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="131.4" y="401.6" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="147.8" y="401.6" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="164.2" y="401.6" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="180.6" y="401.6" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="197.0" y="401.6" width="15.5" height="15.5" rx="1" fill="#DBBFAC" stroke="#DBBFAC" stroke-width="0" />
+<rect x="213.39999999999998" y="401.6" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="229.79999999999998" y="401.6" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="246.2" y="401.6" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="262.6" y="401.6" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="279.0" y="401.6" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="295.4" y="401.6" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="115.0" y="418.0" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="131.4" y="418.0" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="147.8" y="418.0" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="164.2" y="418.0" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="180.6" y="418.0" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="197.0" y="418.0" width="15.5" height="15.5" rx="1" fill="#90A7B1" stroke="#90A7B1" stroke-width="0" />
+<rect x="213.39999999999998" y="418.0" width="15.5" height="15.5" rx="1" fill="#B8C9CE" stroke="#B8C9CE" stroke-width="0" />
+<rect x="229.79999999999998" y="418.0" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="246.2" y="418.0" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="262.6" y="418.0" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="279.0" y="418.0" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="295.4" y="418.0" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="115.0" y="434.4" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="131.4" y="434.4" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="147.8" y="434.4" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="164.2" y="434.4" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="180.6" y="434.4" width="15.5" height="15.5" rx="1" fill="#90A7B1" stroke="#90A7B1" stroke-width="0" />
+<rect x="197.0" y="434.4" width="15.5" height="15.5" rx="1" fill="#90A7B1" stroke="#90A7B1" stroke-width="0" />
+<rect x="213.39999999999998" y="434.4" width="15.5" height="15.5" rx="1" fill="#B8C9CE" stroke="#B8C9CE" stroke-width="0" />
+<rect x="229.79999999999998" y="434.4" width="15.5" height="15.5" rx="1" fill="#B8C9CE" stroke="#B8C9CE" stroke-width="0" />
+<rect x="246.2" y="434.4" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="262.6" y="434.4" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="279.0" y="434.4" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="295.4" y="434.4" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="115.0" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="131.4" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="147.8" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="164.2" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#90A7B1" stroke="#90A7B1" stroke-width="0" />
+<rect x="180.6" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#90A7B1" stroke="#90A7B1" stroke-width="0" />
+<rect x="197.0" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#90A7B1" stroke="#90A7B1" stroke-width="0" />
+<rect x="213.39999999999998" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#B8C9CE" stroke="#B8C9CE" stroke-width="0" />
+<rect x="229.79999999999998" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#B8C9CE" stroke="#B8C9CE" stroke-width="0" />
+<rect x="246.2" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#B8C9CE" stroke="#B8C9CE" stroke-width="0" />
+<rect x="262.6" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="279.0" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="295.4" y="450.79999999999995" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="115.0" y="467.2" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="131.4" y="467.2" width="15.5" height="15.5" rx="1" fill="#D8E1E4" stroke="#D8E1E4" stroke-width="0" />
+<rect x="147.8" y="467.2" width="15.5" height="15.5" rx="1" fill="#90A7B1" stroke="#90A7B1" stroke-width="0" />
+<rect x="164.2" y="467.2" width="15.5" height="15.5" rx="1" fill="#90A7B1" stroke="#90A7B1" stroke-width="0" />
+<rect x="180.6" y="467.2" width="15.5" height="15.5" rx="1" fill="#90A7B1" stroke="#90A7B1" stroke-width="0" />
+<rect x="197.0" y="467.2" width="15.5" height="15.5" rx="1" fill="#90A7B1" stroke="#90A7B1" stroke-width="0" />
+<rect x="213.39999999999998" y="467.2" width="15.5" height="15.5" rx="1" fill="#B8C9CE" stroke="#B8C9CE" stroke-width="0" />
+<rect x="229.79999999999998" y="467.2" width="15.5" height="15.5" rx="1" fill="#B8C9CE" stroke="#B8C9CE" stroke-width="0" />
+<rect x="246.2" y="467.2" width="15.5" height="15.5" rx="1" fill="#B8C9CE" stroke="#B8C9CE" stroke-width="0" />
+<rect x="262.6" y="467.2" width="15.5" height="15.5" rx="1" fill="#B8C9CE" stroke="#B8C9CE" stroke-width="0" />
+<rect x="279.0" y="467.2" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<rect x="295.4" y="467.2" width="15.5" height="15.5" rx="1" fill="#DCE3DB" stroke="#DCE3DB" stroke-width="0" />
+<line x1="167" y1="510" x2="167" y2="526" stroke="#8198A4" stroke-width="4" />
+<line x1="258" y1="510" x2="258" y2="526" stroke="#8198A4" stroke-width="4" />
+<line x1="140" y1="529" x2="285" y2="529" stroke="#8198A4" stroke-width="4" />
+<text x="214" y="570" fill="#6D7975" font-size="20" font-weight="400" text-anchor="middle" >Programmed phase</text>
+<line x1="393" y1="390" x2="419" y2="390" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="450" y="195" fill="#AB704F" font-size="15" font-weight="600" text-anchor="start" >ANALYSE</text>
+<text x="450" y="231" fill="#303A39" font-size="28" font-weight="600" text-anchor="start" >Mode analysis</text>
+<text x="450" y="266" fill="#6D7975" font-size="19" font-weight="400" text-anchor="start" >Routing and alignment</text>
+<path d="M448 396 L578 396" fill="none" stroke="#AB704F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<ellipse cx="490" cy="396" rx="12" ry="53" fill="#E1E9EC" stroke="#8198A4" stroke-width="2"/>
+<ellipse cx="535" cy="396" rx="12" ry="53" fill="#E1E9EC" stroke="#8198A4" stroke-width="2"/>
+<rect x="571" y="361" width="67" height="70" rx="7" fill="#DFE8DF" stroke="#8DA497" stroke-width="1.5" />
+<text x="604.5" y="402" fill="#303A39" font-size="18" font-weight="600" text-anchor="middle" >AOD</text>
+<path d="M639 396 L694 330" fill="none" stroke="#AB704F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="730" cy="330" r="31" fill="url(#mode)" stroke="#DFE8DF" stroke-width="1.3" />
+<circle cx="730" cy="330" r="12" fill="#FFFDFA" stroke="#8DA497" stroke-width="1.4" />
+<path d="M639 396 L694 396" fill="none" stroke="#AB704F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="730" cy="396" r="31" fill="url(#mode)" stroke="#DFE8DF" stroke-width="1.3" />
+<circle cx="730" cy="396" r="12" fill="#FFFDFA" stroke="#8DA497" stroke-width="1.4" />
+<path d="M639 396 L694 462" fill="none" stroke="#AB704F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="730" cy="462" r="31" fill="url(#mode)" stroke="#DFE8DF" stroke-width="1.3" />
+<circle cx="730" cy="462" r="12" fill="#FFFDFA" stroke="#8DA497" stroke-width="1.4" />
+<text x="510" y="490" fill="#6D7975" font-size="18" font-weight="400" text-anchor="middle" >Lenses</text>
+<text x="716" y="521" fill="#6D7975" font-size="20" font-weight="400" text-anchor="middle" >OAM modes</text>
+<text x="600" y="570" fill="#6D7975" font-size="20" font-weight="400" text-anchor="middle" >Spatial and mode channels</text>
+<line x1="779" y1="390" x2="805" y2="390" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="836" y="195" fill="#AB704F" font-size="15" font-weight="600" text-anchor="start" >CHARACTERISE</text>
+<text x="836" y="231" fill="#303A39" font-size="28" font-weight="600" text-anchor="start" >Coupling &amp;</text>
+<text x="836" y="265" fill="#303A39" font-size="28" font-weight="600" text-anchor="start" >crosstalk</text>
+<circle cx="902" cy="368" r="43" fill="none" stroke="#8DA497" stroke-width="5" />
+<circle cx="927" cy="368" r="43" fill="none" stroke="#8198A4" stroke-width="3" />
+<path d="M962 367 Q1008 367 1038 367" fill="none" stroke="#AB704F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1045" y="344" width="58" height="48" rx="8" fill="#E1E9EC" stroke="#8198A4" stroke-width="1.5" />
+<circle cx="1055" cy="368" r="7" fill="#FFFDFA" stroke="#8198A4" stroke-width="2" />
+<text x="938" y="433" fill="#6D7975" font-size="20" font-weight="400" text-anchor="middle" >Mode overlap</text>
+<rect x="841" y="468" width="290" height="51" rx="10" fill="#DFE8DF" stroke="#DFE8DF" stroke-width="1.5" />
+<text x="986" y="501" fill="#303A39" font-size="20" font-weight="500" text-anchor="middle" >Coupling assessment</text>
+<rect x="841" y="534" width="290" height="51" rx="10" fill="#E1E9EC" stroke="#E1E9EC" stroke-width="1.5" />
+<text x="986" y="567" fill="#303A39" font-size="20" font-weight="500" text-anchor="middle" >Channel crosstalk</text>
+<rect x="40" y="650" width="1120" height="70" rx="14" fill="#ECE9DF" stroke="#ECE9DF" stroke-width="1.5" />
+<text x="65" y="692" fill="#AB704F" font-size="20" font-weight="600" text-anchor="start" >Working loop</text>
+<text x="246" y="692" fill="#303A39" font-size="21" font-weight="400" text-anchor="start" >Phase preparation</text>
+<line x1="445" y1="686" x2="492" y2="686" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="514" y="692" fill="#303A39" font-size="21" font-weight="400" text-anchor="start" >Optical alignment</text>
+<line x1="711" y1="686" x2="758" y2="686" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="782" y="692" fill="#303A39" font-size="21" font-weight="400" text-anchor="start" >Python analysis</text>
+</g></svg>

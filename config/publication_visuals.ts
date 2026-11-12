@@ -2,14 +2,24 @@ export const publication_visuals: Record<
   string,
   {
     src: string;
+    preview_src?: string;
     alt: string;
     caption: string;
-    source_url: string;
+    source_url?: string;
     source_label?: string;
     width: number;
     height: number;
   }
 > = {
+  sun_physics_informed_learning: {
+    src: "/research/yu_hu_multimode_control.jpg",
+    preview_src: "/research/yu_hu_multimode_control.webp",
+    alt: "Author-provided manuscript figure showing a spin-wave memory array, AOD-addressed write and read paths, photon detection, electronic timing control, and the write and read measurement configurations.",
+    caption: "Experimental platform and measurement interface for multimode quantum-state characterization and control. Figure supplied by Yuedong Sun for the manuscript with Yu Hu; complete panels a–c.",
+    source_label: "Author-provided manuscript figure",
+    width: 1976,
+    height: 1147,
+  },
   cui_metropolitan_network_node: {
     src: "/papers/hybrid-multiplexing-2026-fig1.webp",
     alt: "Complete Figure 1 showing a conceptual multiplexed trapped-ion network, the implemented ion–photon node highlighted within it, the time-bin protocol, and multiplexing enhancement scaling.",

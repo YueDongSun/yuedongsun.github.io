@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Rare-earth memory modelling hierarchy</title>
+<desc id="desc">Qualitative method diagram linking the rare-earth crystal environment to free-ion, crystal-field, Zeeman and hyperfine Hamiltonian terms, an effective low-energy spin model, then transition, ZEFOZ and memory-protocol comparisons. No experimental or simulated energy spectrum is reproduced.</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#AB704F"/></marker>
+  <marker id="blue-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#8198A4"/></marker>
+  <radialGradient id="mode"><stop offset="0" stop-color="#FFFDFA"/><stop offset=".37" stop-color="#FFFDFA"/><stop offset=".57" stop-color="#8DA497"/><stop offset=".74" stop-color="#DFE8DF"/><stop offset="1" stop-color="#FFFDFA"/></radialGradient>
+  <linearGradient id="host" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ECF0EC"/><stop offset="1" stop-color="#D6E0E2"/></linearGradient>
+</defs>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect width="1200" height="760" fill="#F7F4EC"/>
+
+<text x="40" y="65" fill="#303A39" font-size="34" font-weight="600" text-anchor="start" >From crystal environment to memory models</text>
+<text x="40" y="105" fill="#6D7975" font-size="20" font-weight="400" text-anchor="start" >Rare-earth-doped YSO · microscopic Hamiltonians · effective spin models</text>
+<rect x="943" y="32" width="217" height="38" rx="19" fill="#DFE8DF" stroke="#DFE8DF" stroke-width="1.5" />
+<text x="1051.5" y="57" fill="#303A39" font-size="15" font-weight="600" text-anchor="middle" >METHOD SCHEMATIC</text>
+<line x1="40" y1="128" x2="1160" y2="128" stroke="#DADDD4" stroke-width="1.5" />
+<rect x="40" y="159" width="265" height="290" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
+<rect x="343" y="159" width="498" height="290" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
+<rect x="879" y="159" width="281" height="290" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
+<text x="61" y="196" fill="#303A39" font-size="24" font-weight="600" text-anchor="start" >Local environment</text>
+<text x="61" y="226" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >Rare-earth ion in YSO</text>
+<line x1="174" y1="326" x2="106" y2="277" stroke="#8198A4" stroke-width="2.4" />
+<line x1="174" y1="326" x2="197" y2="265" stroke="#8198A4" stroke-width="2.4" />
+<line x1="174" y1="326" x2="252" y2="311" stroke="#8198A4" stroke-width="2.4" />
+<line x1="174" y1="326" x2="232" y2="383" stroke="#8198A4" stroke-width="2.4" />
+<line x1="174" y1="326" x2="140" y2="399" stroke="#8198A4" stroke-width="2.4" />
+<line x1="174" y1="326" x2="88" y2="344" stroke="#8198A4" stroke-width="2.4" />
+<line x1="106" y1="277" x2="197" y2="265" stroke="#DADDD4" stroke-width="1.8" stroke-dasharray="4 5"/>
+<circle cx="106" cy="277" r="10" fill="#E1E9EC" stroke="#8198A4" stroke-width="2" />
+<line x1="197" y1="265" x2="252" y2="311" stroke="#DADDD4" stroke-width="1.8" stroke-dasharray="4 5"/>
+<circle cx="197" cy="265" r="10" fill="#E1E9EC" stroke="#8198A4" stroke-width="2" />
+<line x1="252" y1="311" x2="232" y2="383" stroke="#DADDD4" stroke-width="1.8" stroke-dasharray="4 5"/>
+<circle cx="252" cy="311" r="10" fill="#E1E9EC" stroke="#8198A4" stroke-width="2" />
+<line x1="232" y1="383" x2="140" y2="399" stroke="#DADDD4" stroke-width="1.8" stroke-dasharray="4 5"/>
+<circle cx="232" cy="383" r="10" fill="#E1E9EC" stroke="#8198A4" stroke-width="2" />
+<line x1="140" y1="399" x2="88" y2="344" stroke="#DADDD4" stroke-width="1.8" stroke-dasharray="4 5"/>
+<circle cx="140" cy="399" r="10" fill="#E1E9EC" stroke="#8198A4" stroke-width="2" />
+<line x1="88" y1="344" x2="106" y2="277" stroke="#DADDD4" stroke-width="1.8" stroke-dasharray="4 5"/>
+<circle cx="88" cy="344" r="10" fill="#E1E9EC" stroke="#8198A4" stroke-width="2" />
+<circle cx="174" cy="326" r="22" fill="#DEC2AC" stroke="#AB704F" stroke-width="2.5" />
+<text x="174" y="333" fill="#303A39" font-size="18" font-weight="600" text-anchor="middle" >RE</text>
+<text x="172" y="430" fill="#6D7975" font-size="18" font-weight="400" text-anchor="middle" >Local geometry</text>
+<line x1="310" y1="315" x2="336" y2="315" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="365" y="196" fill="#303A39" font-size="25" font-weight="600" text-anchor="start" >Microscopic Hamiltonian</text>
+<text x="592" y="234" fill="#AB704F" font-size="23" font-weight="600" text-anchor="middle" >H = H<tspan baseline-shift="sub" font-size="65%">FI</tspan> + H<tspan baseline-shift="sub" font-size="65%">CF</tspan> + H<tspan baseline-shift="sub" font-size="65%">Z</tspan> + H<tspan baseline-shift="sub" font-size="65%">HF</tspan></text>
+<rect x="365" y="260" width="215" height="67" rx="10" fill="#DFE8DF" stroke="#DFE8DF" stroke-width="1.5" />
+<text x="383" y="288" fill="#303A39" font-size="20" font-weight="500" text-anchor="start" >Free-ion</text>
+<text x="383" y="313" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >H<tspan baseline-shift="sub" font-size="65%">FI</tspan></text>
+<rect x="604" y="260" width="215" height="67" rx="10" fill="#E1E9EC" stroke="#E1E9EC" stroke-width="1.5" />
+<text x="622" y="288" fill="#303A39" font-size="20" font-weight="500" text-anchor="start" >Crystal field</text>
+<text x="622" y="313" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >H<tspan baseline-shift="sub" font-size="65%">CF</tspan></text>
+<rect x="365" y="342" width="215" height="67" rx="10" fill="#E1E9EC" stroke="#E1E9EC" stroke-width="1.5" />
+<text x="383" y="370" fill="#303A39" font-size="20" font-weight="500" text-anchor="start" >Zeeman</text>
+<text x="383" y="395" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >H<tspan baseline-shift="sub" font-size="65%">Z</tspan></text>
+<rect x="604" y="342" width="215" height="67" rx="10" fill="#DFE8DF" stroke="#DFE8DF" stroke-width="1.5" />
+<text x="622" y="370" fill="#303A39" font-size="20" font-weight="500" text-anchor="start" >Hyperfine</text>
+<text x="622" y="395" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >H<tspan baseline-shift="sub" font-size="65%">HF</tspan></text>
+<line x1="847" y1="315" x2="873" y2="315" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="902" y="195" fill="#303A39" font-size="25" font-weight="600" text-anchor="start" >Effective</text>
+<text x="902" y="228" fill="#303A39" font-size="25" font-weight="600" text-anchor="start" >low-energy model</text>
+<circle cx="954" cy="318" r="34" fill="#DFE8DF" stroke="#8DA497" stroke-width="2" />
+<circle cx="1086" cy="318" r="34" fill="#E1E9EC" stroke="#8198A4" stroke-width="2" />
+<line x1="954" y1="335" x2="954" y2="290" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="1086" y1="336" x2="1086" y2="291" stroke="#8198A4" stroke-width="3" marker-end="url(#blue-arrow)"/>
+<text x="954" y="379" fill="#303A39" font-size="23" font-weight="600" text-anchor="middle" >S</text>
+<text x="1086" y="379" fill="#303A39" font-size="23" font-weight="600" text-anchor="middle" >I</text>
+<line x1="988" y1="318" x2="1052" y2="318" stroke="#DADDD4" stroke-width="2" />
+<text x="1020" y="422" fill="#AB704F" font-size="23" font-weight="600" text-anchor="middle" >H<tspan baseline-shift="sub" font-size="65%">eff</tspan>(S, I; B)</text>
+<path d="M1019 452 L1019 477 L215 477 L215 511" fill="none" stroke="#AB704F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M600 477 L600 511" fill="none" stroke="#AB704F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1000 477 L1000 511" fill="none" stroke="#AB704F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="40" y="517" width="347" height="176" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
+<rect x="426" y="517" width="347" height="176" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
+<rect x="812" y="517" width="348" height="176" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
+<text x="62" y="551" fill="#303A39" font-size="25" font-weight="600" text-anchor="start" >Transitions</text>
+<line x1="67" y1="592" x2="135" y2="592" stroke="#8198A4" stroke-width="3" />
+<line x1="67" y1="633" x2="135" y2="633" stroke="#8198A4" stroke-width="3" />
+<line x1="101" y1="626" x2="101" y2="599" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="163" y="601" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >Transition structure</text>
+<text x="163" y="629" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >and comparisons</text>
+<text x="448" y="551" fill="#303A39" font-size="25" font-weight="600" text-anchor="start" >ZEFOZ analysis</text>
+<circle cx="485" cy="612" r="29" fill="#DFE8DF" stroke="#8DA497" stroke-width="2" />
+<line x1="485" y1="630" x2="485" y2="594" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="537" y="605" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >Working-point</text>
+<text x="537" y="632" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >analysis</text>
+<text x="834" y="551" fill="#303A39" font-size="25" font-weight="600" text-anchor="start" >Memory protocols</text>
+<text x="834" y="585" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >AFC · spin-wave storage</text>
+<text x="834" y="616" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >NLPE-DLCZ</text>
+<text x="834" y="647" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >Single-ion repeater schemes</text>
+<text x="40" y="733" fill="#6D7975" font-size="17" font-weight="400" text-anchor="start" >Model hierarchy and qualitative comparisons; no measured or simulated spectrum is shown.</text>
+</g></svg>

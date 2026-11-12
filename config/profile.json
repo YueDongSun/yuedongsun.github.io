@@ -94,18 +94,21 @@
       "details": "I work on AOD-addressed atomic ensembles, optical control, and multiplexed entanglement protocols. The experimental workflow connects waveform generation, FPGA timing, photon acquisition, and Python/C++ analysis.",
       "figures": [
         {
-          "src": "/research/aod_optical_relay.png",
-          "alt": "AOD-addressed optical relay with write, read, and signal paths.",
-          "caption": "AOD-addressed optical relay and beam paths.",
-          "width": 1672,
-          "height": 941
+          "src": "/research/yu_hu_multimode_control.jpg",
+          "preview_src": "/research/yu_hu_multimode_control.webp",
+          "alt": "Complete author-provided experimental figure showing the spin-wave memory array, AOD-addressed write and read optical paths, detection, and timing control.",
+          "caption": "Multimode memory apparatus and write/read measurement configurations; complete panels a–c, supplied for the manuscript with Yu Hu.",
+          "source_label": "Author-provided manuscript figure",
+          "width": 1976,
+          "height": 1147
         },
         {
           "src": "/research/quantum_relay_network.png",
           "alt": "Two-node quantum memory relay with FPGA feedforward and count traces.",
           "caption": "Two-node relay architecture with FPGA feedforward.",
           "width": 968,
-          "height": 557
+          "height": 557,
+          "source_label": "Research portfolio / CV"
         }
       ],
       "keywords": [
@@ -123,11 +126,23 @@
       "details": "Quantum density matrices are converted into multi-channel image representations and classified with a CNN–BiLSTM network for 3–4 qubit systems. The work covered architecture co-design, the data pipeline, and benchmarking against MLP and CNN baselines.",
       "figures": [
         {
-          "src": "/research/cnn_bilstm_pipeline.png",
-          "alt": "CNN and BiLSTM pipeline from measurement results to entanglement classification.",
-          "caption": "Multi-channel representation and hybrid CNN–BiLSTM pipeline.",
-          "width": 865,
-          "height": 555
+          "src": "/research/cnn_bilstm_architectures.webp",
+          "alt": "Complete preprint Figure 1 contrasting feature flattening and sequence reshaping in two CNN–BiLSTM architectures.",
+          "caption": "Architecture: two routes from convolutional features to BiLSTM classification. Q. Sun, Y. Sun et al., preprint Fig. 1 (2026), CC BY 4.0.",
+          "source_url": "https://arxiv.org/html/2601.22562v1#S3.F1",
+          "source_label": "Preprint figure · arXiv",
+          "width": 747,
+          "height": 446
+        },
+        {
+          "src": "/research/cnn_bilstm_benchmarks.svg",
+          "preview_src": "/research/cnn_bilstm_benchmarks.webp",
+          "alt": "Complete preprint Figure 5 comparing classification accuracy of CNN, BiLSTM, MLP and CNN–BiLSTM models across training-set sizes for three- and four-qubit states.",
+          "caption": "Benchmarks: model accuracy across training-set sizes. Q. Sun, Y. Sun et al., preprint Fig. 5 (2026), CC BY 4.0.",
+          "source_url": "https://arxiv.org/html/2601.22562v1#S4.F5",
+          "source_label": "Preprint figure · arXiv",
+          "width": 1600,
+          "height": 778
         }
       ],
       "keywords": [
@@ -149,7 +164,16 @@
           "alt": "AOD and OAM optical multiplexing paths producing multiple spatial modes.",
           "caption": "AOD and OAM paths for multimode multiplexing.",
           "width": 744,
-          "height": 517
+          "height": 517,
+          "source_label": "Research portfolio / CV"
+        },
+        {
+          "src": "/research/oam_mode_workflow.svg",
+          "alt": "Optical mode preparation with an SLM, mode analysis, and coupling and crosstalk characterization.",
+          "caption": "From mode preparation to coupling and crosstalk characterization.",
+          "source_label": "Schematic · research methods",
+          "width": 1200,
+          "height": 760
         }
       ],
       "keywords": [
@@ -172,7 +196,17 @@
           "alt": "Signal and idler AODs addressing a selected region in a quantum memory array.",
           "caption": "Signal/idler AOD control over a selected memory-array region.",
           "width": 2171,
-          "height": 724
+          "height": 724,
+          "source_label": "Research portfolio / CV"
+        },
+        {
+          "src": "/research/yu_hu_multimode_control.jpg",
+          "preview_src": "/research/yu_hu_multimode_control.webp",
+          "alt": "Complete author-provided experimental figure showing the spin-wave memory array, AOD-addressed write and read optical paths, detection, and timing control.",
+          "caption": "Multimode memory apparatus and write/read measurement configurations; complete panels a–c, supplied for the manuscript with Yu Hu.",
+          "source_label": "Author-provided manuscript figure",
+          "width": 1976,
+          "height": 1147
         }
       ],
       "keywords": [
@@ -195,7 +229,16 @@
           "alt": "Rare-earth crystal structure, Hamiltonian terms, and energy-level diagram.",
           "caption": "Crystal-field and spin-Hamiltonian modelling view.",
           "width": 1192,
-          "height": 544
+          "height": 544,
+          "source_label": "Research portfolio / CV"
+        },
+        {
+          "src": "/research/rare_earth_model_workflow.svg",
+          "alt": "Schematic of crystal-field Hamiltonian modelling, effective spin models, and their connection to transitions, ZEFOZ analysis and memory protocols.",
+          "caption": "From the microscopic Hamiltonian to an effective spin model and memory-protocol analysis.",
+          "source_label": "Schematic · research methods",
+          "width": 1200,
+          "height": 760
         }
       ],
       "keywords": [
@@ -219,7 +262,16 @@
           "alt": "SEM images of fabricated photonic structures for an Er3+:YSO interface.",
           "caption": "SEM views from the nanofabrication workflow.",
           "width": 896,
-          "height": 345
+          "height": 345,
+          "source_label": "Research portfolio / CV"
+        },
+        {
+          "src": "/research/er3_optical_microwave_interface.svg",
+          "alt": "Schematic of optical and microwave interfaces to an Er3+:YSO ion, with a design, simulation, fabrication and inspection workflow.",
+          "caption": "Optical and microwave interfaces, alongside the device-development workflow.",
+          "source_label": "Schematic · research methods",
+          "width": 1200,
+          "height": 760
         }
       ],
       "keywords": [

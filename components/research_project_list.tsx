@@ -1,14 +1,25 @@
 'use client';
 
 import { useRef as use_ref } from 'react';
-import type { Research_project } from '../lib/profile_contract';
+import type { Research_figure, Research_project } from '../lib/profile_contract';
 import { Figure_viewer } from './figure_viewer';
 import styles from './research_visuals.module.css';
 
 const visual_selections = [
-  { id: 'multiplexed_four_photon_entanglement', title: 'Cold atoms & optical control', preview: '/research/previews/aod_optical_relay.webp' },
-  { id: 'rare_earth_memory_modeling', title: 'Rare-earth quantum systems', preview: '/research/previews/rare_earth_hamiltonian.webp' },
+  { id: 'multiplexed_four_photon_entanglement', title: 'Cold atoms & optical control' },
+  { id: 'rare_earth_memory_modeling', title: 'Rare-earth quantum systems' },
 ];
+
+const legacy_previews: Record<string, string> = {
+  '/research/aod_optical_relay.png': '/research/previews/aod_optical_relay.webp',
+  '/research/cnn_bilstm_pipeline.png': '/research/previews/cnn_bilstm_pipeline.webp',
+  '/research/oam_multiplexing.png': '/research/previews/oam_multiplexing.webp',
+  '/research/rare_earth_hamiltonian.png': '/research/previews/rare_earth_hamiltonian.webp',
+};
+
+function preview_for(figure: Research_figure) {
+  return figure.preview_src ?? legacy_previews[figure.src];
+}
 
 export function Research_project_list({ projects }: { projects: Research_project[] }) {
   const list_ref = use_ref<HTMLDivElement>(null);
@@ -31,7 +42,7 @@ export function Research_project_list({ projects }: { projects: Research_project
           if (!project || !figure) return null;
           return (
             <article className={styles.galleryCard} key={project.id}>
-              <Figure_viewer {...figure} preview_src={selection.preview} title={selection.title} source_label="Research portfolio / CV" compact sizes="(max-width: 700px) 100vw, 560px" />
+              <Figure_viewer {...figure} preview_src={preview_for(figure)} title={selection.title} source_label={figure.source_label ?? 'Research portfolio / CV'} compact sizes="(max-width: 900px) 100vw, 560px" />
               <div className={styles.galleryCopy}>
                 <a href={`#research-${project.id}`} onClick={() => open_project(project.id)}>{selection.title}<span aria-hidden="true"> ↘</span></a>
                 <p>{project.summary}</p>
@@ -57,10 +68,11 @@ export function Research_project_list({ projects }: { projects: Research_project
             <div className="research_item_content">
               <p className="research_summary">{project.summary}</p>
               <p className="research_details">{project.details}</p>
-              <div className="research_figures">
-                {project.figures.map((figure, index) => (
-                  <Figure_viewer key={figure.src} {...figure} preview_src={index === 0 ? visual_selections.find((item) => item.id === project.id)?.preview : undefined} title={project.title} source_label="Research portfolio / CV" className={styles.detailFigure} sizes="(max-width: 700px) 90vw, 420px" />
-                ))}
+              <div className={styles.detailGrid}>
+                {project.figures.map((figure) => {
+                  const wide = figure.width / figure.height >= 2.8 || (project.figures.length === 2 && project.figures.some((item) => item.width / item.height >= 2.8));
+                  return <Figure_viewer key={figure.src} {...figure} preview_src={preview_for(figure)} title={project.title} source_label={figure.source_label ?? 'Research portfolio / CV'} className={`${styles.detailFigure}${wide ? ` ${styles.detailFigureWide}` : ''}`} sizes={wide ? '(max-width: 700px) 90vw, 1080px' : '(max-width: 760px) 90vw, 530px'} />;
+                })}
               </div>
               <ul className="research_keywords" aria-label="Research keywords">
                 {project.keywords.map((keyword) => <li key={keyword}>{keyword}</li>)}

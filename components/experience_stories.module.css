@@ -1,0 +1,95 @@
+.tabList { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.experienceCard { display:flex; flex-direction:column; min-width:0; padding:18px; border:1px solid var(--line); border-radius:6px; background:#fdfcf8; color:var(--ink); text-align:left; font:inherit; transition:border-color .15s,background .15s; }
+.experienceCard:hover { border-color:#c7b5a6; background:#fffdf9; }
+.experienceCard[aria-selected="true"] { border-color:var(--accent); background:#f5ece4; box-shadow:inset 0 3px 0 var(--accent); }
+.experienceCard:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.cardTop { display:flex; flex-direction:column; align-items:start; gap:9px; margin-bottom:17px; }
+.cardLogo { width:100%; max-width:220px; height:42px; object-fit:contain; object-position:left center; }
+.cardTop > span { color:var(--muted); font:9px/1.5 var(--mono); }
+.cardName { display:block; font-size:13px; font-weight:600; line-height:1.5; }
+.cardChinese { display:block; margin:4px 0 12px; color:#8a8378; font-size:10px; }
+.cardRole { display:block; margin-bottom:8px; color:var(--accent); font-size:12px; font-weight:500; }
+.cardDescription { display:block; color:var(--muted); font-size:12px; line-height:1.8; }
+.cardAction { display:flex; align-items:center; justify-content:space-between; gap:10px; width:100%; margin-top:auto; padding-top:16px; color:var(--accent); font-size:10px; }
+.cardAction > span { font-size:12px; }
+.experienceCard[aria-selected="true"] .cardAction > span { font-size:7px; }
+.storyPanel { margin-top:26px; padding:30px; border:1px solid #ded4c7; border-radius:8px; background:#f3efe6; scroll-margin-top:calc(var(--header_height) + 24px); }
+.storyPanel:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.storyTopline { display:flex; align-items:center; justify-content:space-between; gap:25px; }
+.storyTopline > a { display:flex; align-items:center; }
+.storyLogo { width:250px; height:46px; max-width:100%; object-fit:contain; object-position:left center; }
+.storyTopline > span { color:var(--muted); font:10px/1.5 var(--mono); letter-spacing:.09em; text-align:right; }
+.storyPeriod { margin:18px 0 0; color:var(--accent); font:10px/1.7 var(--mono); }
+.storyPeriod > span { margin:0 7px; color:#a79a8b; }
+.storyHeading { display:flex; align-items:end; justify-content:space-between; gap:35px; margin:16px 0 28px; }
+.storyHeading h2 { margin:0; color:var(--ink); font:400 clamp(36px,4.1vw,56px)/1.05 var(--serif); letter-spacing:-1.8px; }
+.storyHeading h2 em { color:var(--accent); font-weight:400; }
+.storyHeading > p { max-width:330px; margin:0 0 3px; color:var(--muted); font-size:14px; line-height:1.8; }
+.illustration { overflow:hidden; border:1px solid #e3dbcd; border-radius:6px; background:var(--paper); }
+.illustration > a { height:auto; padding:0; background:var(--paper); }
+.illustration > a > img { width:100%; height:auto; object-fit:contain; }
+.focusAreas { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:26px; }
+.focusAreas > div { padding-right:18px; border-right:1px solid #ded4c7; }
+.focusAreas > div:last-child { border-right:0; }
+.focusAreas span { color:var(--accent); font:9px/1.5 var(--mono); letter-spacing:.08em; }
+.focusAreas h3 { margin:9px 0 6px; font:400 23px/1.15 var(--serif); letter-spacing:-.5px; }
+.focusAreas p { margin:0; color:var(--muted); font-size:12px; line-height:1.6; }
+.imageNote { margin:24px 0 0; color:#8a8072; font-size:10px; }
+@media screen and (max-width:1150px) {
+  .tabList { gap:12px; }
+  .experienceCard { padding:15px; }
+  .cardDescription { font-size:11px; }
+  .storyPanel { padding:24px; }
+  .storyHeading { flex-direction:column; align-items:start; gap:18px; }
+  .storyHeading > p { max-width:700px; }
+  .focusAreas h3 { font-size:21px; }
+}
+@media screen and (min-width:761px) and (max-width:900px) {
+  .experienceCard { padding:12px; }
+  .cardLogo { height:32px; }
+  .cardName { font-size:11px; }
+  .cardChinese { font-size:8px; }
+  .cardRole { font-size:10px; }
+  .cardDescription { display:none; }
+  .cardAction { font-size:8px; }
+  .storyLogo { width:220px; height:40px; }
+}
+@media screen and (max-width:760px) {
+  .tabList { grid-template-columns:1fr; gap:10px; }
+  .experienceCard { display:grid; grid-template-columns:minmax(0,1fr) auto; column-gap:16px; padding:16px; }
+  .cardTop { grid-column:1/-1; flex-direction:row; justify-content:space-between; align-items:center; gap:15px; margin-bottom:11px; }
+  .cardLogo { max-width:180px; height:35px; }
+  .cardName { grid-column:1/-1; font-size:13px; }
+  .cardChinese { grid-column:1/-1; margin-bottom:9px; font-size:10px; }
+  .cardRole { margin:0; align-self:end; font-size:11px; }
+  .cardDescription { display:none; }
+  .cardAction { align-self:end; gap:8px; padding-top:0; margin:0; font-size:9px; }
+  .storyPanel { padding:20px; margin-top:22px; }
+  .storyLogo { width:210px; height:37px; }
+  .storyTopline { flex-wrap:wrap; gap:13px; }
+  .storyTopline > span { font-size:8px; text-align:left; }
+  .storyPeriod { margin-top:15px; font-size:9px; }
+  .storyHeading { margin:18px 0 23px; gap:16px; }
+  .storyHeading h2 { font-size:38px; letter-spacing:-1.3px; }
+  .storyHeading > p { font-size:13px; }
+  .focusAreas { grid-template-columns:1fr; gap:14px; margin-top:22px; }
+  .focusAreas > div { padding:0 0 14px; border:0; border-bottom:1px solid #ded4c7; }
+  .focusAreas > div:last-child { padding-bottom:0; border:0; }
+  .focusAreas h3 { margin-top:6px; font-size:24px; }
+  .imageNote { margin-top:18px; font-size:9px; }
+}
+@media (prefers-reduced-motion:reduce) { .experienceCard { transition:none; } }
+@media print {
+  .tabList { grid-template-columns:repeat(3,minmax(0,1fr)); gap:9pt; }
+  .experienceCard { padding:10pt; break-inside:avoid; border-color:#bbb; background:#fff; }
+  .cardLogo { height:28pt; }
+  .cardName,.cardRole { font-size:9pt; }
+  .cardDescription { display:block; font-size:8pt; }
+  .cardChinese,.cardTop > span { font-size:7pt; }
+  .cardAction { display:none; }
+  .storyPanel { margin-top:16pt; padding:15pt; break-inside:avoid; }
+  .storyHeading h2 { font-size:28pt; }
+  .storyHeading > p { font-size:9pt; }
+  .focusAreas h3 { font-size:15pt; }
+  .focusAreas p { font-size:8pt; }
+}

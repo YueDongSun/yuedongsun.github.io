@@ -4,7 +4,7 @@
 
 Edit `config/profile.json` for profile text, education, experience, publications, research, and the project directory. The parser in `lib/profile_contract.ts` validates records and HTTPS URLs.
 
-- `experience`: three compact institution cards; organisation names select the corresponding official logo.
+- `experience`: three selectable institution cards with official logos and a large illustrated story for each stage.
 - `education`: compact sidebar records.
 - `research_projects`: summary, detailed text, optional local figures, dates, and keywords.
 - `publications`: title, author reference, venue, status, contribution, optional `url` and `link_label`.
@@ -14,11 +14,11 @@ Project search matches names, summaries, detailed text, categories, tags, and re
 
 ## Images and workflow illustrations
 
-The research overview displays selected figures from `research_projects`. Original files stay in `public/research/`; the selected gallery images have compressed WebP previews in `public/research/previews/`. Preserve the original image proportions and use the full image in the enlarged view.
+The research overview displays selected figures from `research_projects`. Each current research entry pairs two complementary images. Original files stay in `public/research/`; `preview_src` can select a compressed WebP for normal display. `source_label` distinguishes portfolio images, manuscript/preprint figures and explanatory schematics; `source_url` is optional and must be HTTPS. Preserve complete scientific panels and use the original image in the enlarged view. Sources are recorded in `public/research/SOURCES.md`.
 
 `config/publication_visuals.ts` maps an existing publication ID to its image, caption, source URL, version label, and dimensions. Add the corresponding original source and credit to `public/papers/SOURCES.md`. Use a complete figure belonging to that exact paper and distinguish the journal version from a preprint. Entries without a figure keep their compact text layout.
 
-The Seed section uses the panoramic illustration in `public/seed/`, with its provenance in `SOURCES.md`. Keep the stated work scope aligned with the profile: reinforcement learning for STEM, spanning data, algorithms, and benchmarks. The artwork is a concept illustration; technical claims or quantitative results should come from their actual sources.
+The experience story uses the Seed illustration in `public/seed/` and the Tsinghua/USTC illustrations in `public/experience/`. Each has a source note containing its generation brief. Keep Seed's work scope aligned with the profile: reinforcement learning for STEM, spanning data, algorithms, and benchmarks. The other stories follow the existing education and research descriptions. These artworks are concept illustrations; technical claims and quantitative results come from their actual sources.
 
 `components/project_visual.tsx` holds the reusable SVG workflow illustrations for the public projects and software introductions. Keep their labels aligned with the project descriptions and development stages. The diagrams explain roles and information flow; measurements belong in figures with their actual sources.
 
@@ -26,7 +26,7 @@ The Seed section uses the panoramic illustration in `public/seed/`, with its pro
 
 `app/globals.css` defines the warm paper palette, serif headings, spacious image-led sections, compact metadata, responsive sidebar, navigation, disclosure panels, project directory, and print styles. `components/tools_showcase.module.css` applies the same language to the software route. Preserve complete scientific panels and institution image aspect ratios. Let the selected images occupy substantial space on desktop, while keeping text and controls readable on narrow screens.
 
-The legacy anchors `#about`, `#experience`, `#research`, `#projects`, `#publications`, `#skills`, and `#contact` are retained. Tools anchors include `#products`, `#tailnet_mesh`, `#cc`, `#vibemux`, `#principles`, and `#questions`.
+The legacy anchors `#about`, `#experience`, `#research`, `#projects`, `#publications`, `#skills`, and `#contact` are retained. Experience stories support `#seed`, `#tsinghua`, and `#ustc`. Tools anchors include `#products`, `#tailnet_mesh`, `#cc`, `#vibemux`, `#principles`, and `#questions`.
 
 ## Check and publish
 

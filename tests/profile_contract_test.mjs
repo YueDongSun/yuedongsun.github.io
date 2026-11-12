@@ -41,8 +41,14 @@ test('invalid records are reported rather than silently dropped', () => {
   assert.throws(() => parse_profile(invalid_research), /research_projects\[0\]\.details/);
   const invalid_figure = structuredClone(profile_source);
   invalid_figure.research_projects[0].figures[0].src = 'https://example.com/image.png';
-  assert.throws(() => parse_profile(invalid_figure), /must be a local research PNG/);
+  assert.throws(() => parse_profile(invalid_figure), /must be a local research image/);
   invalid_figure.research_projects[0].figures[0].src = profile_source.research_projects[0].figures[0].src;
+  invalid_figure.research_projects[0].figures[0].preview_src = '/research/../private.png';
+  assert.throws(() => parse_profile(invalid_figure), /preview_src must be a local research image/);
+  delete invalid_figure.research_projects[0].figures[0].preview_src;
+  invalid_figure.research_projects[0].figures[0].source_url = 'javascript:alert(1)';
+  assert.throws(() => parse_profile(invalid_figure), /source_url/);
+  delete invalid_figure.research_projects[0].figures[0].source_url;
   invalid_figure.research_projects[0].figures[0].width = 0;
   assert.throws(() => parse_profile(invalid_figure), /positive integers/);
 });

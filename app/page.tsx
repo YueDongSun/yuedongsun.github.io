@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Profile_schema } from '../components/profile_schema';
 import { Publication_list } from '../components/publication_list';
@@ -6,18 +5,8 @@ import { Project_gallery } from '../components/project_gallery';
 import { Research_project_list } from '../components/research_project_list';
 import { Skills_matrix } from '../components/skills_matrix';
 import { Site_header } from '../components/site_header';
-import { Seed_research } from '../components/seed_research';
+import { Experience_stories } from '../components/experience_stories';
 import { github_url, profile } from '../config/profile';
-
-function institution(organization: string) {
-  if (/seed|bytedance/i.test(organization)) {
-    return { logo: '/institutions/seed.png', name: 'ByteDance Seed', chinese: '字节跳动 · Seed', url: 'https://seed.bytedance.com/en/' };
-  }
-  if (/tsinghua|iiis/i.test(organization)) {
-    return { logo: '/institutions/iiis.png', name: 'Tsinghua University · IIIS', chinese: '清华大学 · 交叉信息研究院', url: 'https://iiis.tsinghua.edu.cn/en/' };
-  }
-  return { logo: '/institutions/ustc-sgy.png', name: 'USTC · School of the Gifted Young', chinese: '中国科学技术大学 · 少年班学院', url: 'https://sgy.ustc.edu.cn/main.htm' };
-}
 
 export default function Cv_page() {
   return (
@@ -66,27 +55,7 @@ export default function Cv_page() {
             <h2 id="intro_heading">Quantum systems.<br /><em>Useful software.</em></h2>
             <p>I work across quantum memories, STEM reinforcement learning, and the tools that make research easier to do. Explore my experiments, published work, and software.</p>
           </section>
-          <section className="experience_section" id="experience" aria-labelledby="experience_heading">
-            <div className="section_heading compact_heading">
-              <h2 id="experience_heading">Education & experience <span lang="zh-CN">经历</span></h2>
-              <span className="section_index">01</span>
-            </div>
-            <div className="affiliation_grid">
-              {profile.experience.map((entry) => {
-                const org = institution(entry.organization);
-                return (
-                  <article className="affiliation_card" key={entry.organization}>
-                    <div className="affiliation_top"><a href={org.url} aria-label={org.name} target="_blank" rel="noopener noreferrer"><Image src={org.logo} alt={`${org.name} logo`} width={220} height={48} className="institution_logo" /></a><span>{entry.period}</span></div>
-                    <h3>{org.name}</h3>
-                    <p className="affiliation_chinese" lang="zh-CN">{org.chinese}</p>
-                    <p className="affiliation_role">{entry.title}</p>
-                    <p className="affiliation_description">{entry.description}</p>
-                  </article>
-                );
-              })}
-            </div>
-          </section>
-          <Seed_research />
+          <Experience_stories entries={profile.experience} />
           <section className="content_section research_section" id="research" aria-labelledby="research_heading">
             <div className="section_heading">
               <div><p className="eyebrow">EXPERIMENTS & QUESTIONS</p><h2 id="research_heading">Research <span lang="zh-CN">研究</span></h2></div>

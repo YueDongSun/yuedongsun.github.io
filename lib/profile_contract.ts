@@ -20,8 +20,11 @@ export interface Research_project {
 
 export interface Research_figure {
   src: string;
+  preview_src?: string;
   alt: string;
   caption: string;
+  source_url?: string;
+  source_label?: string;
   width: number;
   height: number;
 }
@@ -102,7 +105,7 @@ const allowed_contributions: Publication_contribution[] = ['Co-first author', 'C
 const github_username_pattern = /^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,37}[a-zA-Z0-9])?$/;
 const email_pattern = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/;
 const identifier_pattern = /^[a-z][a-z0-9_]*$/;
-const research_asset_pattern = /^\/research\/[a-z][a-z0-9_]*\.png$/;
+const research_asset_pattern = /^\/research\/(?:previews\/)?[a-z][a-z0-9_]*\.(?:png|jpe?g|webp|svg)$/;
 
 function require_record(value: unknown, field_name: string): Record<string, unknown> {
   if (!value || typeof value !== 'object' || Array.isArray(value)) {
@@ -164,7 +167,11 @@ function parse_research_projects(value: unknown): Research_project[] {
       const figure_name = `${entry_name}.figures[${figure_index}]`;
       const figure_record = require_record(figure, figure_name);
       const src = require_text(figure_record.src, `${figure_name}.src`);
-      if (!research_asset_pattern.test(src)) throw new TypeError(`${figure_name}.src must be a local research PNG.`);
+      if (!research_asset_pattern.test(src)) throw new TypeError(`${figure_name}.src must be a local research image.`);
+      const preview_src = figure_record.preview_src;
+      if (preview_src !== undefined && (typeof preview_src !== 'string' || !research_asset_pattern.test(preview_src))) {
+        throw new TypeError(`${figure_name}.preview_src must be a local research image.`);
+      }
       const width = figure_record.width;
       const height = figure_record.height;
       if (typeof width !== 'number' || typeof height !== 'number' || !Number.isInteger(width) || !Number.isInteger(height) || width <= 0 || height <= 0) {
@@ -172,8 +179,11 @@ function parse_research_projects(value: unknown): Research_project[] {
       }
       return {
         src,
+        ...(typeof preview_src === 'string' ? { preview_src } : {}),
         alt: require_text(figure_record.alt, `${figure_name}.alt`),
         caption: require_text(figure_record.caption, `${figure_name}.caption`),
+        ...(figure_record.source_url !== undefined ? { source_url: require_https_url(figure_record.source_url, `${figure_name}.source_url`) } : {}),
+        ...(figure_record.source_label !== undefined ? { source_label: require_text(figure_record.source_label, `${figure_name}.source_label`) } : {}),
         width,
         height,
       };
