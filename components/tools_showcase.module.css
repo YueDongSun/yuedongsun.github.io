@@ -1,4 +1,4 @@
-.tools_main { --tools_peach:#b96347; --tools_peach_tint:#f3e7de; --tools_lavender:#746389; --tools_lavender_tint:#efebf1; --tools_mint:#5d735b; --tools_mint_tint:#ebeee6; }
+.tools_main { --tools_peach:var(--ink); --tools_peach_tint:var(--surface); --tools_lavender:var(--ink); --tools_lavender_tint:var(--accent_soft); --tools_mint:var(--ink); --tools_mint_tint:var(--card_selected); }
 .hero { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(290px,.8fr); gap:50px; align-items:center; padding:42px 0 32px; border-bottom:1px solid var(--line); }
 .eyebrow { margin:0 0 12px; color:var(--muted); font:9px/1.6 var(--mono); letter-spacing:.1em; }
 .status_dot { display:inline-block; width:5px; height:5px; margin-right:8px; border-radius:50%; background:var(--accent); vertical-align:1px; }
@@ -10,20 +10,20 @@
 .primary_link,.text_link { display:inline-flex; gap:12px; align-items:center; min-height:34px; font-size:11px; }
 .primary_link { padding:7px 12px; border:1px solid var(--ink); border-radius:5px; background:var(--ink); color:var(--paper); }
 .primary_link:hover { background:var(--accent); border-color:var(--accent); }
-.text_link { color:var(--accent); text-decoration:underline; text-decoration-color:#d4b2a0; text-underline-offset:4px; }
+.text_link { color:var(--accent); text-decoration:underline; text-decoration-color:var(--rule_strong); text-underline-offset:4px; }
 .hero_note { margin:20px 0 0; color:var(--muted); font:8px/1.6 var(--mono); letter-spacing:.08em; }
 .hero_note span { margin:0 6px; }
-.concept_window { overflow:hidden; border:1px solid var(--line); border-radius:6px; background:#fdfcf9; }
+.concept_window { overflow:hidden; border:1px solid var(--line); border-radius:6px; background:var(--card); }
 .window_bar { display:flex; align-items:center; justify-content:space-between; gap:12px; height:32px; padding:0 12px; border-bottom:1px solid var(--line); color:var(--muted); font:8px var(--mono); }
 .window_dots { display:flex; gap:4px; }
-.window_dots i { width:5px; height:5px; border-radius:50%; background:#d9d2c7; }
+.window_dots i { width:5px; height:5px; border-radius:50%; background:var(--rule_strong); }
 .window_dots i:first-child { background:var(--accent); }
 .window_content { padding:16px; }
 .window_heading { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; color:var(--muted); font:8px var(--mono); letter-spacing:.06em; }
 .concept_badge { color:var(--accent); font-size:7px; }
 .layer_stack { display:grid; gap:7px; }
 .concept_layer { display:grid; grid-template-columns:35px minmax(0,1fr) auto; gap:11px; align-items:center; padding:9px 10px; border:1px solid var(--line); border-radius:4px; background:var(--paper); }
-.concept_layer:hover { border-color:#c3aa96; background:#fffdf9; }
+.concept_layer:hover { border-color:var(--rule_strong); background:var(--card_hover); }
 .layer_code,.product_code { display:grid; place-items:center; flex:0 0 auto; border:1px solid color-mix(in srgb,var(--tool_accent) 25%,var(--line)); border-radius:4px; background:var(--tool_tint); color:var(--tool_accent); font:8px var(--mono); }
 .layer_code { width:33px; height:33px; font-size:6px; }
 .concept_layer small { display:block; color:var(--muted); font:7px/1.4 var(--mono); letter-spacing:.1em; }
@@ -42,7 +42,7 @@
 .section_heading > p,.section_aside_copy p { max-width:490px; margin:0; color:var(--muted); font-size:11px; line-height:1.8; }
 .section_aside_copy p + p { margin-top:7px; }
 .product_list { display:grid; gap:15px; }
-.product_card { scroll-margin-top:calc(var(--header_height) + 20px); overflow:hidden; border:1px solid var(--line); border-radius:6px; background:#fdfcf9; }
+.product_card { scroll-margin-top:calc(var(--header_height) + 20px); overflow:hidden; border:1px solid var(--line); border-radius:6px; background:var(--card); }
 .product_header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:20px 22px 13px; }
 .product_identity { display:flex; align-items:center; gap:14px; }
 .product_code { width:40px; height:40px; }

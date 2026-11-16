@@ -1,12 +1,12 @@
-# Yuedong Sun · Personal website
+# Y.D. Sun · Personal website
 
-A personal research portfolio for **Yuedong Sun / 孙跃东**, connecting quantum physics, STEM reinforcement learning, and software engineering.
+A personal research portfolio for **Y.D. Sun**, connecting quantum physics, STEM reinforcement learning, and software engineering.
 
 - **Homepage:** https://yuedongsun.github.io/
 - **Software introductions:** https://yuedongsun.github.io/tools/
 - **Source:** https://github.com/YueDongSun/yuedongsun.github.io
 
-The design uses warm paper colours, dark text, serif headings, fine rules, and large editorial images with compact supporting information. A personal sidebar accompanies three selectable, illustrated education and experience stories, a research gallery, publications with full-width paper figures, an interactive project directory, and contact details.
+The design uses a neutral black-and-white palette that follows the operating system’s light or dark setting, serif headings, fine rules, and large editorial images with compact supporting information. A personal sidebar accompanies three selectable, illustrated education and experience stories, a research gallery, publications with full-width paper figures, an interactive project directory, and contact details.
 
 ## Content
 

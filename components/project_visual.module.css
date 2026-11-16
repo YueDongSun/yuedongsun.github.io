@@ -1,65 +1,62 @@
 .visual {
-  --diagram_accent:#a45b43;
-  --diagram_tint:#f0e3d7;
-  --diagram_sage:#74856d;
-  --diagram_slate:#758994;
+  --diagram_accent:var(--ink);
+  --diagram_tint:var(--surface);
+  --diagram_slate:var(--muted);
   margin:7px 0 14px;
   padding:9px 10px 10px;
   min-width:0;
-  border:1px solid #e5dfd3;
+  border:1px solid var(--line);
   border-radius:5px;
-  background:#f7f5ee;
+  background:var(--card);
   break-inside:avoid;
 }
-.terracotta { --diagram_accent:#a45b43; --diagram_tint:#f0e3d7; }
-.sage { --diagram_accent:#63785c; --diagram_tint:#e6ebdf; }
-.slate { --diagram_accent:#607985; --diagram_tint:#e3eaeb; }
-.sketch_label { color:#8a8175; font:7px/1.4 var(--mono); letter-spacing:.1em; text-transform:uppercase; }
+.terracotta,.sage,.slate { --diagram_accent:var(--ink); --diagram_tint:var(--surface); }
+.sketch_label { color:var(--muted); font:7px/1.4 var(--mono); letter-spacing:.1em; text-transform:uppercase; }
 .canvas { display:block; width:100%; height:140px; overflow:visible; }
 .canvas text { font-family:var(--sans); }
 .connector,.axis,.wire,.gate_wire,.stream_line,.device_line,.document_lines,.mesh_link,.parameter_line,.energy_levels,.compare_arrow,.dashed {
   fill:none;
-  stroke:#c0b7a9;
+  stroke:var(--rule_strong);
   stroke-width:1.35;
   stroke-linecap:round;
   stroke-linejoin:round;
 }
 .dashed { stroke-dasharray:3 4; }
 .arrow_head { stroke-dasharray:none; }
-.axis { stroke:#d6cec1; }
-.node { fill:#fdfcf8; stroke:#cfc7b8; stroke-width:1.1; }
+.axis { stroke:var(--line); }
+.node { fill:var(--card); stroke:var(--rule_strong); stroke-width:1.1; }
 .accent_node { fill:var(--diagram_tint); stroke:var(--diagram_accent); stroke-width:1.1; }
-.sage_node { fill:#e5eadf; stroke:#9eab96; stroke-width:1.1; }
-.slate_node { fill:#e6ebed; stroke:#9aabb0; stroke-width:1.1; }
-.node_label { fill:#3c3933; font-size:12px; font-weight:500; }
-.small_label { fill:#7b7265; font-size:9px; }
+.sage_node { fill:var(--surface); stroke:var(--muted); stroke-width:1.1; }
+.slate_node { fill:var(--accent_soft); stroke:var(--muted); stroke-width:1.1; }
+.node_label { fill:var(--ink); font-size:12px; font-weight:500; }
+.small_label { fill:var(--muted); font-size:9px; }
 .junction,.ion { fill:var(--diagram_accent); }
-.lattice_dot { fill:#a3b19b; }
+.lattice_dot { fill:var(--muted); }
 .data_bar { fill:var(--diagram_accent); opacity:.8; }
 .secondary_bar { fill:var(--diagram_slate); opacity:.55; }
 .parameter_label { fill:var(--diagram_accent); font-family:var(--serif)!important; font-size:18px; font-style:italic; }
-.parameter_line { stroke:#c3b4a1; stroke-width:2; }
+.parameter_line { stroke:var(--rule_strong); stroke-width:2; }
 .formula { fill:var(--diagram_accent); font-family:var(--serif)!important; font-size:26px; font-style:italic; }
 .energy_levels { stroke:var(--diagram_slate); stroke-width:2; }
 .tensor_label { fill:var(--diagram_accent); font-family:var(--serif)!important; font-size:18px; font-style:italic; }
-.wire { stroke:#b5c1c4; }
+.wire { stroke:var(--muted); }
 .gate_wire { stroke:var(--diagram_accent); }
-.gate { fill:#f7f5ee; stroke:var(--diagram_accent); stroke-width:1.4; }
-.syndrome_dot { fill:#fdfcf8; stroke:#abbbb8; stroke-width:1.3; }
+.gate { fill:var(--card); stroke:var(--diagram_accent); stroke-width:1.4; }
+.syndrome_dot { fill:var(--card); stroke:var(--muted); stroke-width:1.3; }
 .stream_line { stroke:var(--diagram_slate); stroke-width:3; }
 .compare_arrow { stroke:var(--diagram_accent); }
-.document_back { fill:#e4e7db; stroke:#b4beaa; stroke-width:1; }
-.document_lines { stroke:#b5afa3; }
-.mesh_link { stroke:#b2bca9; }
-.mesh_boundary { fill:none; stroke:#d5d6c9; stroke-width:1; stroke-dasharray:3 5; }
-.device_line { stroke:#a0aaa9; }
-.caption { margin:1px 0 0; color:#7b7265; text-align:center; font-size:8px; line-height:1.5; }
+.document_back { fill:var(--surface); stroke:var(--rule_strong); stroke-width:1; }
+.document_lines { stroke:var(--rule_strong); }
+.mesh_link { stroke:var(--rule_strong); }
+.mesh_boundary { fill:none; stroke:var(--line); stroke-width:1; stroke-dasharray:3 5; }
+.device_line { stroke:var(--muted); }
+.caption { margin:1px 0 0; color:var(--muted); text-align:center; font-size:8px; line-height:1.5; }
 .caption strong { font-weight:400; }
 .featured { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr); align-items:center; column-gap:28px; margin:0; padding:11px 20px 15px; }
 .featured .sketch_label { grid-column:1/-1; font-size:8px; }
 .featured .canvas { height:171px; }
 .featured .caption { padding-right:15px; margin:0; text-align:left; }
-.featured .caption strong { display:block; margin-bottom:9px; color:#4d473e; font:400 21px/1.25 var(--serif); letter-spacing:-.4px; }
+.featured .caption strong { display:block; margin-bottom:9px; color:var(--ink); font:400 21px/1.25 var(--serif); letter-spacing:-.4px; }
 .featured .caption span { display:block; max-width:360px; color:var(--muted); font-size:11px; line-height:1.8; }
 @media screen and (max-width:700px) {
   .canvas { height:132px; }

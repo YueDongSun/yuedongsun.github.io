@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { profile } from '../config/profile';
 import './globals.css';
 
-const site_title = `${profile.display_name} 孙跃东 — Quantum Physics & AI Systems`;
+const site_title = `${profile.display_name} — Quantum Physics & AI Systems`;
 const social_image_url = `${profile.site_url}/og.png`;
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: profile.display_name,
     title: site_title,
     description: profile.summary,
-    images: [{ url: social_image_url, alt: `${profile.display_name} — Developer & Researcher` }],
+    images: [{ url: social_image_url, alt: `${profile.display_name} — Quantum physics and software` }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -28,5 +28,5 @@ export const metadata: Metadata = {
 };
 
 export default function Root_layout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}</body></html>;
+  return <html lang="en" style={{ colorScheme: 'light dark' }}><body>{children}</body></html>;
 }

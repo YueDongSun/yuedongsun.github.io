@@ -9,7 +9,7 @@ const accent_class_names: Record<Tool_accent, string> = {
   mint: styles.accent_mint,
 };
 
-export function Tools_showcase({ github_url }: { github_url: string }) {
+export function Tools_showcase({ github_url, display_name }: { github_url: string; display_name: string }) {
   return (
     <main id="main_content" className={styles.tools_main}>
       <section id="tools_overview" className={styles.hero} aria-labelledby="tools_heading">
@@ -25,7 +25,7 @@ export function Tools_showcase({ github_url }: { github_url: string }) {
               Follow the development <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <p className={styles.hero_note}>BY YUEDONG SUN <span aria-hidden="true">·</span> BEIJING</p>
+          <p className={styles.hero_note}>BY {display_name.toUpperCase()} <span aria-hidden="true">·</span> BEIJING</p>
         </div>
 
         <aside className={styles.concept_window}
