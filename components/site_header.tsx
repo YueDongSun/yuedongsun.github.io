@@ -2,8 +2,6 @@
 
 import Link from 'next/link';
 import { useEffect as use_effect, useRef as use_ref, useState as use_state } from 'react';
-import { Brand_mark } from './brand_mark';
-
 type Site_page = 'home' | 'tools';
 
 interface Navigation_item {
@@ -119,8 +117,7 @@ export function Site_header({
       }}>
       <Link className="wordmark" href={current_page === 'tools' ? '/' : '#home'} aria-label={`${display_name} home`}
         onClick={() => { set_menu_open(false); set_active_section(first_section); }}>
-        <Brand_mark />
-        <span>{display_name}<span className="wordmark_dot">.</span></span>
+        <span className="wordmark_name">{display_name}</span>
       </Link>
       <button type="button" className="menu_button" id="menu_toggle" aria-controls="main_navigation"
         aria-expanded={menu_open} aria-label={menu_open ? 'Close navigation' : 'Open navigation'}

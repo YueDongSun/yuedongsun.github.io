@@ -24,7 +24,7 @@ The experience story uses the Seed illustration in `public/seed/` and the Tsingh
 
 ## Layout and appearance
 
-`app/globals.css` defines the warm paper palette, serif headings, spacious image-led sections, compact metadata, responsive sidebar, navigation, disclosure panels, project directory, and print styles. `components/tools_showcase.module.css` applies the same language to the software route. Preserve complete scientific panels and institution image aspect ratios. Let the selected images occupy substantial space on desktop, while keeping text and controls readable on narrow screens.
+`app/globals.css` defines the neutral light and dark palettes, serif headings, spacious image-led sections, compact metadata, responsive sidebar, navigation, disclosure panels, project directory, and print styles. Colour follows `prefers-color-scheme`; print stays on a light page. `components/tools_showcase.module.css` applies the same language to the software route. Preserve complete scientific panels and institution image aspect ratios. Let the selected images occupy substantial space on desktop, while keeping text and controls readable on narrow screens.
 
 The legacy anchors `#about`, `#experience`, `#research`, `#projects`, `#publications`, `#skills`, and `#contact` are retained. Experience stories support `#seed`, `#tsinghua`, and `#ustc`. Tools anchors include `#products`, `#tailnet_mesh`, `#cc`, `#vibemux`, `#principles`, and `#questions`.
 
