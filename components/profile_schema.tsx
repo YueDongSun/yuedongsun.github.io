@@ -8,7 +8,6 @@ const profile_schema = {
     '@type': 'Person',
     '@id': `${profile.site_url}#person`,
     name: profile.display_name,
-    alternateName: profile.nickname,
     description: profile.role,
     url: profile.site_url,
     sameAs: [github_url, profile.contact_details.scholar_url],

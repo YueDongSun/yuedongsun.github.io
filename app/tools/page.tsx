@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: tools_description,
     images: [{
       url: tools_image_url,
-      alt: 'Independent software by Yuedong Sun — Tailnet Mesh, AI Agent Gateway, and VibeMux',
+      alt: `Independent software by ${profile.display_name} — Tailnet Mesh, AI Agent Gateway, and VibeMux`,
     }],
   },
   twitter: {
@@ -39,9 +39,9 @@ export default function Tools_page() {
     <div className="site_shell">
       <a className="skip_link" href="#main_content">Skip to content</a>
       <Site_header display_name={profile.display_name} current_page="tools" />
-      <Tools_showcase github_url={github_url} />
+      <Tools_showcase github_url={github_url} display_name={profile.display_name} />
       <footer className="site_footer">
-        <span>{profile.display_name}<span className="wordmark_dot">.</span><span className="footer_caption">Independent tools, shared direction.</span></span>
+        <span>{profile.display_name}<span className="footer_caption">Independent tools, shared direction.</span></span>
         <span className="footer_platform">Agent systems · Infrastructure · Developer tools.</span>
         <Link href="/">Back to portfolio ↑</Link>
       </footer>
