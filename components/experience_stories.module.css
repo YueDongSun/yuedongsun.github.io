@@ -26,8 +26,6 @@
 .storyHeading h2 em { color:var(--accent); font-weight:400; }
 .storyHeading > p { max-width:330px; margin:0 0 3px; color:var(--muted); font-size:14px; line-height:1.8; }
 .illustration { overflow:hidden; border:1px solid var(--line); border-radius:6px; background:var(--paper); }
-.illustration > a { height:auto; padding:0; background:var(--paper); }
-.illustration > a > img { width:100%; height:auto; object-fit:contain; }
 .focusAreas { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:26px; }
 .focusAreas > div { padding-right:18px; border-right:1px solid var(--line); }
 .focusAreas > div:last-child { border-right:0; }

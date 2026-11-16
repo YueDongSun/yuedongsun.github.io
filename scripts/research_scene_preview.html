@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Research scenes · local review</title>
+  <style>
+    :root { color-scheme:light; font:13px/1.5 system-ui,sans-serif; background:light-dark(#eee,#181818); color:light-dark(#222,#eee); }
+    * { box-sizing:border-box; }
+    body { margin:0; }
+    header { padding:16px 24px 12px; border-bottom:1px solid light-dark(#ccc,#444); }
+    h1 { font-size:16px; font-weight:550; margin:0 0 4px; }
+    p { margin:0; }
+    .controls { display:flex; flex-wrap:wrap; align-items:end; gap:12px; margin:14px 0; }
+    label { display:grid; gap:4px; font-size:11px; }
+    select,button { min-height:36px; padding:6px 10px; border:1px solid light-dark(#bbb,#555); border-radius:4px; color:inherit; background:light-dark(#fff,#252525); font:inherit; }
+    button { cursor:pointer; }
+    button:focus-visible,select:focus-visible,input:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
+    .phase { min-width:160px; }
+    input { accent-color:light-dark(#222,#ddd); height:32px; margin:0; }
+    .status { font:11px/1.6 ui-monospace,monospace; }
+    main { overflow:auto; padding:20px 0; }
+    iframe { display:block; margin:auto; border:0; background:light-dark(#f4f4f2,#111); width:1280px; height:1800px; }
+    .note { font-size:11px; opacity:.75; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Research scenes · local review</h1>
+    <p class="note">The frame loads the production export. Theme uses the browser’s inherited color scheme; geometry and content come from the website.</p>
+    <div class="controls">
+      <label>Story<select id="story"><option value="seed">STEM learning</option><option value="tsinghua">Quantum memories</option><option value="ustc">Light–matter interaction</option></select></label>
+      <label>Viewport<select id="viewport"><option value="1280">Desktop · 1280 px</option><option value="390">Mobile · 390 px</option><option value="320">Narrow mobile · 320 px</option></select></label>
+      <label>Color scheme<select id="theme"><option value="light">Light</option><option value="dark">Dark</option></select></label>
+      <button type="button" id="play">Play sequence</button>
+      <button type="button" id="pause">Pause</button>
+      <label class="phase">Inspect a frame · <output id="phase-label">75%</output><input id="phase" aria-label="Inspect animation progress" type="range" min="0" max="100" value="75"></label>
+      <button type="button" id="inspect">Inspect selected frame</button>
+      <button type="button" id="top">Frame full story</button>
+    </div>
+    <p id="status" class="status" role="status">Loading the production export…</p>
+  </header>
+  <main><iframe id="preview" title="Production website preview" src="/#seed"></iframe></main>
+  <script>
+    const frame = document.querySelector('#preview');
+    const story = document.querySelector('#story');
+    const viewport = document.querySelector('#viewport');
+    const theme = document.querySelector('#theme');
+    const phase = document.querySelector('#phase');
+    const status = document.querySelector('#status');
+    function current_scene() { return frame.contentDocument?.querySelector(`[data-scene="${story.value}"]`); }
+    function scene_button(action) { return Array.from(current_scene()?.querySelectorAll('button') ?? []).find(button => button.getAttribute('aria-label')?.startsWith(action + ' ')); }
+    function update_status() {
+      const view = frame.contentWindow;
+      if (!view || !current_scene()) return;
+      status.textContent = `Viewport ${view.innerWidth} × ${view.innerHeight} · prefers-color-scheme: ${view.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'} · prefers-reduced-motion: ${view.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'reduce' : 'no-preference'} · scene ${current_scene().dataset.playing === 'true' ? 'playing' : 'paused / still'}`;
+    }
+    function frame_story() {
+      frame.contentDocument?.getElementById(story.value)?.scrollIntoView({behavior:'instant',block:'start'});
+      window.scrollTo({top:0,behavior:'instant'});
+    }
+    function inspect_frame() {
+      frame_story();
+      scene_button('Pause')?.click();
+      requestAnimationFrame(() => {
+        const scene = current_scene();
+        const animations = scene?.querySelector('svg')?.getAnimations({subtree:true}) ?? [];
+        animations.forEach(animation => {
+          animation.pause();
+          animation.currentTime = Number(animation.effect.getTiming().duration) * Number(phase.value) / 100;
+        });
+        update_status();
+      });
+    }
+    story.addEventListener('change', () => { frame.contentWindow.location.hash = story.value; });
+    viewport.addEventListener('change', () => { frame.style.width = `${viewport.value}px`; requestAnimationFrame(frame_story); });
+    theme.addEventListener('change', () => { document.documentElement.style.colorScheme = theme.value; });
+    document.querySelector('#play').addEventListener('click', () => { frame_story(); scene_button('Replay')?.click(); });
+    document.querySelector('#pause').addEventListener('click', () => scene_button('Pause')?.click());
+    document.querySelector('#inspect').addEventListener('click', inspect_frame);
+    document.querySelector('#top').addEventListener('click', frame_story);
+    phase.addEventListener('input', () => { document.querySelector('#phase-label').value = `${phase.value}%`; inspect_frame(); });
+    frame.addEventListener('load', () => { frame_story(); update_status(); });
+    setInterval(update_status, 500);
+  </script>
+</body>
+</html>

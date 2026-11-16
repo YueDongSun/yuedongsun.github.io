@@ -1,0 +1,67 @@
+.engraving { fill:none; stroke:var(--scene-ink); stroke-width:1.3; }
+.construction { stroke:var(--scene-faint); stroke-width:1; }
+.ground { fill:var(--scene-plane); fill-opacity:.5; stroke:none; }
+.surfaceFill { fill:inherit; fill-opacity:.6; stroke:none; }
+.surfaceRule { fill:none; stroke:var(--scene-mid); stroke-width:.85; opacity:.64; }
+.surfaceEdge { fill:none; stroke:var(--scene-mid); stroke-width:1.4; }
+.problemContour { fill:none; stroke:var(--scene-ink); stroke-width:2.3; }
+.original { opacity:.28; }
+.revision { opacity:1; }
+.revisedContour { fill:none; stroke:var(--scene-ink); stroke-width:2.5; }
+.constraints { stroke:var(--scene-ink); stroke-width:1.1; }
+.constraints circle { fill:var(--scene-paper); }
+.branchGuides { stroke:var(--scene-faint); stroke-dasharray:2 6; stroke-width:1; }
+.candidatePlane { fill:var(--scene-plane); fill-opacity:.5; stroke:none; }
+.candidateBack { stroke:var(--scene-faint); stroke-width:1; }
+.candidateContour { stroke:var(--scene-ink); stroke-width:1.8; fill:none; }
+.candidateEdge { stroke:var(--scene-mid); stroke-width:.8; }
+.candidateBaseline { stroke:var(--scene-faint); stroke-width:.8; }
+.optionOne,.optionThree { opacity:.58; }
+.comparisonGuide { stroke:var(--scene-faint); stroke-width:1; }
+.comparisonArrival { stroke:var(--scene-ink); stroke-width:1.9; opacity:.6; }
+.apertureOuter { fill:var(--scene-highlight); fill-opacity:.28; stroke:var(--scene-faint); stroke-width:1.3; }
+.apertureInner { stroke:var(--scene-mid); stroke-width:.8; stroke-dasharray:1 7; }
+.comparisonConstruction { stroke:var(--scene-faint); stroke-width:.8; }
+.referenceContour { stroke:var(--scene-mid); stroke-width:1.8; stroke-dasharray:4 5; }
+.residual { stroke:none; opacity:.65; }
+.evaluatedContour { stroke:var(--scene-ink); stroke-width:2.6; }
+.residualTicks { stroke:var(--scene-mid); stroke-width:1; }
+.evaluation { opacity:.38; }
+.nextComparison { stroke:var(--scene-ink); stroke-width:2.6; opacity:1; }
+.fixedPoints { fill:var(--scene-paper); stroke:var(--scene-ink); stroke-width:1.4; }
+.returnGuide { stroke:var(--scene-mid); stroke-width:.9; }
+.feedback { stroke:var(--scene-ink); stroke-width:2.3; opacity:.8; }
+.returnArrow { stroke:var(--scene-ink); stroke-width:1.5; }
+.reviseArrival { stroke:var(--scene-ink); stroke-width:1.6; opacity:.5; }
+
+:global([data-animated="true"]) .original { animation:original var(--scene-duration) ease-in-out infinite; }
+:global([data-animated="true"]) .revision { animation:revision var(--scene-duration) ease-in-out infinite; }
+:global([data-animated="true"]) .optionOne { animation:optionOne var(--scene-duration) ease-in-out infinite; }
+:global([data-animated="true"]) .optionTwo { animation:optionTwo var(--scene-duration) ease-in-out infinite; }
+:global([data-animated="true"]) .optionThree { animation:optionThree var(--scene-duration) ease-in-out infinite; }
+:global([data-animated="true"]) .candidateContour { animation:candidateTrace var(--scene-duration) cubic-bezier(.4,0,.2,1) infinite; stroke-dasharray:1; }
+:global([data-animated="true"]) .comparisonArrival { animation:arrival var(--scene-duration) ease-in-out infinite; stroke-dasharray:1; }
+:global([data-animated="true"]) .evaluation { animation:evaluate var(--scene-duration) ease-in-out infinite; }
+:global([data-animated="true"]) .nextComparison { animation:nextComparison var(--scene-duration) ease-in-out infinite; }
+:global([data-animated="true"]) .feedback { animation:feedback var(--scene-duration) cubic-bezier(.45,0,.2,1) infinite; stroke-dasharray:.22 .78; }
+:global([data-animated="true"]) .reviseArrival { animation:reviseArrival var(--scene-duration) ease-in-out infinite; stroke-dasharray:1; }
+
+@keyframes original { 0%,65%,100% { opacity:1; } 76%,92% { opacity:.18; } }
+@keyframes revision { 0%,65%,100% { opacity:0; } 78%,92% { opacity:1; } }
+@keyframes optionOne { 0%,10%,100% { opacity:.18; } 22%,28% { opacity:.9; } 38%,91% { opacity:.4; } }
+@keyframes optionTwo { 0%,15%,100% { opacity:.2; } 31%,91% { opacity:1; } }
+@keyframes optionThree { 0%,18%,100% { opacity:.18; } 29%,34% { opacity:.85; } 43%,91% { opacity:.4; } }
+@keyframes candidateTrace { 0%,14%,100% { stroke-dashoffset:1; } 33%,92% { stroke-dashoffset:0; } 97% { stroke-dashoffset:0; } }
+@keyframes arrival { 0%,32%,100% { opacity:0; stroke-dashoffset:1; } 36% { opacity:1; stroke-dashoffset:1; } 43%,87% { opacity:.7; stroke-dashoffset:0; } 94% { opacity:0; stroke-dashoffset:0; } }
+@keyframes evaluate { 0%,35%,100% { opacity:0; } 46%,76% { opacity:1; } 84%,91% { opacity:.38; } 96% { opacity:0; } }
+@keyframes nextComparison { 0%,75%,100% { opacity:0; } 83%,91% { opacity:1; } }
+@keyframes feedback { 0%,49% { opacity:0; stroke-dashoffset:.23; } 52% { opacity:1; stroke-dashoffset:.23; } 66% { opacity:1; stroke-dashoffset:-.78; } 70%,100% { opacity:0; stroke-dashoffset:-.78; } }
+@keyframes reviseArrival { 0%,65%,100% { opacity:0; stroke-dashoffset:1; } 67% { opacity:1; stroke-dashoffset:1; } 73%,88% { opacity:.8; stroke-dashoffset:0; } 94% { opacity:0; stroke-dashoffset:0; } }
+
+/* Keep the visual hierarchy at phone width; construction stays quieter. */
+@media screen and (max-width:760px) {
+  .engraving .problemContour,.engraving .candidateContour,.engraving .revisedContour,.engraving .evaluatedContour,.engraving .nextComparison { vector-effect:non-scaling-stroke; stroke-width:.9px; }
+  .engraving .surfaceEdge,.engraving .referenceContour,.engraving .returnGuide,.engraving .returnArrow,.engraving .apertureOuter { vector-effect:non-scaling-stroke; stroke-width:.55px; }
+  .engraving .surfaceRule { vector-effect:non-scaling-stroke; stroke-width:.35px; }
+  .engraving .feedback,.engraving .reviseArrival { vector-effect:non-scaling-stroke; stroke-width:1px; }
+}
