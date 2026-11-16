@@ -16,7 +16,7 @@ The publication list distinguishes journal articles, preprints, and manuscripts.
 
 Each research topic pairs two complementary images that can be enlarged. Lightweight previews keep original figures available for close reading. `config/publication_visuals.ts` associates paper images with publication IDs and labels their published, preprint or author-provided manuscript source; figure credits live in `public/papers/SOURCES.md` and `public/research/SOURCES.md`. The project directory and Tools page use large SVG workflow illustrations to explain each tool's purpose.
 
-Experience cards select panoramic stories for ByteDance Seed, Tsinghua IIIS and USTC School of the Gifted Young. Their generated concept artwork shares a warm ivory, copper and frosted-glass direction. Seed covers STEM data, reinforcement-learning algorithms and benchmarks; Tsinghua covers quantum memories, multiplexing and networks; USTC covers mathematical foundations, quantum optics and rare-earth systems. Deep links `#seed`, `#tsinghua` and `#ustc` open the corresponding story.
+Experience cards select panoramic stories for ByteDance Seed, Tsinghua IIIS and USTC School of the Gifted Young. Editable monochrome SVG scenes illustrate a learning/feedback cycle, spatial mode addressing and a remote memory link, and localized optical excitation and response. Seed covers STEM data, reinforcement-learning algorithms and benchmarks; Tsinghua covers quantum memories, multiplexing and networks; USTC covers mathematical foundations, quantum optics and rare-earth systems. Deep links `#seed`, `#tsinghua` and `#ustc` open the corresponding story. See [research scenes](docs/research_scenes.md) for geometry, timing, accessibility, and local preview instructions. The earlier generated rasters remain with their provenance notes.
 
 See [content sources](docs/content_sources_20261112.md) for the November 2026 bibliography and profile update, and [editing guide](docs/editing_guide.md) for routine maintenance.
 
@@ -38,6 +38,8 @@ npm run build_pages
 ```
 
 `out/` contains the complete static website, including `/tools/index.html`. All links, styles, logos, and research images work without a server API, database, or visitor login. No external font or analytics service is required.
+
+After the static build, run `npm run preview_scenes` and open the [local scene review](http://127.0.0.1:4173/__scene-preview/) for viewport, theme, playback, and timeline controls. See [research scenes](docs/research_scenes.md) for the preview workflow and geometry editing guide.
 
 ## Publishing
 
@@ -69,8 +71,9 @@ The two former Sites introductions have separate source checkouts and fixed HTTP
 | `public/research/` | Research figures from the supplied CV |
 | `public/research/previews/` | Compressed web previews of selected research figures |
 | `public/papers/` | Publication figures and source credits |
-| `public/seed/` | Generated STEM reinforcement-learning illustration and provenance |
-| `public/experience/` | Generated Tsinghua and USTC experience illustrations and their briefs |
+| `components/scenes/` | Editable SVG experience illustrations and coordinated CSS animation |
+| `public/seed/` | Earlier generated STEM illustration retained with its provenance |
+| `public/experience/` | Earlier generated Tsinghua and USTC illustrations retained with their briefs |
 | `config/publication_visuals.ts` | Publication IDs mapped to figures, captions, and source links |
 | `scripts/build_github_pages.mjs` | Next.js static-export orchestration |
 | `.github/workflows/deploy_pages.yml` | GitHub Pages publication |

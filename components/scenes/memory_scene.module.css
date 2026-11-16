@@ -1,0 +1,100 @@
+.scene { fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.groundShadow,.remoteShadow { fill:var(--scene-ink); opacity:.045; }
+.slabSide,.remoteSide { fill:var(--scene-plane); stroke:var(--scene-mid); stroke-width:1; }
+.slabPlane,.remotePlane { stroke:var(--scene-mid); stroke-width:1.2; }
+.slabEdge { stroke:var(--scene-mid); stroke-width:.85; }
+.inset,.remoteEtch { stroke:var(--scene-mid); stroke-width:.7; opacity:.65; }
+.registration { stroke:var(--scene-mid); stroke-width:1; }
+.modeFoot { stroke:var(--scene-faint); stroke-width:.8; }
+.modeWaist { stroke:var(--scene-mid); stroke-width:1; opacity:.62; }
+.waistFill { fill:var(--scene-paper); fill-opacity:.65; stroke:none; }
+.waistMiddle { opacity:.65; }
+.modeAxis { stroke-dasharray:1 5; stroke-width:.7; opacity:.45; }
+.selectedWaist { stroke:var(--scene-ink); stroke-width:1.65; }
+.selectedWaist .waistFill { fill:var(--scene-ink); fill-opacity:.045; }
+.address { stroke:var(--scene-ink); stroke-width:1; opacity:.46; }
+.address > path { stroke-dasharray:100; stroke-dashoffset:0; }
+.incidentEnvelope { fill:var(--scene-ink); opacity:.025; }
+.incidentGuide { stroke:var(--scene-mid); stroke-width:.85; opacity:.58; }
+.incidentAxis { stroke:var(--scene-mid); stroke-width:.65; stroke-dasharray:2 7; opacity:.4; }
+.incidentPacket { stroke:var(--scene-ink); stroke-width:1.65; transform:translate(237px,263px) rotate(16.24deg); opacity:.8; }
+.localHold { opacity:1; }
+.holdField { stroke:none; }
+.holdRing { stroke:var(--scene-ink); stroke-width:1.8; }
+.holdContour { stroke:var(--scene-ink); stroke-width:1.5; }
+.opticalRibbon { stroke:none; opacity:.8; }
+.ribbonEdge { stroke:var(--scene-mid); stroke-width:1; opacity:.7; }
+.ribbonAxis { stroke:var(--scene-mid); stroke-width:.65; stroke-dasharray:1 7; opacity:.45; }
+.ribbonInner { stroke:var(--scene-faint); stroke-width:.65; opacity:.75; }
+.networkPacket { stroke:var(--scene-ink); stroke-width:1.45; transform:translate(630.88px,128.72px) rotate(-12.54deg); opacity:.9; }
+.remoteVolume { stroke:var(--scene-mid); stroke-width:1.2; }
+.remoteFill { fill:var(--scene-paper); fill-opacity:.8; stroke:none; }
+.remoteSection { stroke-dasharray:2 3; }
+.remoteAxis { stroke-width:.65; stroke-dasharray:1 5; opacity:.45; }
+.remoteBase { stroke:var(--scene-faint); stroke-width:.8; }
+.remoteResponse { stroke:var(--scene-ink); stroke-width:1.8; opacity:.85; }
+
+:global([data-animated='true']) .address { animation:address var(--scene-duration) linear infinite; }
+:global([data-animated='true']) .address > path { animation:addressTrace var(--scene-duration) ease-in-out infinite; }
+:global([data-animated='true']) .incidentPacket { animation:incident var(--scene-duration) linear infinite; }
+:global([data-animated='true']) .localHold { animation:hold var(--scene-duration) ease-in-out infinite; }
+:global([data-animated='true']) .opticalRibbon { animation:ribbon var(--scene-duration) ease-in-out infinite; }
+:global([data-animated='true']) .networkPacket { animation:propagate var(--scene-duration) linear infinite; }
+:global([data-animated='true']) .remoteResponse { animation:response var(--scene-duration) ease-in-out infinite; }
+
+/* One shared cycle. Arrival, local storage and remote response never blink on
+   independent periods. The quiet 0/100% pose is identical at the loop seam. */
+@keyframes address {
+  0%,97%,100% { opacity:0; }
+  11%,31% { opacity:.75; }
+  43%,89% { opacity:.3; }
+}
+@keyframes addressTrace {
+  0%,100% { stroke-dashoffset:100; }
+  13%,87% { stroke-dashoffset:0; }
+  97% { stroke-dashoffset:-100; }
+}
+@keyframes incident {
+  0%,10%,100% { opacity:0; transform:translate(135px,233px) rotate(16.24deg) scale(1.05); }
+  14% { opacity:.85; transform:translate(175px,245px) rotate(16.24deg) scale(.96); }
+  21% { opacity:1; transform:translate(300px,281px) rotate(16.24deg) scale(.7); }
+  29% { opacity:1; transform:translate(431px,319px) rotate(16.24deg) scale(.4); }
+  32%,99% { opacity:0; transform:translate(437px,321px) rotate(16.24deg) scale(.26); }
+}
+@keyframes hold {
+  0%,22%,100% { opacity:0; }
+  31%,47% { opacity:1; }
+  59%,90% { opacity:.2; }
+}
+@keyframes ribbon {
+  0%,42%,100% { opacity:.3; }
+  54%,81% { opacity:1; }
+  92% { opacity:.3; }
+}
+@keyframes propagate {
+  0%,49%,100% { opacity:0; transform:translate(437px,321px) rotate(-84.9deg) scale(.45); }
+  50% { opacity:.7; transform:translate(437px,321px) rotate(-84.9deg) scale(.45); }
+  53.5% { opacity:1; transform:translate(450.6px,265.53px) rotate(-67.45deg) scale(.7); }
+  57% { opacity:1; transform:translate(479.27px,217.55px) rotate(-51.14deg) scale(1); }
+  60.5% { opacity:1; transform:translate(520.51px,178.07px) rotate(-36.75deg) scale(1); }
+  64% { opacity:1; transform:translate(571.88px,148.12px) rotate(-24.08deg) scale(1); }
+  67.5% { opacity:1; transform:translate(630.88px,128.72px) rotate(-12.54deg) scale(1); }
+  71% { opacity:1; transform:translate(695.05px,120.89px) rotate(-1.49deg) scale(1); }
+  74.5% { opacity:1; transform:translate(761.91px,125.64px) rotate(9.59deg) scale(.9); }
+  78% { opacity:.7; transform:translate(829px,144px) rotate(21.02deg) scale(.7); }
+  81%,99% { opacity:0; transform:translate(829px,144px) rotate(21.02deg) scale(.35); }
+}
+@keyframes response {
+  0%,78%,100% { opacity:0; }
+  81%,91% { opacity:1; }
+  98% { opacity:0; }
+}
+
+@media screen and (max-width:760px) {
+  .scene .modeWaist { opacity:.8; }
+  .scene .modeWaist path,.scene .modeWaist ellipse { vector-effect:non-scaling-stroke; stroke-width:.5px; }
+  .scene .selectedWaist path,.scene .selectedWaist ellipse,.scene .holdRing,.scene .holdContour { vector-effect:non-scaling-stroke; stroke-width:.85px; }
+  .scene .slabPlane,.scene .slabEdge,.scene .remotePlane,.scene .ribbonEdge,.scene .incidentGuide { vector-effect:non-scaling-stroke; stroke-width:.55px; }
+  .scene .incidentPacket ellipse,.scene .networkPacket ellipse,.scene .remoteResponse path,.scene .remoteResponse ellipse { vector-effect:non-scaling-stroke; stroke-width:.8px; }
+  .scene .remoteVolume path,.scene .remoteVolume ellipse { vector-effect:non-scaling-stroke; stroke-width:.65px; }
+}

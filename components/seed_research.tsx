@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Figure_viewer } from './figure_viewer';
+import { Research_scene } from './research_scene';
 import styles from './seed_research.module.css';
 
 export function Seed_research() {
@@ -13,17 +13,7 @@ export function Seed_research() {
         <h2 id="seed_heading">Reinforcement learning<br /><em>for STEM.</em></h2>
         <p>Working across data, algorithms, and benchmarks for STEM reinforcement learning.</p>
       </div>
-      <Figure_viewer
-        src="/seed/seed-stem-rl-v1.webp"
-        alt="A concept illustration connecting STEM knowledge, training data, reinforcement-learning algorithms, and evaluation benchmarks."
-        caption="STEM reinforcement learning · concept illustration"
-        title="Reinforcement learning for STEM"
-        width={1672}
-        height={941}
-        compact
-        className={styles.illustration}
-        sizes="(max-width: 700px) 100vw, 1120px"
-      />
+      <Research_scene kind="seed" className={styles.illustration} />
       <div className={styles.focusAreas}>
         <div><span>01 / DATA</span><h3>Make expertise learnable.</h3><p>STEM tasks, data, and feedback.</p></div>
         <div><span>02 / ALGORITHMS</span><h3>Improve how models learn.</h3><p>Reinforcement learning methods.</p></div>

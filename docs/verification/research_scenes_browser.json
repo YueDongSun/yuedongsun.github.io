@@ -1,0 +1,751 @@
+{
+  "method": "Observed live production-export sequences in Chromium. Samples read computed SVG styles during real playback; UI controls operated Pause/Play/Replay. Sample elapsed times include interaction and browser scheduling overhead. Stationary screenshot captures were conducted separately at a selected phase.",
+  "checks": {
+    "seed": [
+      {
+        "elapsedMs": 2040,
+        "parts": {
+          "candidateContour": {
+            "dashOffset": "1px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "evaluation": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "feedback": {
+            "dashOffset": "0.23px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "revision": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 4836,
+        "parts": {
+          "candidateContour": {
+            "dashOffset": "0.572252px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "evaluation": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "feedback": {
+            "dashOffset": "0.23px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "revision": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 6872,
+        "parts": {
+          "candidateContour": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "evaluation": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "feedback": {
+            "dashOffset": "0.23px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "revision": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 8741,
+        "parts": {
+          "candidateContour": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "evaluation": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "feedback": {
+            "dashOffset": "0.23px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "revision": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 11262,
+        "parts": {
+          "candidateContour": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "evaluation": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "feedback": {
+            "dashOffset": "-0.78px",
+            "opacity": "0.999606",
+            "playState": "running",
+            "transform": "none"
+          },
+          "revision": {
+            "dashOffset": "0px",
+            "opacity": "0.0130408",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 13035,
+        "parts": {
+          "candidateContour": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "evaluation": {
+            "dashOffset": "0px",
+            "opacity": "0.854905",
+            "playState": "running",
+            "transform": "none"
+          },
+          "feedback": {
+            "dashOffset": "-0.78px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "revision": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 15041,
+        "parts": {
+          "candidateContour": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "evaluation": {
+            "dashOffset": "0px",
+            "opacity": "0.243595",
+            "playState": "running",
+            "transform": "none"
+          },
+          "feedback": {
+            "dashOffset": "-0.78px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "revision": {
+            "dashOffset": "0px",
+            "opacity": "0.963315",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      }
+    ],
+    "pauseAndReset": {
+      "pausedA": {
+        "feedback": "-0.78px",
+        "playing": "false",
+        "revision": "0.512763",
+        "state": "paused"
+      },
+      "pausedB": {
+        "feedback": "-0.78px",
+        "playing": "false",
+        "revision": "0.512763",
+        "state": "paused"
+      },
+      "unchanged": true,
+      "seedReset": {
+        "candidateOffset": "1px",
+        "evaluation": "0",
+        "playing": "true",
+        "revision": "0"
+      }
+    },
+    "tsinghua": [
+      {
+        "elapsedMs": 2041,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0.951739",
+            "playState": "running",
+            "transform": "matrix(0.752383, 0.219157, -0.219157, 0.752383, 259.783, 269.417)"
+          },
+          "localHold": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "networkPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.0400024, -0.448218, 0.448218, 0.0400024, 437, 321)"
+          },
+          "remoteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 4547,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.249626, 0.072712, -0.072712, 0.249626, 437, 321)"
+          },
+          "localHold": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "networkPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.0400024, -0.448218, 0.448218, 0.0400024, 437, 321)"
+          },
+          "remoteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 6648,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.249626, 0.072712, -0.072712, 0.249626, 437, 321)"
+          },
+          "localHold": {
+            "dashOffset": "0px",
+            "opacity": "0.235696",
+            "playState": "running",
+            "transform": "none"
+          },
+          "networkPacket": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(0.639165, -0.76907, 0.76907, 0.639165, 481.762, 215.164)"
+          },
+          "remoteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 9057,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.249626, 0.072712, -0.072712, 0.249626, 437, 321)"
+          },
+          "localHold": {
+            "dashOffset": "0px",
+            "opacity": "0.2",
+            "playState": "running",
+            "transform": "none"
+          },
+          "networkPacket": {
+            "dashOffset": "0px",
+            "opacity": "0.767951",
+            "playState": "running",
+            "transform": "matrix(0.707071, 0.235637, -0.235637, 0.707071, 813.804, 139.841)"
+          },
+          "remoteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 11620,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.249626, 0.072712, -0.072712, 0.249626, 437, 321)"
+          },
+          "localHold": {
+            "dashOffset": "0px",
+            "opacity": "0.00797622",
+            "playState": "running",
+            "transform": "none"
+          },
+          "networkPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.326709, 0.125543, -0.125543, 0.326709, 829, 144)"
+          },
+          "remoteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 14098,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0.963172",
+            "playState": "running",
+            "transform": "matrix(0.733356, 0.213615, -0.213615, 0.733356, 269.31, 272.161)"
+          },
+          "localHold": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          },
+          "networkPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.0400024, -0.448218, 0.448218, 0.0400024, 437, 321)"
+          },
+          "remoteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 16072,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.249626, 0.072712, -0.072712, 0.249626, 437, 321)"
+          },
+          "localHold": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "none"
+          },
+          "networkPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.0400024, -0.448218, 0.448218, 0.0400024, 437, 321)"
+          },
+          "remoteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "none"
+          }
+        },
+        "playing": "true"
+      }
+    ],
+    "ustc": [
+      {
+        "elapsedMs": 1851,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 0.761294, 94.8702, 0)"
+          },
+          "occupation": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "responsePacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.09, 0, 0, 0.09, 0, 0)"
+          },
+          "siteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.7, 0, 0, 0.7, 0, 0)"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 3830,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0.00724492",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 0.0611592, 390.413, 0)"
+          },
+          "occupation": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 1, 0, -22.3166)"
+          },
+          "responsePacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.09, 0, 0, 0.09, 0, 0)"
+          },
+          "siteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.7, 0, 0, 0.7, 0, 0)"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 5231,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 0.06, 391, 0)"
+          },
+          "occupation": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 1, 0, -80)"
+          },
+          "responsePacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.09, 0, 0, 0.09, 0, 0)"
+          },
+          "siteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.7, 0, 0, 0.7, 0, 0)"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 7138,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 0.06, 391, 0)"
+          },
+          "occupation": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 1, 0, -22.5812)"
+          },
+          "responsePacket": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(0.635695, 0, 0, 0.635695, 0, 0)"
+          },
+          "siteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0.727164",
+            "playState": "running",
+            "transform": "matrix(1.11561, 0, 0, 1.11561, 0, 0)"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 8278,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 0.06, 391, 0)"
+          },
+          "occupation": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "responsePacket": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(0.99931, 0, 0, 0.99931, 0, 0)"
+          },
+          "siteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0.0189918",
+            "playState": "running",
+            "transform": "matrix(1.78213, 0, 0, 1.78213, 0, 0)"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 10570,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 0.06, 391, 0)"
+          },
+          "occupation": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "responsePacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(1.13, 0, 0, 1.13, 0, 0)"
+          },
+          "siteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(1.8, 0, 0, 1.8, 0, 0)"
+          }
+        },
+        "playing": "true"
+      },
+      {
+        "elapsedMs": 13245,
+        "parts": {
+          "incidentPacket": {
+            "dashOffset": "0px",
+            "opacity": "0.999772",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 1.00002, -0.00639779, 0)"
+          },
+          "occupation": {
+            "dashOffset": "0px",
+            "opacity": "1",
+            "playState": "running",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "responsePacket": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.09, 0, 0, 0.09, 0, 0)"
+          },
+          "siteResponse": {
+            "dashOffset": "0px",
+            "opacity": "0",
+            "playState": "running",
+            "transform": "matrix(0.7, 0, 0, 0.7, 0, 0)"
+          }
+        },
+        "playing": "true"
+      }
+    ],
+    "remoteHold": {
+      "incident": "0",
+      "playing": "false",
+      "propagation": "0",
+      "remote": "1"
+    },
+    "offscreen": {
+      "before": {
+        "opacity": "0",
+        "playing": "false",
+        "state": "paused",
+        "top": -2527.734375,
+        "transform": "matrix(0.326709, 0.125543, -0.125543, 0.326709, 829, 144)"
+      },
+      "after": {
+        "opacity": "0",
+        "playing": "false",
+        "state": "paused",
+        "top": -5729.734375,
+        "transform": "matrix(0.326709, 0.125543, -0.125543, 0.326709, 829, 144)"
+      },
+      "unchanged": true,
+      "resumed": {
+        "opacity": "0",
+        "playing": "true",
+        "state": "running",
+        "transform": "matrix(0.326709, 0.125543, -0.125543, 0.326709, 829, 144)"
+      }
+    },
+    "keyboardTabs": {
+      "endSelectsUstc": "true",
+      "homeSelectsSeed": "true"
+    },
+    "publicationViewer": {
+      "opened": 1,
+      "closed": 0,
+      "replacedViewerLinks": 0
+    },
+    "narrowMobile": [
+      {
+        "buttonSizes": [
+          {
+            "height": 44,
+            "width": 60.453125
+          },
+          {
+            "height": 44,
+            "width": 72.140625
+          }
+        ],
+        "kind": "seed",
+        "sceneWidth": 244,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      {
+        "buttonSizes": [
+          {
+            "height": 44,
+            "width": 60.453125
+          },
+          {
+            "height": 44,
+            "width": 72.140625
+          }
+        ],
+        "kind": "tsinghua",
+        "sceneWidth": 244,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      {
+        "buttonSizes": [
+          {
+            "height": 44,
+            "width": 60.453125
+          },
+          {
+            "height": 44,
+            "width": 72.140625
+          }
+        ],
+        "kind": "ustc",
+        "sceneWidth": 244,
+        "scrollWidth": 320,
+        "width": 320
+      }
+    ]
+  },
+  "excluded_attempt": "An initial memory sampling attempt occurred while playback was paused in a background tab. It was not counted as live-motion verification; the foreground sequence was rerun and is recorded above."
+}

@@ -12,7 +12,8 @@
     "lint": "eslint app components config lib scripts tests *.ts *.mjs",
     "build_pages": "node scripts/build_github_pages.mjs",
     "test": "node --experimental-strip-types --test tests/profile_contract_test.mjs tests/tools_catalog_test.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "preview_scenes": "node scripts/preview_research_scenes.mjs"
   },
   "dependencies": {
     "next": "16.3.4",

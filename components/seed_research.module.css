@@ -11,8 +11,6 @@
 .heading h2 em { color:var(--accent); font-weight:400; }
 .heading > p { max-width:290px; margin:0 0 3px; color:var(--muted); font-size:14px; line-height:1.8; }
 .illustration { overflow:hidden; border:1px solid var(--line); border-radius:6px; background:var(--paper); }
-.illustration > a { height:auto; aspect-ratio:1672 / 941; padding:0; background:var(--paper); }
-.illustration > a > img { object-fit:contain; }
 .focusAreas { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:26px; }
 .focusAreas > div { padding-right:18px; border-right:1px solid var(--line); }
 .focusAreas > div:last-child { border-right:0; }
@@ -35,8 +33,6 @@
   .heading { margin:23px 0; gap:16px; }
   .heading h2 { font-size:38px; letter-spacing:-1.3px; }
   .heading > p { font-size:13px; }
-  .illustration > a { height:auto; min-height:0; padding:0; }
-  .illustration > a > img { height:100%; width:100%; object-fit:contain; }
   .focusAreas { grid-template-columns:1fr; gap:14px; margin-top:22px; }
   .focusAreas > div { padding:0 0 14px; border:0; border-bottom:1px solid var(--line); }
   .focusAreas > div:last-child { padding-bottom:0; border:0; }
@@ -47,7 +43,6 @@
   .seedSection { margin-top:20pt; padding:15pt; break-inside:avoid; }
   .heading h2 { font-size:28pt; }
   .heading > p { font-size:9pt; }
-  .illustration > a { height:230pt; }
   .focusAreas h3 { font-size:15pt; }
   .focusAreas p { font-size:8pt; }
 }
