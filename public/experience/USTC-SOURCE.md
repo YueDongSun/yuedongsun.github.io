@@ -1,5 +1,7 @@
 # USTC quantum foundations visual
 
+The homepage no longer displays this file. The USTC story uses the inline diagram in `components/research_scenes.tsx`. This note records the earlier generated image.
+
 - **Website asset:** `/experience/ustc-quantum-foundations-v1.webp`
 - **Purpose:** Concept illustration for Yuedong Sun's 2019–2023 education at USTC School of the Gifted Young, connecting mathematics, computational physics, quantum optics, rare-earth-crystal quantum memory and optical interfaces.
 - **Creation:** OpenAI built-in image generation, 12 November 2026. One image was generated. No external reference images were passed to the generation tool.

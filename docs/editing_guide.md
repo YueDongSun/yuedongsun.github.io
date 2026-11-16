@@ -18,13 +18,13 @@ The research overview displays selected figures from `research_projects`. Each c
 
 `config/publication_visuals.ts` maps an existing publication ID to its image, caption, source URL, version label, and dimensions. Add the corresponding original source and credit to `public/papers/SOURCES.md`. Use a complete figure belonging to that exact paper and distinguish the journal version from a preprint. Entries without a figure keep their compact text layout.
 
-The experience story uses the Seed illustration in `public/seed/` and the Tsinghua/USTC illustrations in `public/experience/`. Each has a source note containing its generation brief. Keep Seed's work scope aligned with the profile: reinforcement learning for STEM, spanning data, algorithms, and benchmarks. The other stories follow the existing education and research descriptions. These artworks are concept illustrations; technical claims and quantitative results come from their actual sources.
+Education and experience stories render inline diagrams from `components/research_scenes.tsx`. Seed shows a STEM task and learning loop, Tsinghua an addressed mode array with propagation and network edges, and USTC rays, a two-level transition, and a lattice site. Keep the drawings qualitative: do not add scores, rates, or a claimed laboratory layout. The earlier generated rasters in `public/seed/` and `public/experience/` stay in the repository as provenance and are not referenced by the page.
 
 `components/project_visual.tsx` holds the reusable SVG workflow illustrations for the public projects and software introductions. Keep their labels aligned with the project descriptions and development stages. The diagrams explain roles and information flow; measurements belong in figures with their actual sources.
 
 ## Layout and appearance
 
-`app/globals.css` defines the warm paper palette, serif headings, spacious image-led sections, compact metadata, responsive sidebar, navigation, disclosure panels, project directory, and print styles. `components/tools_showcase.module.css` applies the same language to the software route. Preserve complete scientific panels and institution image aspect ratios. Let the selected images occupy substantial space on desktop, while keeping text and controls readable on narrow screens.
+`app/globals.css` defines the neutral light and dark palettes, serif headings, spacious image-led sections, compact metadata, responsive sidebar, navigation, disclosure panels, project directory, and print styles. Colour follows `prefers-color-scheme`; print stays on a light page. `components/tools_showcase.module.css` applies the same language to the software route. Preserve complete scientific panels and institution image aspect ratios. Let the selected images occupy substantial space on desktop, while keeping text and controls readable on narrow screens.
 
 The legacy anchors `#about`, `#experience`, `#research`, `#projects`, `#publications`, `#skills`, and `#contact` are retained. Experience stories support `#seed`, `#tsinghua`, and `#ustc`. Tools anchors include `#products`, `#tailnet_mesh`, `#cc`, `#vibemux`, `#principles`, and `#questions`.
 

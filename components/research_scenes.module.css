@@ -1,0 +1,132 @@
+.scene {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--ink);
+}
+.canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.track,.runner,.edge,.ray,.transition,.channel {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.track { stroke: var(--hairline); stroke-width: 1.6; }
+.runner,.transition {
+  stroke: var(--ink);
+  stroke-width: 3.2;
+  stroke-dasharray: 8 92;
+  stroke-dashoffset: -24;
+}
+.channel {
+  stroke: var(--hairline);
+  stroke-width: 1.6;
+}
+.photon {
+  stroke: var(--ink);
+  stroke-width: 3;
+  stroke-dasharray: 2.2 17.8;
+  stroke-dashoffset: -8;
+}
+.edge {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 16;
+}
+.ray {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 15;
+}
+.ray_dim { fill: none; stroke: var(--hairline); stroke-width: 1.45; stroke-linecap: round; stroke-linejoin: round; }
+.panel {
+  fill: var(--paper);
+  stroke: var(--hairline);
+  stroke-width: 1.35;
+}
+.panel_active {
+  fill: var(--surface);
+  stroke: var(--ink);
+  stroke-width: 1.75;
+}
+.rule { fill: none; stroke: var(--ink); stroke-width: 1.5; stroke-linecap: round; opacity: .72; }
+.rule_short { fill: none; stroke: var(--hairline); stroke-width: 1.5; stroke-linecap: round; }
+.node {
+  fill: var(--card);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.node_on { fill: var(--ink); stroke: var(--ink); }
+.cell {
+  fill: var(--surface);
+  stroke: var(--hairline);
+  stroke-width: 1.25;
+}
+.lattice { fill: var(--surface); stroke: var(--muted); stroke-width: 1.2; }
+.ion { fill: var(--ink); }
+.mark { fill: var(--ink); }
+.mark_idle { fill: none; stroke: var(--muted); stroke-width: 1.4; }
+.lens { fill: none; stroke: var(--ink); stroke-width: 1.6; }
+.level { fill: none; stroke: var(--ink); stroke-width: 1.7; stroke-linecap: round; }
+.level_dim { fill: none; stroke: var(--hairline); stroke-width: 1.5; stroke-linecap: round; }
+.divider { fill: none; stroke: var(--line); stroke-width: 1; }
+.scene[data-playing="true"] .runner,
+.scene[data-playing="true"] .transition {
+  animation: travel 8s linear infinite;
+}
+.scene[data-playing="true"] .photon { animation: flow 2.6s linear infinite; }
+.scene[data-playing="true"] .edge { animation: flow 2.2s linear infinite; }
+.scene[data-playing="true"] .ray { animation: flow 2.4s linear infinite; }
+.scene[data-playing="true"] .cell { animation: address 8s linear infinite; }
+.stages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px 18px;
+  margin: 0;
+  padding: 14px 16px 8px;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+.stages li { min-width: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.stages span {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--ink);
+  font: 10px/1.4 var(--mono);
+  letter-spacing: .08em;
+}
+.caption {
+  margin: 0;
+  padding: 4px 16px 14px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+@keyframes travel { to { stroke-dashoffset: -100; } }
+@keyframes flow { to { stroke-dashoffset: -20; } }
+@keyframes address {
+  0%, 6% { fill: var(--ink); stroke: var(--ink); }
+  12%, 100% { fill: var(--surface); stroke: var(--hairline); }
+}
+@media screen and (max-width: 700px) {
+  .stages { grid-template-columns: 1fr; gap: 10px; padding: 12px 14px 6px; }
+  .stages li { font-size: 13px; }
+  .caption { padding: 2px 14px 14px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .runner,.transition,.photon,.edge,.ray,.cell { animation: none; }
+  .edge,.ray { stroke-dasharray: none; }
+  .cell { fill: var(--surface); stroke: var(--hairline); }
+  .cell[data-held] { fill: var(--ink); stroke: var(--ink); }
+}
+@media print {
+  .scene { break-inside: avoid; background: #fff; }
+  .runner,.transition,.photon,.edge,.ray,.cell { animation: none; }
+  .edge,.ray { stroke-dasharray: none; }
+  .cell[data-held] { fill: #161616; stroke: #161616; }
+}

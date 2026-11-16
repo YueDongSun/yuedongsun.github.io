@@ -2,84 +2,84 @@
 <title id="title">Er3+:YSO optical-microwave interface methods</title>
 <desc id="desc">Conceptual device and methods schematic showing an optical mode coupled through a grating and photonic interface to an Er3+:YSO ion, with microwave and coplanar-waveguide control as a second interface. The lower row connects electromagnetic design and simulation, fabrication and SEM inspection. Geometry is illustrative and not to scale; no experimental parameters are given.</desc>
 <defs>
-  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#AB704F"/></marker>
-  <marker id="blue-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#8198A4"/></marker>
-  <radialGradient id="mode"><stop offset="0" stop-color="#FFFDFA"/><stop offset=".37" stop-color="#FFFDFA"/><stop offset=".57" stop-color="#8DA497"/><stop offset=".74" stop-color="#DFE8DF"/><stop offset="1" stop-color="#FFFDFA"/></radialGradient>
-  <linearGradient id="host" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ECF0EC"/><stop offset="1" stop-color="#D6E0E2"/></linearGradient>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#1A1A1A"/></marker>
+  <marker id="blue-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#6A6A68"/></marker>
+  <radialGradient id="mode"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".37" stop-color="#FFFFFF"/><stop offset=".57" stop-color="#4A4A48"/><stop offset=".74" stop-color="#ECECEA"/><stop offset="1" stop-color="#FFFFFF"/></radialGradient>
+  <linearGradient id="host" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F0F0EE"/><stop offset="1" stop-color="#E2E2E0"/></linearGradient>
 </defs>
 <g font-family="Arial, Helvetica, sans-serif">
-<rect width="1200" height="760" fill="#F7F4EC"/>
+<rect width="1200" height="760" fill="#F4F4F2"/>
 
-<text x="40" y="65" fill="#303A39" font-size="34" font-weight="600" text-anchor="start" >An optical–microwave interface</text>
-<text x="40" y="105" fill="#6D7975" font-size="20" font-weight="400" text-anchor="start" >Er³⁺:YSO · photonic coupling · microwave control · nanofabrication</text>
-<rect x="943" y="32" width="217" height="38" rx="19" fill="#DFE8DF" stroke="#DFE8DF" stroke-width="1.5" />
-<text x="1051.5" y="57" fill="#303A39" font-size="15" font-weight="600" text-anchor="middle" >METHOD SCHEMATIC</text>
-<line x1="40" y1="128" x2="1160" y2="128" stroke="#DADDD4" stroke-width="1.5" />
-<rect x="40" y="155" width="1120" height="354" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
-<rect x="328" y="246" width="653" height="224" rx="16" fill="url(#host)" stroke="#8198A4" stroke-width="1.5" />
-<text x="64" y="199" fill="#303A39" font-size="25" font-weight="600" text-anchor="start" >Optical mode</text>
-<text x="694" y="199" fill="#303A39" font-size="25" font-weight="600" text-anchor="start" >Microwave / CPW control</text>
-<path d="M77 278 C160 278 216 339 389 358" fill="none" stroke="#AB704F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<path d="M77 262 C160 262 219 323 386 345" fill="none" stroke="#DEC2AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M77 294 C158 294 213 356 386 371" fill="none" stroke="#DEC2AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M394 306.0 Q407 358 394 410.0" fill="none" stroke="#AB704F" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M407 310.5 Q420 358 407 405.5" fill="none" stroke="#AB704F" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M420 315.0 Q433 358 420 401.0" fill="none" stroke="#AB704F" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M433 319.5 Q446 358 433 396.5" fill="none" stroke="#AB704F" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M446 324.0 Q459 358 446 392.0" fill="none" stroke="#AB704F" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M459 328.5 Q472 358 459 387.5" fill="none" stroke="#AB704F" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M472 333.0 Q485 358 472 383.0" fill="none" stroke="#AB704F" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M485 337.5 Q498 358 485 378.5" fill="none" stroke="#AB704F" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
-<rect x="494" y="351" width="318" height="14" rx="7" fill="#DEC2AC" stroke="#DEC2AC" stroke-width="0" />
-<line x1="525" y1="358" x2="793" y2="358" stroke="#AB704F" stroke-width="3.2" marker-end="url(#arrow)"/>
-<text x="358" y="444" fill="#303A39" font-size="21" font-weight="500" text-anchor="start" >Grating / photonic interface</text>
-<path d="M1100 275 L971 275 Q947 275 937 299 L903 365" fill="none" stroke="#8198A4" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M1100 252 L951 252 Q928 252 917 278 L884 345" fill="none" stroke="#AB704F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M1100 230 L929 230 Q907 230 898 254 L862 326" fill="none" stroke="#8198A4" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M1035 252 L994 252" fill="none" stroke="#AB704F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<text x="1037" y="323" fill="#6D7975" font-size="18" font-weight="400" text-anchor="middle" >CPW</text>
-<circle cx="835" cy="358" r="38" fill="#EDF1E9" stroke="#8DA497" stroke-width="1.8" />
-<circle cx="835" cy="358" r="19" fill="#DEC2AC" stroke="#AB704F" stroke-width="2.5" />
-<text x="753" y="306" fill="#303A39" font-size="23" font-weight="600" text-anchor="middle" >Er³⁺:YSO ion</text>
-<line x1="805" y1="313" x2="820" y2="330" stroke="#6D7975" stroke-width="1.6" />
-<text x="808" y="442" fill="#6D7975" font-size="19" font-weight="400" text-anchor="start" >YSO host</text>
-<text x="66" y="484" fill="#6D7975" font-size="17" font-weight="400" text-anchor="start" >Conceptual geometry · not to scale</text>
-<rect x="40" y="548" width="348" height="168" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
-<rect x="426" y="548" width="348" height="168" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
-<rect x="812" y="548" width="348" height="168" rx="18" fill="#FFFDFA" stroke="#DADDD4" stroke-width="1.5" />
-<text x="64" y="584" fill="#303A39" font-size="24" font-weight="600" text-anchor="start" >Design &amp; simulation</text>
-<text x="450" y="584" fill="#303A39" font-size="24" font-weight="600" text-anchor="start" >Fabrication</text>
-<text x="836" y="584" fill="#303A39" font-size="24" font-weight="600" text-anchor="start" >SEM inspection</text>
-<rect x="65" y="607" width="73" height="73" rx="8" fill="#E1E9EC" stroke="#8198A4" stroke-width="1.5" />
-<line x1="82" y1="614" x2="82" y2="673" stroke="#8198A4" stroke-width="1" />
-<line x1="72" y1="614" x2="131" y2="614" stroke="#8198A4" stroke-width="1" />
-<line x1="100" y1="614" x2="100" y2="673" stroke="#8198A4" stroke-width="1" />
-<line x1="72" y1="632" x2="131" y2="632" stroke="#8198A4" stroke-width="1" />
-<line x1="118" y1="614" x2="118" y2="673" stroke="#8198A4" stroke-width="1" />
-<line x1="72" y1="650" x2="131" y2="650" stroke="#8198A4" stroke-width="1" />
-<path d="M73 650 Q90 620 103 648 T132 638" fill="none" stroke="#AB704F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
-<text x="156" y="634" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >Electromagnetic</text>
-<text x="156" y="662" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >modelling</text>
-<line x1="393" y1="635" x2="419" y2="635" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="452" y="617" width="75" height="58" rx="7" fill="#DFE8DF" stroke="#8DA497" stroke-width="1.5" />
-<line x1="462" y1="627" x2="462" y2="664" stroke="#AB704F" stroke-width="2.7" />
-<line x1="471" y1="627" x2="471" y2="664" stroke="#AB704F" stroke-width="2.7" />
-<line x1="480" y1="627" x2="480" y2="664" stroke="#AB704F" stroke-width="2.7" />
-<line x1="489" y1="627" x2="489" y2="664" stroke="#AB704F" stroke-width="2.7" />
-<line x1="498" y1="627" x2="498" y2="664" stroke="#AB704F" stroke-width="2.7" />
-<line x1="507" y1="627" x2="507" y2="664" stroke="#AB704F" stroke-width="2.7" />
-<path d="M480 604 L490 617 L500 604" fill="none" stroke="#8198A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-<text x="548" y="634" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >Grating and CPW</text>
-<text x="548" y="662" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >structures</text>
-<line x1="779" y1="635" x2="805" y2="635" stroke="#AB704F" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="839" y="610" width="68" height="63" rx="7" fill="#E1E9EC" stroke="#8198A4" stroke-width="1.5" />
-<line x1="850" y1="623" x2="895" y2="623" stroke="#8198A4" stroke-width="1.5" />
-<line x1="850" y1="632" x2="895" y2="632" stroke="#8198A4" stroke-width="1.5" />
-<line x1="850" y1="641" x2="895" y2="641" stroke="#8198A4" stroke-width="1.5" />
-<line x1="850" y1="650" x2="895" y2="650" stroke="#8198A4" stroke-width="1.5" />
-<line x1="850" y1="659" x2="895" y2="659" stroke="#8198A4" stroke-width="1.5" />
-<circle cx="889" cy="653" r="15" fill="#FFFDFA" stroke="#AB704F" stroke-width="3" />
-<line x1="900" y1="665" x2="913" y2="678" stroke="#AB704F" stroke-width="4" />
-<text x="932" y="634" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >Inspect fabricated</text>
-<text x="932" y="662" fill="#6D7975" font-size="18" font-weight="400" text-anchor="start" >geometry</text>
+<text x="40" y="65" fill="#1A1A1A" font-size="34" font-weight="600" text-anchor="start" >An optical–microwave interface</text>
+<text x="40" y="105" fill="#5C5C5A" font-size="20" font-weight="400" text-anchor="start" >Er³⁺:YSO · photonic coupling · microwave control · nanofabrication</text>
+<rect x="943" y="32" width="217" height="38" rx="19" fill="#ECECEA" stroke="#ECECEA" stroke-width="1.5" />
+<text x="1051.5" y="57" fill="#1A1A1A" font-size="15" font-weight="600" text-anchor="middle" >METHOD SCHEMATIC</text>
+<line x1="40" y1="128" x2="1160" y2="128" stroke="#D4D4D2" stroke-width="1.5" />
+<rect x="40" y="155" width="1120" height="354" rx="18" fill="#FFFFFF" stroke="#D4D4D2" stroke-width="1.5" />
+<rect x="328" y="246" width="653" height="224" rx="16" fill="url(#host)" stroke="#6A6A68" stroke-width="1.5" />
+<text x="64" y="199" fill="#1A1A1A" font-size="25" font-weight="600" text-anchor="start" >Optical mode</text>
+<text x="694" y="199" fill="#1A1A1A" font-size="25" font-weight="600" text-anchor="start" >Microwave / CPW control</text>
+<path d="M77 278 C160 278 216 339 389 358" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M77 262 C160 262 219 323 386 345" fill="none" stroke="#E4E4E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M77 294 C158 294 213 356 386 371" fill="none" stroke="#E4E4E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M394 306.0 Q407 358 394 410.0" fill="none" stroke="#1A1A1A" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M407 310.5 Q420 358 407 405.5" fill="none" stroke="#1A1A1A" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M420 315.0 Q433 358 420 401.0" fill="none" stroke="#1A1A1A" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M433 319.5 Q446 358 433 396.5" fill="none" stroke="#1A1A1A" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M446 324.0 Q459 358 446 392.0" fill="none" stroke="#1A1A1A" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M459 328.5 Q472 358 459 387.5" fill="none" stroke="#1A1A1A" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M472 333.0 Q485 358 472 383.0" fill="none" stroke="#1A1A1A" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M485 337.5 Q498 358 485 378.5" fill="none" stroke="#1A1A1A" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="494" y="351" width="318" height="14" rx="7" fill="#E4E4E2" stroke="#E4E4E2" stroke-width="0" />
+<line x1="525" y1="358" x2="793" y2="358" stroke="#1A1A1A" stroke-width="3.2" marker-end="url(#arrow)"/>
+<text x="358" y="444" fill="#1A1A1A" font-size="21" font-weight="500" text-anchor="start" >Grating / photonic interface</text>
+<path d="M1100 275 L971 275 Q947 275 937 299 L903 365" fill="none" stroke="#6A6A68" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1100 252 L951 252 Q928 252 917 278 L884 345" fill="none" stroke="#1A1A1A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1100 230 L929 230 Q907 230 898 254 L862 326" fill="none" stroke="#6A6A68" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1035 252 L994 252" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1037" y="323" fill="#5C5C5A" font-size="18" font-weight="400" text-anchor="middle" >CPW</text>
+<circle cx="835" cy="358" r="38" fill="#F0F0EE" stroke="#4A4A48" stroke-width="1.8" />
+<circle cx="835" cy="358" r="19" fill="#E4E4E2" stroke="#1A1A1A" stroke-width="2.5" />
+<text x="753" y="306" fill="#1A1A1A" font-size="23" font-weight="600" text-anchor="middle" >Er³⁺:YSO ion</text>
+<line x1="805" y1="313" x2="820" y2="330" stroke="#5C5C5A" stroke-width="1.6" />
+<text x="808" y="442" fill="#5C5C5A" font-size="19" font-weight="400" text-anchor="start" >YSO host</text>
+<text x="66" y="484" fill="#5C5C5A" font-size="17" font-weight="400" text-anchor="start" >Conceptual geometry · not to scale</text>
+<rect x="40" y="548" width="348" height="168" rx="18" fill="#FFFFFF" stroke="#D4D4D2" stroke-width="1.5" />
+<rect x="426" y="548" width="348" height="168" rx="18" fill="#FFFFFF" stroke="#D4D4D2" stroke-width="1.5" />
+<rect x="812" y="548" width="348" height="168" rx="18" fill="#FFFFFF" stroke="#D4D4D2" stroke-width="1.5" />
+<text x="64" y="584" fill="#1A1A1A" font-size="24" font-weight="600" text-anchor="start" >Design &amp; simulation</text>
+<text x="450" y="584" fill="#1A1A1A" font-size="24" font-weight="600" text-anchor="start" >Fabrication</text>
+<text x="836" y="584" fill="#1A1A1A" font-size="24" font-weight="600" text-anchor="start" >SEM inspection</text>
+<rect x="65" y="607" width="73" height="73" rx="8" fill="#E8E8E6" stroke="#6A6A68" stroke-width="1.5" />
+<line x1="82" y1="614" x2="82" y2="673" stroke="#6A6A68" stroke-width="1" />
+<line x1="72" y1="614" x2="131" y2="614" stroke="#6A6A68" stroke-width="1" />
+<line x1="100" y1="614" x2="100" y2="673" stroke="#6A6A68" stroke-width="1" />
+<line x1="72" y1="632" x2="131" y2="632" stroke="#6A6A68" stroke-width="1" />
+<line x1="118" y1="614" x2="118" y2="673" stroke="#6A6A68" stroke-width="1" />
+<line x1="72" y1="650" x2="131" y2="650" stroke="#6A6A68" stroke-width="1" />
+<path d="M73 650 Q90 620 103 648 T132 638" fill="none" stroke="#1A1A1A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="156" y="634" fill="#5C5C5A" font-size="18" font-weight="400" text-anchor="start" >Electromagnetic</text>
+<text x="156" y="662" fill="#5C5C5A" font-size="18" font-weight="400" text-anchor="start" >modelling</text>
+<line x1="393" y1="635" x2="419" y2="635" stroke="#1A1A1A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="452" y="617" width="75" height="58" rx="7" fill="#ECECEA" stroke="#4A4A48" stroke-width="1.5" />
+<line x1="462" y1="627" x2="462" y2="664" stroke="#1A1A1A" stroke-width="2.7" />
+<line x1="471" y1="627" x2="471" y2="664" stroke="#1A1A1A" stroke-width="2.7" />
+<line x1="480" y1="627" x2="480" y2="664" stroke="#1A1A1A" stroke-width="2.7" />
+<line x1="489" y1="627" x2="489" y2="664" stroke="#1A1A1A" stroke-width="2.7" />
+<line x1="498" y1="627" x2="498" y2="664" stroke="#1A1A1A" stroke-width="2.7" />
+<line x1="507" y1="627" x2="507" y2="664" stroke="#1A1A1A" stroke-width="2.7" />
+<path d="M480 604 L490 617 L500 604" fill="none" stroke="#6A6A68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="548" y="634" fill="#5C5C5A" font-size="18" font-weight="400" text-anchor="start" >Grating and CPW</text>
+<text x="548" y="662" fill="#5C5C5A" font-size="18" font-weight="400" text-anchor="start" >structures</text>
+<line x1="779" y1="635" x2="805" y2="635" stroke="#1A1A1A" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="839" y="610" width="68" height="63" rx="7" fill="#E8E8E6" stroke="#6A6A68" stroke-width="1.5" />
+<line x1="850" y1="623" x2="895" y2="623" stroke="#6A6A68" stroke-width="1.5" />
+<line x1="850" y1="632" x2="895" y2="632" stroke="#6A6A68" stroke-width="1.5" />
+<line x1="850" y1="641" x2="895" y2="641" stroke="#6A6A68" stroke-width="1.5" />
+<line x1="850" y1="650" x2="895" y2="650" stroke="#6A6A68" stroke-width="1.5" />
+<line x1="850" y1="659" x2="895" y2="659" stroke="#6A6A68" stroke-width="1.5" />
+<circle cx="889" cy="653" r="15" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3" />
+<line x1="900" y1="665" x2="913" y2="678" stroke="#1A1A1A" stroke-width="4" />
+<text x="932" y="634" fill="#5C5C5A" font-size="18" font-weight="400" text-anchor="start" >Inspect fabricated</text>
+<text x="932" y="662" fill="#5C5C5A" font-size="18" font-weight="400" text-anchor="start" >geometry</text>
 </g></svg>

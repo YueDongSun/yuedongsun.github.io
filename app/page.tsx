@@ -16,12 +16,10 @@ export default function Cv_page() {
       <Site_header display_name={profile.display_name} />
       <div id="home" />
       <main id="main_content" className="portfolio_layout">
-        <aside className="profile_sidebar" aria-label="About Yuedong Sun">
+        <aside className="profile_sidebar" aria-label={`About ${profile.display_name}`}>
           <div className="profile_sidebar_inner">
-            <div className="identity_monogram" aria-hidden="true">ys<span>↗</span></div>
             <p className="eyebrow">PHYSICS / SYSTEMS / SOFTWARE</p>
             <h1>{profile.display_name}</h1>
-            <p className="chinese_name" lang="zh-CN">孙跃东 <span>· {profile.nickname}</span></p>
             <p className="profile_role">{profile.role}</p>
             <p className="profile_bio">{profile.summary}</p>
             <div className="profile_links">
@@ -89,7 +87,7 @@ export default function Cv_page() {
           </section>
         </div>
       </main>
-      <footer className="site_footer"><span>{profile.display_name} <span lang="zh-CN">/ 孙跃东</span></span><span className="footer_caption">Physics, code, and ongoing questions.</span><a href="#home">Back to top ↑</a></footer>
+      <footer className="site_footer"><span>{profile.display_name}</span><span className="footer_caption">Physics, code, and ongoing questions.</span><a href="#home">Back to top ↑</a></footer>
     </div>
   );
 }

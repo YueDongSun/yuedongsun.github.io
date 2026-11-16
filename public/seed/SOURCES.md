@@ -1,5 +1,7 @@
 # Seed STEM reinforcement learning illustration
 
+The homepage no longer displays this file. The Seed story uses the inline diagram in `components/research_scenes.tsx`. This note records the earlier generated image.
+
 - Asset: `seed-stem-rl-v1.webp` (1672 × 941 pixels; full composition retained, encoded from the generated PNG for web delivery).
 - Created: 2026-11-12, using the built-in image generation tool at the site owner's request.
 - Subject: an editorial concept illustration connecting scientific data, reinforcement-learning exploration, and executable benchmarks through a sculptural feedback loop.

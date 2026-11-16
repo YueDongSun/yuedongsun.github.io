@@ -1,12 +1,12 @@
-# Yuedong Sun · Personal website
+# Y.D. Sun · Personal website
 
-A personal research portfolio for **Yuedong Sun / 孙跃东**, connecting quantum physics, STEM reinforcement learning, and software engineering.
+A personal research portfolio for **Y.D. Sun**, connecting quantum physics, STEM reinforcement learning, and software engineering.
 
 - **Homepage:** https://yuedongsun.github.io/
 - **Software introductions:** https://yuedongsun.github.io/tools/
 - **Source:** https://github.com/YueDongSun/yuedongsun.github.io
 
-The design uses warm paper colours, dark text, serif headings, fine rules, and large editorial images with compact supporting information. A personal sidebar accompanies three selectable, illustrated education and experience stories, a research gallery, publications with full-width paper figures, an interactive project directory, and contact details.
+The design uses a neutral black-and-white palette that follows the operating system’s light or dark setting, serif headings, fine rules, and compact supporting information. A personal sidebar accompanies three selectable education and experience stories, a research gallery, publications with full-width paper figures, an interactive project directory, and contact details.
 
 ## Content
 
@@ -16,7 +16,7 @@ The publication list distinguishes journal articles, preprints, and manuscripts.
 
 Each research topic pairs two complementary images that can be enlarged. Lightweight previews keep original figures available for close reading. `config/publication_visuals.ts` associates paper images with publication IDs and labels their published, preprint or author-provided manuscript source; figure credits live in `public/papers/SOURCES.md` and `public/research/SOURCES.md`. The project directory and Tools page use large SVG workflow illustrations to explain each tool's purpose.
 
-Experience cards select panoramic stories for ByteDance Seed, Tsinghua IIIS and USTC School of the Gifted Young. Their generated concept artwork shares a warm ivory, copper and frosted-glass direction. Seed covers STEM data, reinforcement-learning algorithms and benchmarks; Tsinghua covers quantum memories, multiplexing and networks; USTC covers mathematical foundations, quantum optics and rare-earth systems. Deep links `#seed`, `#tsinghua` and `#ustc` open the corresponding story.
+Experience cards select stories for ByteDance Seed, Tsinghua IIIS and USTC School of the Gifted Young. Each story uses an inline monochrome diagram: a STEM task and feedback loop, an addressed mode array with a propagating field and network edges, and an optical ray with a two-level transition. The diagrams are conceptual and do not report measurements. Deep links `#seed`, `#tsinghua` and `#ustc` open the corresponding story. Earlier generated raster illustrations remain in `public/seed/` and `public/experience/` as provenance and are not shown on the page.
 
 See [content sources](docs/content_sources_20261112.md) for the November 2026 bibliography and profile update, and [editing guide](docs/editing_guide.md) for routine maintenance.
 
@@ -69,8 +69,8 @@ The two former Sites introductions have separate source checkouts and fixed HTTP
 | `public/research/` | Research figures from the supplied CV |
 | `public/research/previews/` | Compressed web previews of selected research figures |
 | `public/papers/` | Publication figures and source credits |
-| `public/seed/` | Generated STEM reinforcement-learning illustration and provenance |
-| `public/experience/` | Generated Tsinghua and USTC experience illustrations and their briefs |
+| `public/seed/` | Retained STEM illustration provenance; the page uses an inline diagram |
+| `public/experience/` | Retained Tsinghua and USTC illustration provenance; the page uses inline diagrams |
 | `config/publication_visuals.ts` | Publication IDs mapped to figures, captions, and source links |
 | `scripts/build_github_pages.mjs` | Next.js static-export orchestration |
 | `.github/workflows/deploy_pages.yml` | GitHub Pages publication |

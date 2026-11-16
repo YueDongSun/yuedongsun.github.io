@@ -1,5 +1,7 @@
 # Tsinghua / IIIS quantum-network concept artwork
 
+The homepage no longer displays this file. The Tsinghua story uses the inline diagram in `components/research_scenes.tsx`. This note records the earlier generated image.
+
 - Created: 2026-11-12.
 - Method: OpenAI built-in image generation tool; one new image, without image inputs.
 - Use: editorial concept artwork for Yuedong Sun's Tsinghua / IIIS research experience.
